@@ -1,0 +1,9 @@
+E:\Jobs\NPPBiaHoi\NPPBiaHoi\NPPBiaHoi\bin\Debug\NPPBiaHoi.exe
+E:\Jobs\NPPBiaHoi\NPPBiaHoi\NPPBiaHoi\bin\Debug\NPPBiaHoi.pdb
+E:\Jobs\NPPBiaHoi\NPPBiaHoi\NPPBiaHoi\obj\Debug\NPPBiaHoi.csprojResolveAssemblyReference.cache
+E:\Jobs\NPPBiaHoi\NPPBiaHoi\NPPBiaHoi\obj\Debug\NPPBiaHoi.Form1.resources
+E:\Jobs\NPPBiaHoi\NPPBiaHoi\NPPBiaHoi\obj\Debug\NPPBiaHoi.Properties.Resources.resources
+E:\Jobs\NPPBiaHoi\NPPBiaHoi\NPPBiaHoi\obj\Debug\NPPBiaHoi.csproj.GenerateResource.Cache
+E:\Jobs\NPPBiaHoi\NPPBiaHoi\NPPBiaHoi\obj\Debug\NPPBiaHoi.exe.licenses
+E:\Jobs\NPPBiaHoi\NPPBiaHoi\NPPBiaHoi\obj\Debug\NPPBiaHoi.exe
+E:\Jobs\NPPBiaHoi\NPPBiaHoi\NPPBiaHoi\obj\Debug\NPPBiaHoi.pdb
