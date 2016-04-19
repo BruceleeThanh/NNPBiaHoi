@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPPBiaHoi", "NPPBiaHoi\NPPBiaHoi.csproj", "{CE84333B-1D07-4DCF-8463-FE868288C9CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{1123EC09-224B-469A-A9E2-D80A93A547FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinessLogic", "BussinessLogic\BussinessLogic.csproj", "{8C819B5D-897B-40A9-8CAB-7ACA25B8155A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{CE84333B-1D07-4DCF-8463-FE868288C9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE84333B-1D07-4DCF-8463-FE868288C9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE84333B-1D07-4DCF-8463-FE868288C9CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1123EC09-224B-469A-A9E2-D80A93A547FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1123EC09-224B-469A-A9E2-D80A93A547FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1123EC09-224B-469A-A9E2-D80A93A547FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1123EC09-224B-469A-A9E2-D80A93A547FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C819B5D-897B-40A9-8CAB-7ACA25B8155A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C819B5D-897B-40A9-8CAB-7ACA25B8155A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C819B5D-897B-40A9-8CAB-7ACA25B8155A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C819B5D-897B-40A9-8CAB-7ACA25B8155A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

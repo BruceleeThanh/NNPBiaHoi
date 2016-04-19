@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5e811df1c430434eab26e75eca3e24e4" Name="Diagram1">
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.ChiPhiPhuongTien" Width="1.5" PointX="13" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.ChiTietHoaDonBanBuon" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.ChiTietNhapHang" Width="1.5" PointX="6" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.CuocVoCongTy" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.DonGiaKhachHang" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.HoaDonBanBuon" Width="1.5" PointX="0.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.HoaDonBanLe" Width="1.5" PointX="3" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.KhachHang" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.KhachHangNoTien" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.KhachHangNoVo" Width="1.5" PointX="6" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.LichSuKhachHangTraNoTien" Width="1.5" PointX="3" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.LichSuKhachHangTraNoVo" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.NhanVien" Width="1.5" PointX="10.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.NhapHang" Width="1.5" PointX="3.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.NhomKhachHang" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.PhuongTien" Width="1.5" PointX="10.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.PhuongTienDiGiaoHang" Width="1.5" PointX="13" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.PhuongTienDiNhapHang" Width="1.5" PointX="13" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.SanPham" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.SanPhamDoiDoiTra" Width="1.5" PointX="3" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="NhaPhanPhoiBiaHoiModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_ChiPhiPhuongTien_PhuongTien" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_ChiTietHoaDonBanBuon_HoaDonBanBuon" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_ChiTietHoaDonBanBuon_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_ChiTietNhapHang_NhapHang" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_ChiTietNhapHang_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_CuocVoCongTy_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_DonGiaKhachHang_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_DonGiaKhachHang_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_HoaDonBanBuon_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_PhuongTienDiGiaoHang_HoaDonBanBuon" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_HoaDonBanLe_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_KhachHangNoTien_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_KhachHangNoVo_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_LichSuKhachHangTraNoTien_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_KhachHangNoVo_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_LichSuKhachHangTraNoVo_KhachHangNoVo" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_PhuongTienDiGiaoHang_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_PhuongTienDiNhapHang_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_PhuongTienDiNhapHang_NhapHang" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_PhuongTienDiGiaoHang_PhuongTien" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_PhuongTienDiNhapHang_PhuongTien" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.FK_SanPhamDoiDoiTra_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="NhaPhanPhoiBiaHoiModel.NhomKhachHang_KhachHang" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
