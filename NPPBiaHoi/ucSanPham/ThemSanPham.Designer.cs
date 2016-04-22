@@ -42,13 +42,13 @@
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnThemAnh = new DevExpress.XtraEditors.SimpleButton();
-            this.radioGroupLoai = new DevExpress.XtraEditors.RadioGroup();
+            this.rdoLoai = new DevExpress.XtraEditors.RadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSanPham.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDungTich.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDangQuanLy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmoMieuTa.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroupLoai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdoLoai.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -168,26 +168,26 @@
             this.btnThemAnh.TabIndex = 25;
             this.btnThemAnh.Text = "Thêm ảnh";
             // 
-            // radioGroupLoai
+            // rdoLoai
             // 
-            this.radioGroupLoai.Location = new System.Drawing.Point(111, 103);
-            this.radioGroupLoai.Name = "radioGroupLoai";
-            this.radioGroupLoai.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.radioGroupLoai.Properties.Appearance.Options.UseBackColor = true;
-            this.radioGroupLoai.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.radioGroupLoai.Properties.Columns = 2;
-            this.radioGroupLoai.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            this.rdoLoai.Location = new System.Drawing.Point(111, 103);
+            this.rdoLoai.Name = "rdoLoai";
+            this.rdoLoai.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.rdoLoai.Properties.Appearance.Options.UseBackColor = true;
+            this.rdoLoai.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.rdoLoai.Properties.Columns = 2;
+            this.rdoLoai.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(0)), "Keg"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Sọt")});
-            this.radioGroupLoai.Size = new System.Drawing.Size(187, 25);
-            this.radioGroupLoai.TabIndex = 26;
+            this.rdoLoai.Size = new System.Drawing.Size(187, 25);
+            this.rdoLoai.TabIndex = 26;
             // 
             // ThemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 291);
-            this.Controls.Add(this.radioGroupLoai);
+            this.Controls.Add(this.rdoLoai);
             this.Controls.Add(this.btnThemAnh);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
@@ -211,7 +211,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkDangQuanLy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmoMieuTa.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroupLoai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdoLoai.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,6 +232,6 @@
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.XtraEditors.SimpleButton btnThemAnh;
-        private DevExpress.XtraEditors.RadioGroup radioGroupLoai;
+        private DevExpress.XtraEditors.RadioGroup rdoLoai;
     }
 }
