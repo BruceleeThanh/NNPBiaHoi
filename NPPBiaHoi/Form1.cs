@@ -11,8 +11,6 @@ namespace NPPBiaHoi {
     public partial class Form1 : Form {
         public Form1() {
             InitializeComponent();
-            KhachHangBO aKhachHang = new KhachHangBO();
-            gridControl1.DataSource = aKhachHang.SelectAll();
         }
     }
 }
