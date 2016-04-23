@@ -200,6 +200,9 @@
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txtTenSanPham);
             this.Controls.Add(this.labelControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSuaSanPham";
             this.Text = "Sửa thông tin sản phẩm";
             ((System.ComponentModel.ISupportInitialize)(this.rdoLoai.Properties)).EndInit();
