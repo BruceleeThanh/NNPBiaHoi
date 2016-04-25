@@ -142,12 +142,6 @@
     <Compile Include="ucSanPham\frmSuaSanPham.Designer.cs">
       <DependentUpon>frmSuaSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucSanPham\frmThemCuocVoCongTy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ucSanPham\frmThemCuocVoCongTy.Designer.cs">
-      <DependentUpon>frmThemCuocVoCongTy.cs</DependentUpon>
-    </Compile>
     <Compile Include="ucSanPham\ThemSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,10 +169,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucKhachHang\frmSuaKhachHang.resx">
       <DependentUpon>frmSuaKhachHang.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucKhachHang\frmSuaNhomKhachHang.resx">
-      <DependentUpon>frmSuaNhomKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucKhachHang\frmThemKhachHang.resx">
       <DependentUpon>frmThemKhachHang.cs</DependentUpon>
@@ -192,26 +182,16 @@
     <EmbeddedResource Include="ucNhanVien\frmThemNhanVien.resx">
       <DependentUpon>frmThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucPhuongTien\frmSuaPhuongTien.resx">
-      <DependentUpon>frmSuaPhuongTien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucPhuongTien\frmThemChiPhiPhuongTien.resx">
-      <DependentUpon>frmThemChiPhiPhuongTien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ucPhuongTien\frmThemPhuongTien.resx">
       <DependentUpon>frmThemPhuongTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucSanPham\frmSuaSanPham.resx">
       <DependentUpon>frmSuaSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucSanPham\frmThemCuocVoCongTy.resx">
-      <DependentUpon>frmThemCuocVoCongTy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ucSanPham\ThemSanPham.resx">
       <DependentUpon>ThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -232,8 +212,11 @@
       <Project>{1123ec09-224b-469a-a9e2-d80a93a547fb}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{6f8a5e2d-e383-44da-8334-54e3a71aba92}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
