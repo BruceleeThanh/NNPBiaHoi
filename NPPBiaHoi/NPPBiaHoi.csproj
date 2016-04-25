@@ -70,6 +70,90 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucHoaDon\frmSuaHoaDonBanLe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucHoaDon\frmSuaHoaDonBanLe.Designer.cs">
+      <DependentUpon>frmSuaHoaDonBanLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucHoaDon\frmThemHoaDonBanLe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucHoaDon\frmThemHoaDonBanLe.Designer.cs">
+      <DependentUpon>frmThemHoaDonBanLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucKhachHang\frmSuaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucKhachHang\frmSuaKhachHang.Designer.cs">
+      <DependentUpon>frmSuaKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucKhachHang\frmSuaNhomKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucKhachHang\frmSuaNhomKhachHang.Designer.cs">
+      <DependentUpon>frmSuaNhomKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucKhachHang\frmThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucKhachHang\frmThemKhachHang.Designer.cs">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucKhachHang\frmThemNhomKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucKhachHang\frmThemNhomKhachHang.Designer.cs">
+      <DependentUpon>frmThemNhomKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\frmSuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\frmSuaNhanVien.Designer.cs">
+      <DependentUpon>frmSuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\frmThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\frmThemNhanVien.Designer.cs">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPhuongTien\frmSuaPhuongTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucPhuongTien\frmSuaPhuongTien.Designer.cs">
+      <DependentUpon>frmSuaPhuongTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPhuongTien\frmThemChiPhiPhuongTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucPhuongTien\frmThemChiPhiPhuongTien.Designer.cs">
+      <DependentUpon>frmThemChiPhiPhuongTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPhuongTien\frmThemPhuongTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucPhuongTien\frmThemPhuongTien.Designer.cs">
+      <DependentUpon>frmThemPhuongTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSanPham\frmSuaSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucSanPham\frmSuaSanPham.Designer.cs">
+      <DependentUpon>frmSuaSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSanPham\frmThemCuocVoCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucSanPham\frmThemCuocVoCongTy.Designer.cs">
+      <DependentUpon>frmThemCuocVoCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSanPham\ThemSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucSanPham\ThemSanPham.Designer.cs">
+      <DependentUpon>ThemSanPham.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,7 +167,51 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucHoaDon\frmSuaHoaDonBanLe.resx">
+      <DependentUpon>frmSuaHoaDonBanLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucHoaDon\frmThemHoaDonBanLe.resx">
+      <DependentUpon>frmThemHoaDonBanLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucKhachHang\frmSuaKhachHang.resx">
+      <DependentUpon>frmSuaKhachHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucKhachHang\frmSuaNhomKhachHang.resx">
+      <DependentUpon>frmSuaNhomKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucKhachHang\frmThemKhachHang.resx">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucKhachHang\frmThemNhomKhachHang.resx">
+      <DependentUpon>frmThemNhomKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\frmSuaNhanVien.resx">
+      <DependentUpon>frmSuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\frmThemNhanVien.resx">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPhuongTien\frmSuaPhuongTien.resx">
+      <DependentUpon>frmSuaPhuongTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPhuongTien\frmThemChiPhiPhuongTien.resx">
+      <DependentUpon>frmThemChiPhiPhuongTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPhuongTien\frmThemPhuongTien.resx">
+      <DependentUpon>frmThemPhuongTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSanPham\frmSuaSanPham.resx">
+      <DependentUpon>frmSuaSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSanPham\frmThemCuocVoCongTy.resx">
+      <DependentUpon>frmThemCuocVoCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSanPham\ThemSanPham.resx">
+      <DependentUpon>ThemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -105,6 +233,7 @@
       <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
