@@ -39,14 +39,14 @@ namespace BussinessLogic {
             }
         }
 
-        public List<HoaDonBanLe> Select_ByThoiGian(DateTime thoiGian) {
-            try {
+        //public List<HoaDonBanLe> Select_ByThoiGian(DateTime thoiGian) {
+        //    try {
 
-            }
-            catch(Exception ex) {
-                throw new Exception("HoaDonBanLeBO.Select_ByThoiGian: " + ex.ToString());
-            }
-        }
+        //    }
+        //    catch(Exception ex) {
+        //        throw new Exception("HoaDonBanLeBO.Select_ByThoiGian: " + ex.ToString());
+        //    }
+        //}
 
     }
 }
