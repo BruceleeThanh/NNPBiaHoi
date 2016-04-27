@@ -82,6 +82,7 @@
             this.colTenSanPham.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTenSanPham.Caption = "Tên sản phẩm";
             this.colTenSanPham.ColumnEdit = this.lueTenSanPham;
+            this.colTenSanPham.FieldName = "Ten";
             this.colTenSanPham.Name = "colTenSanPham";
             this.colTenSanPham.Visible = true;
             this.colTenSanPham.VisibleIndex = 0;
@@ -102,6 +103,7 @@
             this.colSoLuong.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSoLuong.Caption = "Số lượng";
             this.colSoLuong.ColumnEdit = this.spinSoLuong;
+            this.colSoLuong.FieldName = "SoLuong";
             this.colSoLuong.Name = "colSoLuong";
             this.colSoLuong.Visible = true;
             this.colSoLuong.VisibleIndex = 1;
@@ -124,6 +126,7 @@
             this.colThoiGian.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colThoiGian.Caption = "Thời gian";
             this.colThoiGian.ColumnEdit = this.dateThoiGian;
+            this.colThoiGian.FieldName = "ThoiGian";
             this.colThoiGian.Name = "colThoiGian";
             this.colThoiGian.Visible = true;
             this.colThoiGian.VisibleIndex = 2;
@@ -145,6 +148,7 @@
             this.colGhiChu.AppearanceHeader.Options.UseTextOptions = true;
             this.colGhiChu.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colGhiChu.Caption = "Ghi chú";
+            this.colGhiChu.FieldName = "GhiChu";
             this.colGhiChu.Name = "colGhiChu";
             this.colGhiChu.Visible = true;
             this.colGhiChu.VisibleIndex = 3;

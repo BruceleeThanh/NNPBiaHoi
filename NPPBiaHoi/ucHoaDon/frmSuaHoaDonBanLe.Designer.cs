@@ -33,21 +33,21 @@
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTenSanPham = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lueTenSanPham = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.spinSoLuong = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdSuaHoaDonBanLe = new DevExpress.XtraGrid.GridControl();
+            this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dateThoiGian = new DevExpress.XtraEditors.DateEdit();
-            this.lueTenSanPham = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.spinSoLuong = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSuaHoaDonBanLe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGian.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGian.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLuu
@@ -90,10 +90,18 @@
             this.colTenSanPham.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTenSanPham.Caption = "Tên sản phẩm";
             this.colTenSanPham.ColumnEdit = this.lueTenSanPham;
+            this.colTenSanPham.FieldName = "Ten";
             this.colTenSanPham.Name = "colTenSanPham";
             this.colTenSanPham.Visible = true;
             this.colTenSanPham.VisibleIndex = 0;
             this.colTenSanPham.Width = 142;
+            // 
+            // lueTenSanPham
+            // 
+            this.lueTenSanPham.AutoHeight = false;
+            this.lueTenSanPham.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.lueTenSanPham.Name = "lueTenSanPham";
             // 
             // colSoLuong
             // 
@@ -103,10 +111,18 @@
             this.colSoLuong.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSoLuong.Caption = "Số lượng";
             this.colSoLuong.ColumnEdit = this.spinSoLuong;
+            this.colSoLuong.FieldName = "SoLuong";
             this.colSoLuong.Name = "colSoLuong";
             this.colSoLuong.Visible = true;
             this.colSoLuong.VisibleIndex = 1;
             this.colSoLuong.Width = 84;
+            // 
+            // spinSoLuong
+            // 
+            this.spinSoLuong.AutoHeight = false;
+            this.spinSoLuong.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.spinSoLuong.Name = "spinSoLuong";
             // 
             // colGhiChu
             // 
@@ -115,6 +131,7 @@
             this.colGhiChu.AppearanceHeader.Options.UseTextOptions = true;
             this.colGhiChu.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colGhiChu.Caption = "Ghi chú";
+            this.colGhiChu.FieldName = "GhiChu";
             this.colGhiChu.Name = "colGhiChu";
             this.colGhiChu.Visible = true;
             this.colGhiChu.VisibleIndex = 2;
@@ -134,6 +151,13 @@
             this.grdSuaHoaDonBanLe.TabIndex = 4;
             this.grdSuaHoaDonBanLe.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // repositoryItemLookUpEdit2
+            // 
+            this.repositoryItemLookUpEdit2.AutoHeight = false;
+            this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
             // 
             // labelControl1
             // 
@@ -156,27 +180,6 @@
             this.dateThoiGian.Size = new System.Drawing.Size(100, 20);
             this.dateThoiGian.TabIndex = 9;
             // 
-            // lueTenSanPham
-            // 
-            this.lueTenSanPham.AutoHeight = false;
-            this.lueTenSanPham.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
-            this.lueTenSanPham.Name = "lueTenSanPham";
-            // 
-            // repositoryItemLookUpEdit2
-            // 
-            this.repositoryItemLookUpEdit2.AutoHeight = false;
-            this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
-            // 
-            // spinSoLuong
-            // 
-            this.spinSoLuong.AutoHeight = false;
-            this.spinSoLuong.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
-            this.spinSoLuong.Name = "spinSoLuong";
-            // 
             // frmSuaHoaDonBanLe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,12 +196,12 @@
             this.Name = "frmSuaHoaDonBanLe";
             this.Text = "Sửa hóa đơn bán lẻ";
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSuaHoaDonBanLe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGian.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGian.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

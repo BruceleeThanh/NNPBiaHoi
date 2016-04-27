@@ -33,20 +33,20 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).BeginInit();
+            this.chkDaNhanHanDoi = new DevExpress.XtraEditors.CheckEdit();
+            this.dateThoiGianDemDi = new DevExpress.XtraEditors.DateEdit();
+            this.dateThoiGianNhanLai = new DevExpress.XtraEditors.DateEdit();
+            this.lueTenSanPham = new DevExpress.XtraEditors.LookUpEdit();
+            this.spinSoLuong = new DevExpress.XtraEditors.SpinEdit();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.chkDaNhanHanDoi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianDemDi.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianDemDi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianNhanLai.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianNhanLai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -85,95 +85,95 @@
             this.labelControl5.TabIndex = 4;
             this.labelControl5.Text = "Thời gian nhận lại";
             // 
-            // checkEdit1
+            // chkDaNhanHanDoi
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(266, 43);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Caption = "Đã nhận được hàng đổi";
-            this.checkEdit1.Size = new System.Drawing.Size(149, 19);
-            this.checkEdit1.TabIndex = 5;
+            this.chkDaNhanHanDoi.Location = new System.Drawing.Point(266, 43);
+            this.chkDaNhanHanDoi.Name = "chkDaNhanHanDoi";
+            this.chkDaNhanHanDoi.Properties.Caption = "Đã nhận được hàng đổi";
+            this.chkDaNhanHanDoi.Size = new System.Drawing.Size(149, 19);
+            this.chkDaNhanHanDoi.TabIndex = 5;
             // 
-            // dateEdit1
+            // dateThoiGianDemDi
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(119, 43);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateThoiGianDemDi.EditValue = null;
+            this.dateThoiGianDemDi.Location = new System.Drawing.Point(119, 43);
+            this.dateThoiGianDemDi.Name = "dateThoiGianDemDi";
+            this.dateThoiGianDemDi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateThoiGianDemDi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(126, 20);
-            this.dateEdit1.TabIndex = 6;
+            this.dateThoiGianDemDi.Size = new System.Drawing.Size(126, 20);
+            this.dateThoiGianDemDi.TabIndex = 6;
             // 
-            // dateEdit2
+            // dateThoiGianNhanLai
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(119, 79);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateThoiGianNhanLai.EditValue = null;
+            this.dateThoiGianNhanLai.Location = new System.Drawing.Point(119, 79);
+            this.dateThoiGianNhanLai.Name = "dateThoiGianNhanLai";
+            this.dateThoiGianNhanLai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateThoiGianNhanLai.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(126, 20);
-            this.dateEdit2.TabIndex = 7;
+            this.dateThoiGianNhanLai.Size = new System.Drawing.Size(126, 20);
+            this.dateThoiGianNhanLai.TabIndex = 7;
             // 
-            // lookUpEdit1
+            // lueTenSanPham
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(119, 9);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueTenSanPham.Location = new System.Drawing.Point(119, 9);
+            this.lueTenSanPham.Name = "lueTenSanPham";
+            this.lueTenSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Size = new System.Drawing.Size(126, 20);
-            this.lookUpEdit1.TabIndex = 8;
+            this.lueTenSanPham.Size = new System.Drawing.Size(126, 20);
+            this.lueTenSanPham.TabIndex = 8;
             // 
-            // spinEdit1
+            // spinSoLuong
             // 
-            this.spinEdit1.EditValue = new decimal(new int[] {
+            this.spinSoLuong.EditValue = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.spinEdit1.Location = new System.Drawing.Point(321, 9);
-            this.spinEdit1.Name = "spinEdit1";
-            this.spinEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.spinSoLuong.Location = new System.Drawing.Point(321, 9);
+            this.spinSoLuong.Name = "spinSoLuong";
+            this.spinSoLuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinEdit1.Size = new System.Drawing.Size(77, 20);
-            this.spinEdit1.TabIndex = 9;
+            this.spinSoLuong.Size = new System.Drawing.Size(77, 20);
+            this.spinSoLuong.TabIndex = 9;
             // 
-            // simpleButton1
+            // btnLuu
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(290, 131);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(63, 23);
-            this.simpleButton1.TabIndex = 10;
-            this.simpleButton1.Text = "Lưu";
+            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnLuu.Appearance.Options.UseFont = true;
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(290, 131);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(63, 23);
+            this.btnLuu.TabIndex = 10;
+            this.btnLuu.Text = "Lưu";
             // 
-            // simpleButton2
+            // btnHuy
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(370, 131);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(63, 23);
-            this.simpleButton2.TabIndex = 11;
-            this.simpleButton2.Text = "Hủy";
+            this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(370, 131);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(63, 23);
+            this.btnHuy.TabIndex = 11;
+            this.btnHuy.Text = "Hủy";
             // 
             // frmThemSanPhamDoiDoiTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 166);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.spinEdit1);
-            this.Controls.Add(this.lookUpEdit1);
-            this.Controls.Add(this.dateEdit2);
-            this.Controls.Add(this.dateEdit1);
-            this.Controls.Add(this.checkEdit1);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.spinSoLuong);
+            this.Controls.Add(this.lueTenSanPham);
+            this.Controls.Add(this.dateThoiGianNhanLai);
+            this.Controls.Add(this.dateThoiGianDemDi);
+            this.Controls.Add(this.chkDaNhanHanDoi);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl2);
@@ -183,13 +183,13 @@
             this.MinimizeBox = false;
             this.Name = "frmThemSanPhamDoiDoiTra";
             this.Text = "Thêm sản phẩm đợi đổi trả";
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkDaNhanHanDoi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianDemDi.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianDemDi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianNhanLai.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianNhanLai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,12 +201,12 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
-        private DevExpress.XtraEditors.SpinEdit spinEdit1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.CheckEdit chkDaNhanHanDoi;
+        private DevExpress.XtraEditors.DateEdit dateThoiGianDemDi;
+        private DevExpress.XtraEditors.DateEdit dateThoiGianNhanLai;
+        private DevExpress.XtraEditors.LookUpEdit lueTenSanPham;
+        private DevExpress.XtraEditors.SpinEdit spinSoLuong;
+        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private DevExpress.XtraEditors.SimpleButton btnHuy;
     }
 }
