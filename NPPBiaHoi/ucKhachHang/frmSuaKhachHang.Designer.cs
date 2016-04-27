@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuaKhachHang));
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemNhomKhachHang = new DevExpress.XtraEditors.SimpleButton();
             this.btnThemAnh = new DevExpress.XtraEditors.SimpleButton();
             this.lueNhomKhachHang = new DevExpress.XtraEditors.LookUpEdit();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
@@ -68,16 +68,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // simpleButton1
+            // btnThemNhomKhachHang
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(378, 36);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(32, 25);
-            this.simpleButton1.TabIndex = 56;
+            this.btnThemNhomKhachHang.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnThemNhomKhachHang.Appearance.Options.UseFont = true;
+            this.btnThemNhomKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNhomKhachHang.Image")));
+            this.btnThemNhomKhachHang.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnThemNhomKhachHang.Location = new System.Drawing.Point(378, 36);
+            this.btnThemNhomKhachHang.Name = "btnThemNhomKhachHang";
+            this.btnThemNhomKhachHang.Size = new System.Drawing.Size(32, 25);
+            this.btnThemNhomKhachHang.TabIndex = 56;
             // 
             // btnThemAnh
             // 
@@ -298,7 +298,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 648);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnThemNhomKhachHang);
             this.Controls.Add(this.btnThemAnh);
             this.Controls.Add(this.lueNhomKhachHang);
             this.Controls.Add(this.btnHuy);
@@ -346,7 +346,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnThemNhomKhachHang;
         private DevExpress.XtraEditors.SimpleButton btnThemAnh;
         private DevExpress.XtraEditors.LookUpEdit lueNhomKhachHang;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
