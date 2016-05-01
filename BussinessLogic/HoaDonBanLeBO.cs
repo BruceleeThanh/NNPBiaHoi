@@ -48,5 +48,41 @@ namespace BussinessLogic {
         //    }
         //}
 
+        public bool Insert(HoaDonBanLe aHoaDonBanLe) {
+            try {
+                aDatabaseDA.HoaDonBanLe.Add(aHoaDonBanLe);
+                aDatabaseDA.SaveChanges();
+                return true;
+            }
+            catch(Exception ex) {
+                return false;
+                throw new Exception("HoaDonBanLeBO.Insert: " + ex.ToString());
+            }
+        }
+
+        public bool Update(HoaDonBanLe aHoaDonBanLe) {
+            try {
+                aDatabaseDA.HoaDonBanLe.AddOrUpdate(aHoaDonBanLe);
+                aDatabaseDA.SaveChanges();
+                return true;
+            }
+            catch(Exception ex) {
+                return false;
+                throw new Exception("HoaDonBanLeBO.Update: " + ex.ToString());
+            }
+        }
+
+        public bool Delete(int ma) {
+            try {
+                aDatabaseDA.HoaDonBanLe.Remove(this.Select_ByMa(ma));
+                aDatabaseDA.SaveChanges();
+                return true;
+            }
+            catch(Exception ex) {
+                return false;
+                throw new Exception("HoaDonBanLeBO.Delete: " + ex.ToString());
+            }
+        }
+
     }
 }
