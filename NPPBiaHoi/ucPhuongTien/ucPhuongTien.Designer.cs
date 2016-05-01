@@ -46,7 +46,7 @@
             this.btnSua = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdPhuongTien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvPhuongTien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkKichHoat)).BeginInit();
@@ -221,20 +221,20 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // simpleButton1
+            // btnThem
             // 
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(14, 11);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(64, 23);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "Thêm";
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(14, 11);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(64, 23);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "Thêm";
             // 
             // ucPhuongTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.grdPhuongTien);
             this.Name = "ucPhuongTien";
             this.Size = new System.Drawing.Size(667, 393);
@@ -259,7 +259,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSua;
         private DevExpress.XtraGrid.Columns.GridColumn colXoa;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
         private DevExpress.XtraGrid.Columns.GridColumn colLoai;
         private DevExpress.XtraGrid.Columns.GridColumn colKichHoat;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit chkKichHoat;

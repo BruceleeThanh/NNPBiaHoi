@@ -245,7 +245,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSuaPhuongTien";
-            this.Text = "frmSuaPhuongTien";
+            this.Text = "Sửa thông tin phương tiện";
             ((System.ComponentModel.ISupportInitialize)(this.rdoLoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaiTrong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBienSo.Properties)).EndInit();
