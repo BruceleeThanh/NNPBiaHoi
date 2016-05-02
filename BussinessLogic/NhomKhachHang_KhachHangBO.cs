@@ -33,16 +33,16 @@ namespace BussinessLogic {
             }
         }
 
-        public bool Insert(int maNhomKhachHang, int maKhachHang) {
-            try {
-                aDatabaseDA.NhomKhachHang.Add(aNhomKhachHang);
-                aDatabaseDA.SaveChanges();
-                return true;
-            }
-            catch(Exception ex) {
-                return false;
-                throw new Exception("NhomKhachHangBO.Insert: " + ex.ToString());
-            }
-        }
+        //public bool Insert(int maNhomKhachHang, int maKhachHang) {
+        //    try {
+        //        aDatabaseDA.NhomKhachHang.Add(aNhomKhachHang);
+        //        aDatabaseDA.SaveChanges();
+        //        return true;
+        //    }
+        //    catch(Exception ex) {
+        //        return false;
+        //        throw new Exception("NhomKhachHangBO.Insert: " + ex.ToString());
+        //    }
+        //}
     }
 }

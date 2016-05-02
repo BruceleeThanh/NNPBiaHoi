@@ -41,9 +41,9 @@ namespace BussinessLogic {
             }
         }
 
-        public List<SanPhamDoiDoiTra> Select_ByThoiGianDemDi(DateTime thoiGianDemDi);
+        //public List<SanPhamDoiDoiTra> Select_ByThoiGianDemDi(DateTime thoiGianDemDi)
 
-        public List<SanPhamDoiDoiTra> Select_ByThoiGianNhanLai(DateTime thoiGianNhanLai);
+        //public List<SanPhamDoiDoiTra> Select_ByThoiGianNhanLai(DateTime thoiGianNhanLai)
 
         public List<SanPhamDoiDoiTra> Select_ByTrangThai(int trangThai) {
             try {
