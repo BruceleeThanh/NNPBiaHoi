@@ -42,9 +42,9 @@
             this.btnSua = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.colChiTiet = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnChiTiet = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSua)).BeginInit();
@@ -55,14 +55,14 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gridControl1.Location = new System.Drawing.Point(0, 36);
+            this.gridControl1.Location = new System.Drawing.Point(0, 44);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSua,
             this.btnXoa,
             this.btnChiTiet});
-            this.gridControl1.Size = new System.Drawing.Size(531, 270);
+            this.gridControl1.Size = new System.Drawing.Size(600, 270);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -174,15 +174,6 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // btnThem
-            // 
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(7, 7);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(66, 23);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm";
-            // 
             // colChiTiet
             // 
             this.colChiTiet.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
@@ -204,6 +195,15 @@
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
+            // btnThem
+            // 
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(7, 7);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(66, 23);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "Thêm";
+            // 
             // ucNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,7 +211,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.gridControl1);
             this.Name = "ucNhapHang";
-            this.Size = new System.Drawing.Size(531, 306);
+            this.Size = new System.Drawing.Size(600, 314);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSua)).EndInit();
