@@ -144,6 +144,7 @@ namespace NPPBiaHoi {
             this.barButtonItem7.Id = 10;
             this.barButtonItem7.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.LargeGlyph")));
             this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -335,7 +336,7 @@ namespace NPPBiaHoi {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 487);
+            this.ClientSize = new System.Drawing.Size(942, 533);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "Form1";
             this.Text = "Form1";

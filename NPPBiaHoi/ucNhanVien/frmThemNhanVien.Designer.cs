@@ -148,6 +148,7 @@
             this.btnLuu.Size = new System.Drawing.Size(54, 25);
             this.btnLuu.TabIndex = 13;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -157,6 +158,7 @@
             this.btnHuy.Size = new System.Drawing.Size(54, 25);
             this.btnHuy.TabIndex = 14;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // lablelDangQuanLy
             // 
