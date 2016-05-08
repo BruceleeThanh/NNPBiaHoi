@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemNhanVien));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTenNhanVien = new DevExpress.XtraEditors.TextEdit();
             this.txtCMND = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -43,12 +42,13 @@
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.lablelDangQuanLy = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenNhanVien.Properties)).BeginInit();
+            this.txtTenNhanVien = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCMND.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoDienThoai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDangHoatDong.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenNhanVien.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -59,13 +59,6 @@
             this.labelControl1.Size = new System.Drawing.Size(79, 13);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tên nhân viên";
-            // 
-            // txtTenNhanVien
-            // 
-            this.txtTenNhanVien.Location = new System.Drawing.Point(108, 18);
-            this.txtTenNhanVien.Name = "txtTenNhanVien";
-            this.txtTenNhanVien.Size = new System.Drawing.Size(163, 20);
-            this.txtTenNhanVien.TabIndex = 1;
             // 
             // txtCMND
             // 
@@ -169,11 +162,19 @@
             this.lablelDangQuanLy.TabIndex = 10;
             this.lablelDangQuanLy.Text = "Đang quản lý";
             // 
+            // txtTenNhanVien
+            // 
+            this.txtTenNhanVien.Location = new System.Drawing.Point(108, 18);
+            this.txtTenNhanVien.Name = "txtTenNhanVien";
+            this.txtTenNhanVien.Size = new System.Drawing.Size(163, 20);
+            this.txtTenNhanVien.TabIndex = 16;
+            // 
             // frmThemNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 188);
+            this.Controls.Add(this.txtTenNhanVien);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.chkDangHoatDong);
@@ -186,19 +187,19 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtCMND);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.txtTenNhanVien);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmThemNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm nhân viên";
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenNhanVien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCMND.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoDienThoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDangHoatDong.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenNhanVien.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +208,6 @@
         #endregion
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txtTenNhanVien;
         private DevExpress.XtraEditors.TextEdit txtCMND;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -220,5 +220,6 @@
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.XtraEditors.LabelControl lablelDangQuanLy;
+        private DevExpress.XtraEditors.TextEdit txtTenNhanVien;
     }
 }

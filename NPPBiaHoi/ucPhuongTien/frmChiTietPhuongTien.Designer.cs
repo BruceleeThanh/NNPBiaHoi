@@ -201,6 +201,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmChiTietPhuongTien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin chi tiết phương tiện";
             ((System.ComponentModel.ISupportInitialize)(this.rdoLoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaiTrong.Properties)).EndInit();

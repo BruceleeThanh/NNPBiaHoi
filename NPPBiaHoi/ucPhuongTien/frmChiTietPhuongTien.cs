@@ -7,14 +7,47 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DataAccess;
+using BussinessLogic;
 
 namespace NPPBiaHoi.ucPhuongTien
 {
     public partial class frmChiTietPhuongTien : DevExpress.XtraEditors.XtraForm
     {
-        public frmChiTietPhuongTien()
+        PhuongTien aPhuongTien;
+        PhuongTienBO aPhuongTienBO;
+        public frmChiTietPhuongTien(int ma)
         {
             InitializeComponent();
+            frmChiTietPhuongTien_Load(ma);
+        }
+        public void frmChiTietPhuongTien_Load(int ma)
+        {
+            try
+            {
+                aPhuongTienBO = new PhuongTienBO();
+                aPhuongTien = aPhuongTienBO.Select_ByMa(ma);
+                txtTen.Text = aPhuongTien.Ten;
+                txtTaiTrong.Text = aPhuongTien.TaiTrong.ToString();
+                txtBienSo.Text = aPhuongTien.BienSo;
+                mmoMieuTa.Text = aPhuongTien.MieuTa;
+                if (aPhuongTien.Loai == 1)
+                {
+                    rdoLoai.EditValue = 1;
+                }
+                else
+                {
+                    rdoLoai.EditValue = 0;
+                }
+                if (aPhuongTien.KichHoat == 1)
+                    chkDangHoatDong.Checked = true;
+                else
+                    chkDangHoatDong.Checked = false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("frmSuaPhuongTien_Load" + ex.ToString());
+            }
         }
     }
 }

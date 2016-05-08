@@ -14,38 +14,85 @@ namespace NPPBiaHoi.ucNhanVien
 {
     public partial class frmSuaNhanVien : DevExpress.XtraEditors.XtraForm
     {
-        public frmSuaNhanVien()
+        public ucNhanVien aucNhanVien;
+        NhanVien aNhanVien;
+        NhanVienBO aNhanVienBO;
+        public frmSuaNhanVien(int ma, ucNhanVien aucNhanVien)
         {
             InitializeComponent();
+            frmSuaNhanVien_Load(ma);
         }
+
+        public void frmSuaNhanVien_Load(int ma)
+        {
+            try
+            {
+                aNhanVienBO = new NhanVienBO();
+                aNhanVien = aNhanVienBO.Select_ByMa(ma);
+                txtTenNhanVien.Text = aNhanVien.Ten;
+                txtCMND.Text = aNhanVien.CMND;
+                txtDiaChi.Text = aNhanVien.DiaChi;
+                txtEmail.Text = aNhanVien.Email;
+                txtSoDienThoai.Text = aNhanVien.SoDienThoai;
+                if (aNhanVien.KichHoat == 1)
+                    chkDangHoatDong.Checked = true;
+                else
+                    chkDangHoatDong.Checked = false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("frmSuaNhanVien_Load" + ex.ToString());
+            }
+        }
+        
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            NhanVien aNhanVien = new NhanVien();
-            aNhanVien.Ten = txtTenNhanVien.Text;
-            aNhanVien.CMND = txtCMND.Text;
-            aNhanVien.DiaChi = txtDiaChi.Text;
-            aNhanVien.SoDienThoai = txtSoDienThoai.Text;
-            aNhanVien.Email = txtEmail.Text;
-            if (chkDangHoatDong.Checked == true)
+            try
             {
-                aNhanVien.KichHoat = 1;
-            }
-            else
-            {
-                aNhanVien.KichHoat = 0;
-            }
+                aNhanVien = new NhanVien();
+                aNhanVien.Ten = txtTenNhanVien.Text;
+                aNhanVien.CMND = txtCMND.Text;
+                aNhanVien.DiaChi = txtDiaChi.Text;
+                aNhanVien.SoDienThoai = txtSoDienThoai.Text;
+                aNhanVien.Email = txtEmail.Text;
+                if (chkDangHoatDong.Checked == true)
+                {
+                    aNhanVien.KichHoat = 1;
+                }
+                else
+                {
+                    aNhanVien.KichHoat = 0;
+                }
 
-            NhanVienBO aNhanVienBO = new NhanVienBO();
-            aNhanVienBO.Update(aNhanVien);
+                if (string.IsNullOrEmpty(txtTenNhanVien.Text))
+                    return;
+                aNhanVienBO = new NhanVienBO();
+                aNhanVienBO.Update(aNhanVien);
+                aucNhanVien.ucNhanVien_Load();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("btnLuu_Click" + ex.ToString());
+            }
+            
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn hủy!", "Thông báo..", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            try
             {
-                this.Close();
+                if (MessageBox.Show("Bạn muốn hủy!", "Thông báo..", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    this.Close();
+                }
             }
+            catch (Exception ex)
+            {
+                throw new Exception("btnHuy_Click" + ex.ToString());
+            }
+            
         }
     }
 }

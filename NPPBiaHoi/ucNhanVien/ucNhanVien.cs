@@ -18,19 +18,68 @@ namespace NPPBiaHoi.ucNhanVien
         public ucNhanVien()
         {
             InitializeComponent();
+            ucNhanVien_Load();
         }
 
         public void ucNhanVien_Load()
         {
-            NhanVienBO aNhanVienBO = new NhanVienBO();
-            aListNhanVien = aNhanVienBO.SelectAll();
-            grdNhanVien.DataSource = aListNhanVien;
+            try
+            {
+                NhanVienBO aNhanVienBO = new NhanVienBO();
+                aListNhanVien = aNhanVienBO.SelectAll();
+                grdNhanVien.DataSource = aListNhanVien;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ucNhanVien_Load" + ex.ToString());
+            }
         }
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
-            frmThemNhanVien afrmThemNhanVien = new frmThemNhanVien();
-            afrmThemNhanVien.ShowDialog();
+            try
+            {
+                frmThemNhanVien afrmThemNhanVien = new frmThemNhanVien(this);
+                afrmThemNhanVien.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("btnThemNhanVien_click" + ex.ToString());
+            }
         }
+
+        private void btnSua_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            try
+            {
+                int ma = int.Parse(grvNhanVien.GetFocusedRowCellValue("Ma").ToString());
+                frmSuaNhanVien afrmSuaNhanVien = new frmSuaNhanVien(ma , this);
+                afrmSuaNhanVien.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("btnSua_ButtonClick" + ex.ToString());
+            }
+        }
+
+        private void btnXoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            try
+            {
+                int ma = int.Parse(grvNhanVien.GetFocusedRowCellValue("Ma").ToString());
+                NhanVienBO aNhanVienBO = new NhanVienBO();
+                if (MessageBox.Show("Bạn muốn xóa!", "Thông báo..", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    aNhanVienBO.Delete(ma);
+                    ucNhanVien_Load();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("btnXoa_ButtonClick" + ex.ToString());
+            }
+        }
+
     }
 }

@@ -41,8 +41,8 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtCMND = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTenNhanVien = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTenNhanVien = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDangHoatDong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
@@ -153,13 +153,6 @@
             this.labelControl2.TabIndex = 17;
             this.labelControl2.Text = "CMND";
             // 
-            // txtTenNhanVien
-            // 
-            this.txtTenNhanVien.Location = new System.Drawing.Point(104, 17);
-            this.txtTenNhanVien.Name = "txtTenNhanVien";
-            this.txtTenNhanVien.Size = new System.Drawing.Size(163, 20);
-            this.txtTenNhanVien.TabIndex = 16;
-            // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
@@ -169,11 +162,19 @@
             this.labelControl1.TabIndex = 15;
             this.labelControl1.Text = "Tên nhân viên";
             // 
+            // txtTenNhanVien
+            // 
+            this.txtTenNhanVien.Location = new System.Drawing.Point(104, 17);
+            this.txtTenNhanVien.Name = "txtTenNhanVien";
+            this.txtTenNhanVien.Size = new System.Drawing.Size(163, 20);
+            this.txtTenNhanVien.TabIndex = 29;
+            // 
             // frmSuaNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 188);
+            this.Controls.Add(this.txtTenNhanVien);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.chkDangHoatDong);
@@ -186,12 +187,12 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtCMND);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.txtTenNhanVien);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSuaNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa thông tin nhân viên";
             ((System.ComponentModel.ISupportInitialize)(this.chkDangHoatDong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
@@ -218,7 +219,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtCMND;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txtTenNhanVien;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txtTenNhanVien;
     }
 }

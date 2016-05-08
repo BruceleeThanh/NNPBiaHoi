@@ -100,6 +100,7 @@
             this.btnThemAnh.Size = new System.Drawing.Size(90, 26);
             this.btnThemAnh.TabIndex = 29;
             this.btnThemAnh.Text = "Thêm ảnh";
+            this.btnThemAnh.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
             // labelControl4
             // 
@@ -206,6 +207,7 @@
             this.btnLuu.Size = new System.Drawing.Size(64, 26);
             this.btnLuu.TabIndex = 18;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -218,6 +220,7 @@
             this.btnHuy.Size = new System.Drawing.Size(64, 26);
             this.btnHuy.TabIndex = 17;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // frmSuaPhuongTien
             // 
@@ -245,6 +248,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSuaPhuongTien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa thông tin phương tiện";
             ((System.ComponentModel.ISupportInitialize)(this.rdoLoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaiTrong.Properties)).EndInit();

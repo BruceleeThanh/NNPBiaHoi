@@ -82,7 +82,7 @@
             this.colTenPhuongTien.AppearanceHeader.Options.UseFont = true;
             this.colTenPhuongTien.AppearanceHeader.Options.UseTextOptions = true;
             this.colTenPhuongTien.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colTenPhuongTien.Caption = "Tên phương tiện";
+            this.colTenPhuongTien.Caption = "Tên chi phí";
             this.colTenPhuongTien.FieldName = "Ten";
             this.colTenPhuongTien.Name = "colTenPhuongTien";
             this.colTenPhuongTien.Visible = true;
@@ -144,6 +144,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSua.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnSua.Name = "btnSua";
             this.btnSua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnSua.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSua_ButtonClick);
             // 
             // colXoa
             // 
@@ -165,6 +166,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnXoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXoa_ButtonClick);
             // 
             // btnThem
             // 
@@ -174,6 +176,7 @@
             this.btnThem.Size = new System.Drawing.Size(64, 23);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // ucChiPhiPhuongTien
             // 
