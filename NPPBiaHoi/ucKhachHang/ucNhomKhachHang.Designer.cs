@@ -1,4 +1,4 @@
-﻿namespace NPPBiaHoi.ucKhachHang
+namespace NPPBiaHoi.ucKhachHang
 {
     partial class ucNhomKhachHang
     {
@@ -19,7 +19,7 @@
             }
             base.Dispose(disposing);
         }
-
+         
         #region Component Designer generated code
 
         /// <summary> 

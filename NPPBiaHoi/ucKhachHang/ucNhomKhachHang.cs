@@ -27,7 +27,7 @@ namespace NPPBiaHoi.ucKhachHang
             try
             {
                 frmThemNhomKhachHang afrmThemNhomKhachHang = new frmThemNhomKhachHang(this);
-                afrmThemNhomKhachHang.ShowDialog();
+                afrmThemNhomKhachHang.ShowDialog(); 
             }
             catch (Exception ex)
             {
