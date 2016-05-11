@@ -1,6 +1,6 @@
 ﻿namespace NPPBiaHoi.ucSanPham
 {
-    partial class ThemSanPham
+    partial class frmThemSanPham
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemSanPham));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemSanPham));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtTenSanPham = new DevExpress.XtraEditors.TextEdit();
             this.txtDungTich = new DevExpress.XtraEditors.TextEdit();
@@ -123,7 +123,7 @@
             // 
             this.picAnh.Location = new System.Drawing.Point(328, 50);
             this.picAnh.Name = "picAnh";
-            this.picAnh.Properties.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureEdit1.Properties.InitialImage")));
+            this.picAnh.Properties.InitialImage = ((System.Drawing.Image)(resources.GetObject("picAnh.Properties.InitialImage")));
             this.picAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picAnh.Size = new System.Drawing.Size(150, 150);
             this.picAnh.TabIndex = 16;
@@ -145,6 +145,7 @@
             this.btnLuu.Size = new System.Drawing.Size(66, 26);
             this.btnLuu.TabIndex = 22;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -156,6 +157,7 @@
             this.btnHuy.Size = new System.Drawing.Size(66, 26);
             this.btnHuy.TabIndex = 23;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThemAnh
             // 
@@ -167,6 +169,7 @@
             this.btnThemAnh.Size = new System.Drawing.Size(98, 24);
             this.btnThemAnh.TabIndex = 25;
             this.btnThemAnh.Text = "Thêm ảnh";
+            this.btnThemAnh.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
             // rdoLoai
             // 
@@ -177,12 +180,12 @@
             this.rdoLoai.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rdoLoai.Properties.Columns = 2;
             this.rdoLoai.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(0)), "Keg"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Sọt")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Keg"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Sọt")});
             this.rdoLoai.Size = new System.Drawing.Size(187, 25);
             this.rdoLoai.TabIndex = 26;
             // 
-            // ThemSanPham
+            // frmThemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,7 +207,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ThemSanPham";
+            this.Name = "frmThemSanPham";
             this.Text = "Thêm sản phẩm";
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSanPham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDungTich.Properties)).EndInit();

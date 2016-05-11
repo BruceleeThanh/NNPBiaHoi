@@ -60,8 +60,8 @@
             this.rdoLoai.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rdoLoai.Properties.Columns = 2;
             this.rdoLoai.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(0)), "Keg"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Sọt")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Keg"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Sọt")});
             this.rdoLoai.Size = new System.Drawing.Size(187, 25);
             this.rdoLoai.TabIndex = 40;
             // 
@@ -75,6 +75,7 @@
             this.btnThemAnh.Size = new System.Drawing.Size(98, 24);
             this.btnThemAnh.TabIndex = 39;
             this.btnThemAnh.Text = "Thêm ảnh";
+            this.btnThemAnh.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
             // btnHuy
             // 
@@ -86,6 +87,7 @@
             this.btnHuy.Size = new System.Drawing.Size(66, 26);
             this.btnHuy.TabIndex = 38;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -97,6 +99,7 @@
             this.btnLuu.Size = new System.Drawing.Size(66, 26);
             this.btnLuu.TabIndex = 37;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // mmoMieuTa
             // 

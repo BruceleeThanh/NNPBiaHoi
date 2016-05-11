@@ -40,9 +40,9 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtTenSanPham = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtSoLuongSanPham = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtSoLuongVo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.rdoLoai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmoMieuTa.Properties)).BeginInit();
@@ -50,8 +50,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkDangQuanLy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDungTich.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSanPham.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongSanPham.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongVo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // rdoLoai
@@ -63,8 +63,8 @@
             this.rdoLoai.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rdoLoai.Properties.Columns = 2;
             this.rdoLoai.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(0)), "Keg"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Sọt")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Keg"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Sọt")});
             this.rdoLoai.Size = new System.Drawing.Size(127, 25);
             this.rdoLoai.TabIndex = 38;
             // 
@@ -152,12 +152,12 @@
             this.labelControl1.TabIndex = 27;
             this.labelControl1.Text = "Tên sản phẩm";
             // 
-            // textEdit1
+            // txtSoLuongSanPham
             // 
-            this.textEdit1.Location = new System.Drawing.Point(137, 92);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(187, 20);
-            this.textEdit1.TabIndex = 40;
+            this.txtSoLuongSanPham.Location = new System.Drawing.Point(137, 92);
+            this.txtSoLuongSanPham.Name = "txtSoLuongSanPham";
+            this.txtSoLuongSanPham.Size = new System.Drawing.Size(187, 20);
+            this.txtSoLuongSanPham.TabIndex = 40;
             // 
             // labelControl2
             // 
@@ -168,12 +168,12 @@
             this.labelControl2.TabIndex = 39;
             this.labelControl2.Text = "Số lượng sản phẩm";
             // 
-            // textEdit2
+            // txtSoLuongVo
             // 
-            this.textEdit2.Location = new System.Drawing.Point(137, 129);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(187, 20);
-            this.textEdit2.TabIndex = 42;
+            this.txtSoLuongVo.Location = new System.Drawing.Point(137, 129);
+            this.txtSoLuongVo.Name = "txtSoLuongVo";
+            this.txtSoLuongVo.Size = new System.Drawing.Size(187, 20);
+            this.txtSoLuongVo.TabIndex = 42;
             // 
             // labelControl3
             // 
@@ -188,10 +188,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 267);
-            this.Controls.Add(this.textEdit2);
+            this.ClientSize = new System.Drawing.Size(528, 271);
+            this.Controls.Add(this.txtSoLuongVo);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txtSoLuongSanPham);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.rdoLoai);
             this.Controls.Add(this.mmoMieuTa);
@@ -215,8 +215,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkDangQuanLy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDungTich.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSanPham.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongSanPham.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongVo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,9 +235,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtTenSanPham;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtSoLuongSanPham;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtSoLuongVo;
         private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }
