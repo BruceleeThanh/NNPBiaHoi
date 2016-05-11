@@ -1,4 +1,4 @@
-﻿namespace NPPBiaHoi.ucKhachHang
+namespace NPPBiaHoi.ucKhachHang
 {
     partial class ucKhachHang
     {
@@ -32,7 +32,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.grdKhachHang = new DevExpress.XtraGrid.GridControl();
             this.grvKhachHang = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTenKhachHang = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -41,36 +41,37 @@
             this.colSoDienThoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKhoangCach = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDangQuanLy = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colChiTiet = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSua = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnChiTiet = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.chkDangQuanLy = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.colChiTiet = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnChiTiet = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colSua = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnSua = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.grdKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvKhachHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnChiTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDangQuanLy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChiTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
             this.SuspendLayout();
             // 
-            // simpleButton1
+            // btnThem
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(27, 19);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(83, 39);
-            this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "Thêm";
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnThem.Appearance.Options.UseFont = true;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(16, 19);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(83, 39);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // grdKhachHang
             // 
             this.grdKhachHang.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grdKhachHang.Location = new System.Drawing.Point(0, 73);
+            this.grdKhachHang.Location = new System.Drawing.Point(0, 64);
             this.grdKhachHang.MainView = this.grvKhachHang;
             this.grdKhachHang.Name = "grdKhachHang";
             this.grdKhachHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -78,7 +79,7 @@
             this.chkDangQuanLy,
             this.btnSua,
             this.btnXoa});
-            this.grdKhachHang.Size = new System.Drawing.Size(1227, 696);
+            this.grdKhachHang.Size = new System.Drawing.Size(1227, 632);
             this.grdKhachHang.TabIndex = 4;
             this.grdKhachHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvKhachHang});
@@ -113,6 +114,7 @@
             this.colTenKhachHang.Caption = "Khách hàng";
             this.colTenKhachHang.FieldName = "Ten";
             this.colTenKhachHang.Name = "colTenKhachHang";
+            this.colTenKhachHang.OptionsColumn.ReadOnly = true;
             this.colTenKhachHang.Visible = true;
             this.colTenKhachHang.VisibleIndex = 0;
             this.colTenKhachHang.Width = 203;
@@ -122,6 +124,7 @@
             this.colTenChuCuaHang.Caption = "Tên chủ cửa hàng";
             this.colTenChuCuaHang.FieldName = "TenChuCuaHang";
             this.colTenChuCuaHang.Name = "colTenChuCuaHang";
+            this.colTenChuCuaHang.OptionsColumn.ReadOnly = true;
             this.colTenChuCuaHang.Visible = true;
             this.colTenChuCuaHang.VisibleIndex = 1;
             this.colTenChuCuaHang.Width = 168;
@@ -131,6 +134,7 @@
             this.colDiaChi.Caption = "Địa chỉ";
             this.colDiaChi.FieldName = "DiaChi";
             this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.OptionsColumn.ReadOnly = true;
             this.colDiaChi.Visible = true;
             this.colDiaChi.VisibleIndex = 2;
             this.colDiaChi.Width = 292;
@@ -140,6 +144,7 @@
             this.colSoDienThoai.Caption = "Số điện thoại";
             this.colSoDienThoai.FieldName = "SoDienThoai";
             this.colSoDienThoai.Name = "colSoDienThoai";
+            this.colSoDienThoai.OptionsColumn.ReadOnly = true;
             this.colSoDienThoai.Visible = true;
             this.colSoDienThoai.VisibleIndex = 3;
             this.colSoDienThoai.Width = 121;
@@ -149,6 +154,7 @@
             this.colKhoangCach.Caption = "Khoảng cách";
             this.colKhoangCach.FieldName = "KhoangCach";
             this.colKhoangCach.Name = "colKhoangCach";
+            this.colKhoangCach.OptionsColumn.ReadOnly = true;
             this.colKhoangCach.Visible = true;
             this.colKhoangCach.VisibleIndex = 4;
             this.colKhoangCach.Width = 138;
@@ -159,9 +165,19 @@
             this.colDangQuanLy.ColumnEdit = this.chkDangQuanLy;
             this.colDangQuanLy.FieldName = "KichHoat";
             this.colDangQuanLy.Name = "colDangQuanLy";
+            this.colDangQuanLy.OptionsColumn.ReadOnly = true;
             this.colDangQuanLy.Visible = true;
             this.colDangQuanLy.VisibleIndex = 5;
             this.colDangQuanLy.Width = 103;
+            // 
+            // chkDangQuanLy
+            // 
+            this.chkDangQuanLy.AutoHeight = false;
+            this.chkDangQuanLy.Caption = "Đang quản lý";
+            this.chkDangQuanLy.Name = "chkDangQuanLy";
+            this.chkDangQuanLy.ReadOnly = true;
+            this.chkDangQuanLy.ValueChecked = ((byte)(1));
+            this.chkDangQuanLy.ValueUnchecked = ((byte)(0));
             // 
             // colChiTiet
             // 
@@ -172,6 +188,15 @@
             this.colChiTiet.VisibleIndex = 6;
             this.colChiTiet.Width = 66;
             // 
+            // btnChiTiet
+            // 
+            this.btnChiTiet.AutoHeight = false;
+            this.btnChiTiet.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnChiTiet.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.btnChiTiet.Name = "btnChiTiet";
+            this.btnChiTiet.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnChiTiet.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnChiTiet_ButtonClick);
+            // 
             // colSua
             // 
             this.colSua.Caption = "Sửa";
@@ -180,20 +205,6 @@
             this.colSua.Visible = true;
             this.colSua.VisibleIndex = 7;
             this.colSua.Width = 46;
-            // 
-            // btnChiTiet
-            // 
-            this.btnChiTiet.AutoHeight = false;
-            this.btnChiTiet.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnChiTiet.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-            this.btnChiTiet.Name = "btnChiTiet";
-            this.btnChiTiet.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // chkDangQuanLy
-            // 
-            this.chkDangQuanLy.AutoHeight = false;
-            this.chkDangQuanLy.Caption = "Đang quản lý";
-            this.chkDangQuanLy.Name = "chkDangQuanLy";
             // 
             // btnSua
             // 
@@ -204,6 +215,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSua.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnSua.Name = "btnSua";
             this.btnSua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnSua.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSua_ButtonClick);
             // 
             // colXoa
             // 
@@ -223,19 +235,21 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnXoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXoa_ButtonClick);
             // 
             // ucKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.grdKhachHang);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnThem);
             this.Name = "ucKhachHang";
-            this.Size = new System.Drawing.Size(1227, 769);
+            this.Size = new System.Drawing.Size(1227, 696);
+            this.Load += new System.EventHandler(this.ucKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdKhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvKhachHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnChiTiet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDangQuanLy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChiTiet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
             this.ResumeLayout(false);
@@ -244,7 +258,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
         private DevExpress.XtraGrid.GridControl grdKhachHang;
         private DevExpress.XtraGrid.Views.Grid.GridView grvKhachHang;
         private DevExpress.XtraGrid.Columns.GridColumn colTenKhachHang;

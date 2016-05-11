@@ -104,6 +104,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnHuy.Size = new System.Drawing.Size(86, 32);
             this.btnHuy.TabIndex = 9;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -116,6 +117,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnLuu.Size = new System.Drawing.Size(86, 32);
             this.btnLuu.TabIndex = 8;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // frmSuaNhomKhachHang
             // 
@@ -135,6 +137,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.MinimizeBox = false;
             this.Name = "frmSuaNhomKhachHang";
             this.Text = "Sửa thông tin nhóm khách hàng";
+            this.Load += new System.EventHandler(this.frmSuaNhomKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chkDangQuanLy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmoMoTa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).EndInit();

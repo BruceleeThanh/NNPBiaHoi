@@ -54,7 +54,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.lueNhomKhachHang = new DevExpress.XtraEditors.LookUpEdit();
             this.btnThemAnh = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemNhomKhachHang = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChuCuaHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
@@ -208,6 +208,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.chkDangQuanLy.Properties.Caption = "";
             this.chkDangQuanLy.Size = new System.Drawing.Size(18, 19);
             this.chkDangQuanLy.TabIndex = 21;
+            this.chkDangQuanLy.CheckedChanged += new System.EventHandler(this.chkDangQuanLy_CheckedChanged);
             // 
             // mmoHoTroDauTu
             // 
@@ -236,9 +237,13 @@ namespace NPPBiaHoi.ucKhachHang
             // 
             this.picAnh.Location = new System.Drawing.Point(552, 297);
             this.picAnh.Name = "picAnh";
+            this.picAnh.Properties.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picAnh.Properties.ErrorImage")));
+            this.picAnh.Properties.InitialImage = ((System.Drawing.Image)(resources.GetObject("picAnh.Properties.InitialImage")));
             this.picAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.picAnh.Size = new System.Drawing.Size(197, 191);
             this.picAnh.TabIndex = 25;
+            this.picAnh.EditValueChanged += new System.EventHandler(this.picAnh_EditValueChanged);
             // 
             // btnLuu
             // 
@@ -250,6 +255,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnLuu.Size = new System.Drawing.Size(72, 38);
             this.btnLuu.TabIndex = 26;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -261,6 +267,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnHuy.Size = new System.Drawing.Size(69, 38);
             this.btnHuy.TabIndex = 27;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // lueNhomKhachHang
             // 
@@ -281,24 +288,26 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnThemAnh.Size = new System.Drawing.Size(101, 38);
             this.btnThemAnh.TabIndex = 29;
             this.btnThemAnh.Text = "Thêm ảnh";
+            this.btnThemAnh.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
-            // simpleButton1
+            // btnThemNhomKhachHang
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(369, 42);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(32, 25);
-            this.simpleButton1.TabIndex = 30;
+            this.btnThemNhomKhachHang.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnThemNhomKhachHang.Appearance.Options.UseFont = true;
+            this.btnThemNhomKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNhomKhachHang.Image")));
+            this.btnThemNhomKhachHang.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnThemNhomKhachHang.Location = new System.Drawing.Point(369, 42);
+            this.btnThemNhomKhachHang.Name = "btnThemNhomKhachHang";
+            this.btnThemNhomKhachHang.Size = new System.Drawing.Size(32, 25);
+            this.btnThemNhomKhachHang.TabIndex = 30;
+            this.btnThemNhomKhachHang.Click += new System.EventHandler(this.btnThemNhomKhachHang_Click);
             // 
             // frmThemKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 648);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnThemNhomKhachHang);
             this.Controls.Add(this.btnThemAnh);
             this.Controls.Add(this.lueNhomKhachHang);
             this.Controls.Add(this.btnHuy);
@@ -328,7 +337,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.MinimizeBox = false;
             this.Name = "frmThemKhachHang";
             this.Text = "Thêm mới khách hàng";
-            this.Load += new System.EventHandler(this.frmThemKH_Load);
+            this.Load += new System.EventHandler(this.frmThemKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChuCuaHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
@@ -372,6 +381,6 @@ namespace NPPBiaHoi.ucKhachHang
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.XtraEditors.LookUpEdit lueNhomKhachHang;
         private DevExpress.XtraEditors.SimpleButton btnThemAnh;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnThemNhomKhachHang;
     }
 }

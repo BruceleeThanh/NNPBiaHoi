@@ -78,6 +78,7 @@
             this.btnThemNhomKhachHang.Name = "btnThemNhomKhachHang";
             this.btnThemNhomKhachHang.Size = new System.Drawing.Size(32, 25);
             this.btnThemNhomKhachHang.TabIndex = 56;
+            this.btnThemNhomKhachHang.Click += new System.EventHandler(this.btnThemNhomKhachHang_Click);
             // 
             // btnThemAnh
             // 
@@ -104,11 +105,12 @@
             this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnHuy.Appearance.Options.UseFont = true;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(689, 592);
+            this.btnHuy.Location = new System.Drawing.Point(685, 592);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(69, 38);
+            this.btnHuy.Size = new System.Drawing.Size(73, 38);
             this.btnHuy.TabIndex = 53;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -117,9 +119,10 @@
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.Location = new System.Drawing.Point(590, 592);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(72, 38);
+            this.btnLuu.Size = new System.Drawing.Size(73, 38);
             this.btnLuu.TabIndex = 52;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // picAnh
             // 
@@ -160,6 +163,7 @@
             this.chkDangQuanLy.Properties.Caption = "";
             this.chkDangQuanLy.Size = new System.Drawing.Size(18, 19);
             this.chkDangQuanLy.TabIndex = 47;
+            this.chkDangQuanLy.CheckedChanged += new System.EventHandler(this.chkDangQuanLy_CheckedChanged);
             // 
             // labelControl11
             // 
@@ -297,7 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 648);
+            this.ClientSize = new System.Drawing.Size(787, 648);
             this.Controls.Add(this.btnThemNhomKhachHang);
             this.Controls.Add(this.btnThemAnh);
             this.Controls.Add(this.lueNhomKhachHang);
@@ -328,6 +332,7 @@
             this.MinimizeBox = false;
             this.Name = "frmSuaKhachHang";
             this.Text = "Sửa thông tin khách hàng";
+            this.Load += new System.EventHandler(this.frmSuaKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lueNhomKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmoGhiChu.Properties)).EndInit();
