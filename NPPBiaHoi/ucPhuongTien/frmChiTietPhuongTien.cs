@@ -16,6 +16,8 @@ namespace NPPBiaHoi.ucPhuongTien
     {
         PhuongTien aPhuongTien;
         PhuongTienBO aPhuongTienBO;
+        private string fileName = null;
+        private ConvertImage aConvertImage;
         public frmChiTietPhuongTien(int ma)
         {
             InitializeComponent();
@@ -26,11 +28,16 @@ namespace NPPBiaHoi.ucPhuongTien
             try
             {
                 aPhuongTienBO = new PhuongTienBO();
+                aConvertImage = new ConvertImage();
                 aPhuongTien = aPhuongTienBO.Select_ByMa(ma);
                 txtTen.Text = aPhuongTien.Ten;
                 txtTaiTrong.Text = aPhuongTien.TaiTrong.ToString();
                 txtBienSo.Text = aPhuongTien.BienSo;
                 mmoMieuTa.Text = aPhuongTien.MieuTa;
+                if (aPhuongTien.HinhAnh != null)
+                {
+                    picAnh.Image = aConvertImage.ConvertByteToImage(aPhuongTien.HinhAnh);
+                }
                 if (aPhuongTien.Loai == 1)
                 {
                     rdoLoai.EditValue = 1;

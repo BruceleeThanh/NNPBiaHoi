@@ -40,7 +40,7 @@ namespace NPPBiaHoi.ucPhuongTien
                 aChiPhiPhuongTien.Ten = txtTen.Text;
                 aChiPhiPhuongTien.TienPhi = int.Parse(txtSoTien.Text);
                 aChiPhiPhuongTien.MieuTa = mmoMieuTa.Text;
-                //aChiPhiPhuongTien.ThoiGian = int.Parse(timeThoiGian.DateTime.ToString());
+                aChiPhiPhuongTien.ThoiGian = timeThoiGian.DateTime;
                 
                 aChiPhiPhuongTien.MaPhuongTien = int.Parse(luePhuongTien.GetColumnValue("Ma").ToString());
                 

@@ -85,6 +85,7 @@
             this.colTenPhuongTien.Caption = "Tên chi phí";
             this.colTenPhuongTien.FieldName = "Ten";
             this.colTenPhuongTien.Name = "colTenPhuongTien";
+            this.colTenPhuongTien.OptionsColumn.ReadOnly = true;
             this.colTenPhuongTien.Visible = true;
             this.colTenPhuongTien.VisibleIndex = 0;
             // 
@@ -97,6 +98,7 @@
             this.colThoiGian.Caption = "Thời gian";
             this.colThoiGian.FieldName = "ThoiGian";
             this.colThoiGian.Name = "colThoiGian";
+            this.colThoiGian.OptionsColumn.ReadOnly = true;
             this.colThoiGian.Visible = true;
             this.colThoiGian.VisibleIndex = 1;
             // 
@@ -109,6 +111,7 @@
             this.colTienPhi.Caption = "Tiền phí";
             this.colTienPhi.FieldName = "TienPhi";
             this.colTienPhi.Name = "colTienPhi";
+            this.colTienPhi.OptionsColumn.ReadOnly = true;
             this.colTienPhi.Visible = true;
             this.colTienPhi.VisibleIndex = 2;
             // 
@@ -121,6 +124,7 @@
             this.colMieuTa.Caption = "Miêu tả";
             this.colMieuTa.FieldName = "MieuTa";
             this.colMieuTa.Name = "colMieuTa";
+            this.colMieuTa.OptionsColumn.ReadOnly = true;
             this.colMieuTa.Visible = true;
             this.colMieuTa.VisibleIndex = 3;
             // 

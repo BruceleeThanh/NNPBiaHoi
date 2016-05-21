@@ -15,20 +15,27 @@ namespace NPPBiaHoi.ucPhuongTien
 	public partial class frmThemPhuongTien: DevExpress.XtraEditors.XtraForm
 	{
         ucPhuongTien aucPhuongTien;
+        private string fileName = null;
         public frmThemPhuongTien(ucPhuongTien aucPhuongTien)
 		{
             InitializeComponent();
+            this.aucPhuongTien = aucPhuongTien;
 		}
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try
             {
+                ConvertImage aConvertImage = new ConvertImage();
                 PhuongTien aPhuongTien = new PhuongTien();
                 aPhuongTien.Ten = txtTen.Text;
                 aPhuongTien.TaiTrong = int.Parse(txtTaiTrong.Text);
                 aPhuongTien.BienSo = txtBienSo.Text;
                 aPhuongTien.MieuTa = mmoMieuTa.Text;
+                if (fileName != null)
+                {
+                    aPhuongTien.HinhAnh = aConvertImage.ConvertImagePathToByte(fileName);
+                }
                 if (rdoLoai.EditValue.ToString() == "1")
                 {
                     aPhuongTien.Loai = 1;
@@ -78,11 +85,19 @@ namespace NPPBiaHoi.ucPhuongTien
         {
             try
             {
-                
+                OpenFileDialog fileDiaLog = new OpenFileDialog();
+                fileDiaLog.Title = "Chọn ảnh sản phẩm";
+                fileDiaLog.Filter = "JPG|*.jpg|PNG|*.png|GIF|*.gif";
+                fileDiaLog.Multiselect = false;
+                if (fileDiaLog.ShowDialog() == DialogResult.OK)
+                {
+                    fileName = fileDiaLog.FileName;
+                    picAnh.Image = Image.FromFile(fileDiaLog.FileName);
+                }
             }
             catch (Exception ex)
             {
-                throw new Exception("btnThemAnh_Click" + ex.ToString());
+                MessageBox.Show("frmThemSanPham.btnThemAnh_Click: " + ex.ToString());
             }
         }
     }

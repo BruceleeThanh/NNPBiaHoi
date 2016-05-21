@@ -44,7 +44,7 @@ namespace NPPBiaHoi.ucPhuongTien
                 txtTen.Text = aChiPhiPhuongTien.Ten;
                 txtSoTien.Text = aChiPhiPhuongTien.TienPhi.ToString();
                 mmoMieuTa.Text = aChiPhiPhuongTien.MieuTa;
-                //timeThoiGian.DateTime = Convert.ToDateTime(aChiPhiPhuongTien.ThoiGian.ToString());
+                timeThoiGian.DateTime = Convert.ToDateTime(aChiPhiPhuongTien.ThoiGian);
 
                 PhuongTien aPhuongTien = new PhuongTien();
                 PhuongTienBO aPhuongTienBO = new PhuongTienBO();
@@ -66,7 +66,7 @@ namespace NPPBiaHoi.ucPhuongTien
                 aChiPhiPhuongTien.Ten = txtTen.Text;
                 aChiPhiPhuongTien.TienPhi = int.Parse(txtSoTien.Text);
                 aChiPhiPhuongTien.MieuTa = mmoMieuTa.Text;
-                //aChiPhiPhuongTien.ThoiGian = int.Parse(timeThoiGian.DateTime.ToString());
+                aChiPhiPhuongTien.ThoiGian = timeThoiGian.DateTime;
 
                 aChiPhiPhuongTien.MaPhuongTien = int.Parse(luePhuongTien.GetColumnValue("Ma").ToString());
 

@@ -14,7 +14,6 @@ namespace NPPBiaHoi.ucPhuongTien
 {
     public partial class ucPhuongTien : DevExpress.XtraEditors.XtraUserControl
     {
-        List<PhuongTien> alistPhuongTien;
         public ucPhuongTien()
         {
             InitializeComponent();
@@ -34,6 +33,7 @@ namespace NPPBiaHoi.ucPhuongTien
             try
             {
                 PhuongTienBO aPhuongTienBO = new PhuongTienBO();
+                List<PhuongTien> alistPhuongTien;
                 alistPhuongTien = new List<PhuongTien>();
                 alistPhuongTien = aPhuongTienBO.SelectAll();
                 grdPhuongTien.DataSource = alistPhuongTien;
@@ -76,10 +76,10 @@ namespace NPPBiaHoi.ucPhuongTien
             try
             {
                 int ma = int.Parse(grvPhuongTien.GetFocusedRowCellValue("Ma").ToString());
-                NhanVienBO aNhanVienBO = new NhanVienBO();
+                PhuongTienBO aPhuongTienBO = new PhuongTienBO();
                 if (MessageBox.Show("Bạn muốn xóa!", "Thông báo..", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    aNhanVienBO.Delete(ma);
+                    aPhuongTienBO.Delete(ma);
                     ucPhuongTien_Load();
                 }
 

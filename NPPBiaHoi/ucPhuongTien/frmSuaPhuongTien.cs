@@ -14,12 +14,15 @@ namespace NPPBiaHoi.ucPhuongTien
 {
     public partial class frmSuaPhuongTien : DevExpress.XtraEditors.XtraForm
     {
+        private string fileName = null;
+        private ConvertImage aConvertImage;
         public ucPhuongTien aucPhuongTien;
-        PhuongTien aPhuongTien;
+        private PhuongTien aPhuongTien;
         PhuongTienBO aPhuongTienBO;
         public frmSuaPhuongTien(int ma, ucPhuongTien aucPhuongTien)
         {
             InitializeComponent();
+            this.aucPhuongTien = aucPhuongTien;
             frmSuaPhuongTien_Load(ma);
         }
 
@@ -27,12 +30,17 @@ namespace NPPBiaHoi.ucPhuongTien
         {
             try
             {
+                aConvertImage = new ConvertImage();
                 aPhuongTienBO = new PhuongTienBO();
                 aPhuongTien = aPhuongTienBO.Select_ByMa(ma);
                 txtTen.Text = aPhuongTien.Ten;
                 txtTaiTrong.Text = aPhuongTien.TaiTrong.ToString();
                 txtBienSo.Text = aPhuongTien.BienSo;
                 mmoMieuTa.Text = aPhuongTien.MieuTa;
+                if (aPhuongTien.HinhAnh != null)
+                {
+                    picAnh.Image = aConvertImage.ConvertByteToImage(aPhuongTien.HinhAnh);
+                }
                 if (aPhuongTien.Loai == 1)
                 {
                     rdoLoai.EditValue = 1;
@@ -54,18 +62,37 @@ namespace NPPBiaHoi.ucPhuongTien
 
         private void btnThemAnh_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                OpenFileDialog fileDiaLog = new OpenFileDialog();
+                fileDiaLog.Title = "Chọn ảnh sản phẩm";
+                fileDiaLog.Filter = "JPG|*.jpg|PNG|*.png|GIF|*.gif";
+                fileDiaLog.Multiselect = false;
+                if (fileDiaLog.ShowDialog() == DialogResult.OK)
+                {
+                    fileName = fileDiaLog.FileName;
+                    picAnh.Image = Image.FromFile(fileDiaLog.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmThemSanPham.btnThemAnh_Click: " + ex.ToString());
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try
             {
-                aPhuongTien = new PhuongTien();
+                ConvertImage aConvertImage = new ConvertImage();
                 aPhuongTien.Ten = txtTen.Text;
                 aPhuongTien.TaiTrong = int.Parse(txtTaiTrong.Text);
                 aPhuongTien.BienSo = txtBienSo.Text;
                 aPhuongTien.MieuTa = mmoMieuTa.Text;
+                if (fileName != null)
+                {
+                    aPhuongTien.HinhAnh = aConvertImage.ConvertImagePathToByte(fileName);
+                }
                 if (rdoLoai.EditValue.ToString() == "1")
                 {
                     aPhuongTien.Loai = 1;

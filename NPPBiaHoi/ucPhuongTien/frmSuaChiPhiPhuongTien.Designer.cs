@@ -169,6 +169,7 @@
             this.timeThoiGian.Name = "timeThoiGian";
             this.timeThoiGian.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeThoiGian.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
             this.timeThoiGian.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.timeThoiGian.Properties.DisplayFormat.FormatString = "";
