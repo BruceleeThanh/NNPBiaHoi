@@ -125,6 +125,7 @@
             this.picAnh.Name = "picAnh";
             this.picAnh.Properties.InitialImage = ((System.Drawing.Image)(resources.GetObject("picAnh.Properties.InitialImage")));
             this.picAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picAnh.Size = new System.Drawing.Size(150, 150);
             this.picAnh.TabIndex = 16;
             // 

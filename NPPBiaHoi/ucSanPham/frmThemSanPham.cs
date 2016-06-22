@@ -48,7 +48,9 @@ namespace NPPBiaHoi.ucSanPham
                 aSanPham.DungTich = Double.Parse(txtDungTich.Text);
                 aSanPham.Loai = (byte) rdoLoai.EditValue;
                 aSanPham.MieuTa = mmoMieuTa.Text;
-                aSanPham.HinhAnh = aConvertImage.ConvertImagePathToByte(fileName);
+                if(fileName != null) {
+                    aSanPham.HinhAnh = aConvertImage.ConvertImagePathToByte(fileName);
+                }
                 if(chkDangQuanLy.Checked == true) {
                     aSanPham.KichHoat = 1;
                 }

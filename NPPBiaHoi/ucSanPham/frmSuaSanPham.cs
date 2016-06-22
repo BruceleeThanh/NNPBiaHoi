@@ -19,11 +19,12 @@ namespace NPPBiaHoi.ucSanPham
         private SanPham aSanPham = null;
         private ConvertImage aConvertImage;
         private ucSanPham aucSanPham = null;
+        private SanPhamBO aSanPhamBO;
 
-        public frmSuaSanPham(SanPham aSanPham, ucSanPham aucSanPham)
+        public frmSuaSanPham(int ma, ucSanPham aucSanPham)
         {
             InitializeComponent();
-            this.aSanPham = aSanPham;
+            this.aSanPham = aSanPhamBO.Select_ByMa(ma);
             this.aucSanPham = aucSanPham;
             this.frmSuaSanPham_Load();
         }
@@ -40,7 +41,9 @@ namespace NPPBiaHoi.ucSanPham
             else {
                 chkDangQuanLy.Checked = false;
             }
-            picAnh.Image = aConvertImage.ConvertByteToImage(aSanPham.HinhAnh);
+            if(aSanPham.HinhAnh != null) {
+                picAnh.Image = aConvertImage.ConvertByteToImage(aSanPham.HinhAnh);
+            }
         }
 
         private void btnThemAnh_Click(object sender, EventArgs e) {
@@ -61,13 +64,15 @@ namespace NPPBiaHoi.ucSanPham
 
         private void btnLuu_Click(object sender, EventArgs e) {
             try {
-                SanPhamBO aSanPhamBO = new SanPhamBO();
+                aSanPhamBO = new SanPhamBO();
                 ConvertImage aConvertImage = new ConvertImage();
                 aSanPham.Ten = txtTenSanPham.Text;
                 aSanPham.DungTich = Double.Parse(txtDungTich.Text);
                 aSanPham.Loai = (byte)rdoLoai.EditValue;
                 aSanPham.MieuTa = mmoMieuTa.Text;
-                aSanPham.HinhAnh = aConvertImage.ConvertImagePathToByte(fileName);
+                if(fileName != null) {
+                    aSanPham.HinhAnh = aConvertImage.ConvertImagePathToByte(fileName);
+                }
                 if(chkDangQuanLy.Checked == true) {
                     aSanPham.KichHoat = 1;
                 }

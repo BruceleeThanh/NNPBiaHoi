@@ -113,6 +113,7 @@
             this.picAnh.Location = new System.Drawing.Point(328, 49);
             this.picAnh.Name = "picAnh";
             this.picAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picAnh.Size = new System.Drawing.Size(150, 150);
             this.picAnh.TabIndex = 35;
             // 

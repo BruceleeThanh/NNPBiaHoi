@@ -39,7 +39,9 @@ namespace NPPBiaHoi.ucSanPham
             else {
                 chkDangQuanLy.Checked = false;
             }
-            picAnh.Image = aConvertImage.ConvertByteToImage(aSanPham.HinhAnh);
+            if(aSanPham.HinhAnh != null) {
+                picAnh.Image = aConvertImage.ConvertByteToImage(aSanPham.HinhAnh);
+            }
         }
     }
 }
