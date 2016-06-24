@@ -35,7 +35,8 @@ namespace BussinessLogic {
         // Hàm này dùng để check Đăng nhập - trả về bool
         public bool Select_ByTenDangNhap_ByMatKhau(string tenDangNhap, string matKhau) {
             try {
-                if(aDatabaseDA.TaiKhoanDangNhap.Where(b => b.TenDangNhap == tenDangNhap && b.MatKhau == this.ToSHA1(matKhau)).Any()) {
+                string maHoaMatKhau = this.ToSHA1(matKhau);
+                if(aDatabaseDA.TaiKhoanDangNhap.Where(b => b.TenDangNhap == tenDangNhap && b.MatKhau == maHoaMatKhau).Any()) {
                     return true;
                 }
                 else {

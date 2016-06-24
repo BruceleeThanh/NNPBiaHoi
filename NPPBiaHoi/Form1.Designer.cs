@@ -93,7 +93,7 @@ namespace NPPBiaHoi {
             this.ribbonPageCategory1,
             this.ribbonPageCategory2,
             this.ribbonPageCategory3});
-            this.ribbonControl1.Size = new System.Drawing.Size(942, 141);
+            this.ribbonControl1.Size = new System.Drawing.Size(1099, 141);
             // 
             // btnQuanLyTuyen
             // 
@@ -360,7 +360,7 @@ namespace NPPBiaHoi {
             this.tabMain.Location = new System.Drawing.Point(0, 141);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedTabPage = this.xtraTabPage1;
-            this.tabMain.Size = new System.Drawing.Size(942, 392);
+            this.tabMain.Size = new System.Drawing.Size(1099, 392);
             this.tabMain.TabIndex = 1;
             this.tabMain.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1});
@@ -371,18 +371,22 @@ namespace NPPBiaHoi {
             // 
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.xtraTabPage1.Size = new System.Drawing.Size(936, 364);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1093, 364);
             this.xtraTabPage1.Text = "Giới thiệu";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 533);
+            this.ClientSize = new System.Drawing.Size(1099, 533);
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.ribbonControl1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản lý bán hàng - NPP Bia hơi Luân Dung";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabMain)).EndInit();
             this.tabMain.ResumeLayout(false);

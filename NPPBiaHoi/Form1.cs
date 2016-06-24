@@ -77,5 +77,16 @@ namespace NPPBiaHoi {
             XuLyTabPageEN aXuLyTabPageEN = new XuLyTabPageEN();
             aXuLyTabPageEN.ThemTabPage(tabMain, aucChiPhiPhuongTien, "Chi phí phương tiên");
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e) {
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn thoát?", "Thoát ứng dụng", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes) {
+                System.Diagnostics.Process.GetCurrentProcess().Kill();
+                System.Windows.Forms.Application.Exit();
+            }
+            else {
+                e.Cancel = true;
+            }
+        }
     }
 }
