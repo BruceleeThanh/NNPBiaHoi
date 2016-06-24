@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemChiPhiPhuongTien));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -112,6 +111,8 @@
             this.txtSoTien.Location = new System.Drawing.Point(99, 96);
             this.txtSoTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoTien.Name = "txtSoTien";
+            this.txtSoTien.Properties.Mask.EditMask = "f0";
+            this.txtSoTien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSoTien.Size = new System.Drawing.Size(416, 20);
             this.txtSoTien.TabIndex = 7;
             // 
@@ -147,7 +148,6 @@
             // 
             this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.Location = new System.Drawing.Point(374, 295);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
@@ -160,7 +160,6 @@
             // 
             this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnHuy.Appearance.Options.UseFont = true;
-            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.Location = new System.Drawing.Point(451, 295);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";

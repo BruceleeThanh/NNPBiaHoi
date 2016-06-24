@@ -100,6 +100,8 @@
             this.txtSoTien.Location = new System.Drawing.Point(100, 93);
             this.txtSoTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoTien.Name = "txtSoTien";
+            this.txtSoTien.Properties.Mask.EditMask = "f0";
+            this.txtSoTien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSoTien.Size = new System.Drawing.Size(416, 20);
             this.txtSoTien.TabIndex = 19;
             // 

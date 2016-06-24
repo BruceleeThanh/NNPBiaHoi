@@ -153,6 +153,8 @@
             this.txtTaiTrong.Location = new System.Drawing.Point(84, 102);
             this.txtTaiTrong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTaiTrong.Name = "txtTaiTrong";
+            this.txtTaiTrong.Properties.Mask.EditMask = "f0";
+            this.txtTaiTrong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTaiTrong.Size = new System.Drawing.Size(187, 20);
             this.txtTaiTrong.TabIndex = 10;
             // 

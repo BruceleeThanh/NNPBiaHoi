@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuaPhuongTien));
             this.rdoLoai = new DevExpress.XtraEditors.RadioGroup();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -93,7 +92,6 @@
             // 
             this.btnThemAnh.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnThemAnh.Appearance.Options.UseFont = true;
-            this.btnThemAnh.Image = ((System.Drawing.Image)(resources.GetObject("btnThemAnh.Image")));
             this.btnThemAnh.Location = new System.Drawing.Point(304, 216);
             this.btnThemAnh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemAnh.Name = "btnThemAnh";
@@ -118,6 +116,8 @@
             this.txtTaiTrong.Location = new System.Drawing.Point(84, 102);
             this.txtTaiTrong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTaiTrong.Name = "txtTaiTrong";
+            this.txtTaiTrong.Properties.Mask.EditMask = "f0";
+            this.txtTaiTrong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTaiTrong.Size = new System.Drawing.Size(187, 20);
             this.txtTaiTrong.TabIndex = 27;
             // 
@@ -201,7 +201,6 @@
             // 
             this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.Location = new System.Drawing.Point(370, 280);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
@@ -214,7 +213,6 @@
             // 
             this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnHuy.Appearance.Options.UseFont = true;
-            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.Location = new System.Drawing.Point(440, 280);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";

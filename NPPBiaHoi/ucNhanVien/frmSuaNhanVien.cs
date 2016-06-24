@@ -14,12 +14,13 @@ namespace NPPBiaHoi.ucNhanVien
 {
     public partial class frmSuaNhanVien : DevExpress.XtraEditors.XtraForm
     {
-        public ucNhanVien aucNhanVien;
+        public ucNhanVien bucNhanVien;
         NhanVien aNhanVien;
         NhanVienBO aNhanVienBO;
         public frmSuaNhanVien(int ma, ucNhanVien aucNhanVien)
         {
             InitializeComponent();
+            bucNhanVien = aucNhanVien;
             frmSuaNhanVien_Load(ma);
         }
 
@@ -68,9 +69,16 @@ namespace NPPBiaHoi.ucNhanVien
                 if (string.IsNullOrEmpty(txtTenNhanVien.Text))
                     return;
                 aNhanVienBO = new NhanVienBO();
-                aNhanVienBO.Update(aNhanVien);
-                aucNhanVien.ucNhanVien_Load();
-                this.Close();
+                if (aNhanVienBO.Update(aNhanVien) == true)
+                {
+                    MessageBox.Show("Sửa thông tin nhân viên thành công.", "Sửa thông tin nhân viên", MessageBoxButtons.OK);
+                    bucNhanVien.ucNhanVien_Load();
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Không thành công.", "Sửa thông tin nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {

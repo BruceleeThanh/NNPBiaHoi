@@ -116,6 +116,8 @@
             // 
             this.txtSoDienThoai.Location = new System.Drawing.Point(104, 59);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Properties.Mask.EditMask = "\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d?\\d";
+            this.txtSoDienThoai.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtSoDienThoai.Size = new System.Drawing.Size(163, 20);
             this.txtSoDienThoai.TabIndex = 21;
             // 

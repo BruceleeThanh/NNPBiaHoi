@@ -16,7 +16,7 @@ namespace NPPBiaHoi.ucPhuongTien
     {
         PhuongTien aPhuongTien;
         PhuongTienBO aPhuongTienBO;
-        private string fileName = null;
+        //private string fileName = null;
         private ConvertImage aConvertImage;
         public frmChiTietPhuongTien(int ma)
         {

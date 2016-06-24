@@ -14,7 +14,7 @@ namespace NPPBiaHoi.ucNhanVien
 {
     public partial class ucNhanVien : DevExpress.XtraEditors.XtraUserControl
     {
-        List<NhanVien> aListNhanVien = new List<NhanVien>();
+        List<NhanVien> aListNhanVien;
         public ucNhanVien()
         {
             InitializeComponent();
@@ -25,6 +25,7 @@ namespace NPPBiaHoi.ucNhanVien
         {
             try
             {
+                aListNhanVien = new List<NhanVien>();
                 NhanVienBO aNhanVienBO = new NhanVienBO();
                 aListNhanVien = aNhanVienBO.SelectAll();
                 grdNhanVien.DataSource = aListNhanVien;
