@@ -56,9 +56,9 @@
             this.btnThemNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNhanVien.Image")));
             this.btnThemNhanVien.Location = new System.Drawing.Point(12, 13);
             this.btnThemNhanVien.Name = "btnThemNhanVien";
-            this.btnThemNhanVien.Size = new System.Drawing.Size(113, 23);
+            this.btnThemNhanVien.Size = new System.Drawing.Size(63, 23);
             this.btnThemNhanVien.TabIndex = 0;
-            this.btnThemNhanVien.Text = "Thêm nhân viên";
+            this.btnThemNhanVien.Text = "Thêm";
             this.btnThemNhanVien.Click += new System.EventHandler(this.btnThemNhanVien_Click);
             // 
             // grdNhanVien

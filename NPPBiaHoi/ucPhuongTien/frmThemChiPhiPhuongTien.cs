@@ -30,12 +30,23 @@ namespace NPPBiaHoi.ucPhuongTien
             luePhuongTien.Properties.DataSource = aListPhuongTien;
             luePhuongTien.Properties.ValueMember = "Ten";
             luePhuongTien.Properties.DisplayMember = "Ten";
+            timeThoiGian.DateTime = DateTime.Now;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try
             {
+                if (string.IsNullOrEmpty(txtTen.Text))
+                {
+                    MessageBox.Show("Tên chi phí không được để trống", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+                if (string.IsNullOrEmpty(txtSoTien.Text))
+                {
+                    MessageBox.Show("Tiền phí không được để trống", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
                 ChiPhiPhuongTien aChiPhiPhuongTien = new ChiPhiPhuongTien();
                 aChiPhiPhuongTien.Ten = txtTen.Text;
                 aChiPhiPhuongTien.TienPhi = int.Parse(txtSoTien.Text);
@@ -43,17 +54,25 @@ namespace NPPBiaHoi.ucPhuongTien
                 aChiPhiPhuongTien.ThoiGian = timeThoiGian.DateTime;
                 
                 aChiPhiPhuongTien.MaPhuongTien = int.Parse(luePhuongTien.GetColumnValue("Ma").ToString());
-                
+
                 ChiPhiPhuongTienBO aChiPhiPhuongTienBO = new ChiPhiPhuongTienBO();
-                aChiPhiPhuongTienBO.Insert(aChiPhiPhuongTien);
-                aucChiPhiPhuongTien.ucChiPhiPhuongTien_Load();
-                this.Close();
+                if (aChiPhiPhuongTienBO.Insert(aChiPhiPhuongTien) == true)
+                {
+                    MessageBox.Show("Thêm chi phí phương tiện thành công.", "Thêm chi phí phương tiện", MessageBoxButtons.OK);
+                    aucChiPhiPhuongTien.ucChiPhiPhuongTien_Load();
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Không thành công.", "Thêm chi phí phương tiện", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
                 throw new Exception("btnLuu_Click" + ex.ToString());
             }
         }
+
 
         private void btnHuy_Click(object sender, EventArgs e)
         {

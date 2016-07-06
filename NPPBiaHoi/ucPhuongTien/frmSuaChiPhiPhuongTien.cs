@@ -62,7 +62,16 @@ namespace NPPBiaHoi.ucPhuongTien
         {
             try
             {
-                ChiPhiPhuongTien aChiPhiPhuongTien = new ChiPhiPhuongTien();
+                if (string.IsNullOrEmpty(txtTen.Text))
+                {
+                    MessageBox.Show("Tên chi phí không được để trống", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+                if (string.IsNullOrEmpty(txtSoTien.Text))
+                {
+                    MessageBox.Show("Tiền phí không được để trống", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
                 aChiPhiPhuongTien.Ten = txtTen.Text;
                 aChiPhiPhuongTien.TienPhi = int.Parse(txtSoTien.Text);
                 aChiPhiPhuongTien.MieuTa = mmoMieuTa.Text;
@@ -70,10 +79,17 @@ namespace NPPBiaHoi.ucPhuongTien
 
                 aChiPhiPhuongTien.MaPhuongTien = int.Parse(luePhuongTien.GetColumnValue("Ma").ToString());
 
-                ChiPhiPhuongTienBO aChiPhiPhuongTienBO = new ChiPhiPhuongTienBO();
-                aChiPhiPhuongTienBO.Insert(aChiPhiPhuongTien);
-                aucChiPhiPhuongTien.ucChiPhiPhuongTien_Load();
-                this.Close();
+                if (aChiPhiPhuongTienBO.Update(aChiPhiPhuongTien) == true)
+                {
+                    MessageBox.Show("Sửa chi phí phương tiện thành công.", "Sửa chi phí phương tiện", MessageBoxButtons.OK);
+                    aucChiPhiPhuongTien.ucChiPhiPhuongTien_Load();
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Không thành công.", "Sửa chi phí phương tiện", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             catch (Exception ex)
             {

@@ -138,7 +138,7 @@
             this.colLoai.AppearanceHeader.Options.UseTextOptions = true;
             this.colLoai.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colLoai.Caption = "Loại";
-            this.colLoai.FieldName = "Loai";
+            this.colLoai.FieldName = "sLoai";
             this.colLoai.Name = "colLoai";
             this.colLoai.OptionsColumn.ReadOnly = true;
             this.colLoai.Visible = true;

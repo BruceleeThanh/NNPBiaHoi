@@ -100,7 +100,7 @@
             this.txtSoTien.Location = new System.Drawing.Point(100, 93);
             this.txtSoTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoTien.Name = "txtSoTien";
-            this.txtSoTien.Properties.Mask.EditMask = "f0";
+            this.txtSoTien.Properties.Mask.EditMask = "f";
             this.txtSoTien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSoTien.Size = new System.Drawing.Size(416, 20);
             this.txtSoTien.TabIndex = 19;
@@ -205,6 +205,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSuaChiPhiPhuongTien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa chi phí phương tiện";
             ((System.ComponentModel.ISupportInitialize)(this.luePhuongTien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmoMieuTa.Properties)).EndInit();

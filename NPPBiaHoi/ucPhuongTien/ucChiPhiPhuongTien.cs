@@ -76,10 +76,10 @@ namespace NPPBiaHoi.ucPhuongTien
             try
             {
                 int ma = int.Parse(grvChiPhiPhuongTien.GetFocusedRowCellValue("Ma").ToString());
-                NhanVienBO aNhanVienBO = new NhanVienBO();
+                ChiPhiPhuongTienBO aChiPhiPhuongTienBO = new ChiPhiPhuongTienBO();
                 if (MessageBox.Show("Bạn muốn xóa!", "Thông báo..", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    aNhanVienBO.Delete(ma);
+                    aChiPhiPhuongTienBO.Delete(ma);
                     ucChiPhiPhuongTien_Load();
                 }
 

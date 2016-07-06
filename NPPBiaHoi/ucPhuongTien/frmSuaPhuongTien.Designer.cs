@@ -63,8 +63,8 @@
             this.rdoLoai.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rdoLoai.Properties.Columns = 2;
             this.rdoLoai.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(0)), "Xe máy"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Ô tô")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Xe máy"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Ô tô")});
             this.rdoLoai.Size = new System.Drawing.Size(187, 20);
             this.rdoLoai.TabIndex = 32;
             // 
@@ -116,7 +116,7 @@
             this.txtTaiTrong.Location = new System.Drawing.Point(84, 102);
             this.txtTaiTrong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTaiTrong.Name = "txtTaiTrong";
-            this.txtTaiTrong.Properties.Mask.EditMask = "f0";
+            this.txtTaiTrong.Properties.Mask.EditMask = "f";
             this.txtTaiTrong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTaiTrong.Size = new System.Drawing.Size(187, 20);
             this.txtTaiTrong.TabIndex = 27;

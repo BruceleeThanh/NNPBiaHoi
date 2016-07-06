@@ -51,7 +51,7 @@ namespace NPPBiaHoi.ucNhanVien
         {
             try
             {
-                aNhanVien = new NhanVien();
+                //aNhanVien = new NhanVien();
                 aNhanVien.Ten = txtTenNhanVien.Text;
                 aNhanVien.CMND = txtCMND.Text;
                 aNhanVien.DiaChi = txtDiaChi.Text;
@@ -68,7 +68,7 @@ namespace NPPBiaHoi.ucNhanVien
 
                 if (string.IsNullOrEmpty(txtTenNhanVien.Text))
                     return;
-                aNhanVienBO = new NhanVienBO();
+                //aNhanVienBO = new NhanVienBO();
                 if (aNhanVienBO.Update(aNhanVien) == true)
                 {
                     MessageBox.Show("Sửa thông tin nhân viên thành công.", "Sửa thông tin nhân viên", MessageBoxButtons.OK);

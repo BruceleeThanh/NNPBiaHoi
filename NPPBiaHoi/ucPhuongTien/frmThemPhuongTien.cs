@@ -36,14 +36,7 @@ namespace NPPBiaHoi.ucPhuongTien
                 {
                     aPhuongTien.HinhAnh = aConvertImage.ConvertImagePathToByte(fileName);
                 }
-                if (rdoLoai.EditValue.ToString() == "1")
-                {
-                    aPhuongTien.Loai = 1;
-                }
-                else
-                {
-                    aPhuongTien.Loai = 0;
-                }
+                aPhuongTien.Loai = (Byte?)((rdoLoai.SelectedIndex) + 1);
                 if (chkDangHoatDong.Checked == true)
                 {
                     aPhuongTien.KichHoat = 1;

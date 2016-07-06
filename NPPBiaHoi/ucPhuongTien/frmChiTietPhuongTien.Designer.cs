@@ -60,8 +60,9 @@
             this.rdoLoai.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rdoLoai.Properties.Columns = 2;
             this.rdoLoai.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(0)), "Xe máy"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Ô tô")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Xe máy"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Ô tô")});
+            this.rdoLoai.Properties.ReadOnly = true;
             this.rdoLoai.Size = new System.Drawing.Size(187, 20);
             this.rdoLoai.TabIndex = 48;
             // 
@@ -101,8 +102,8 @@
             this.txtTaiTrong.Location = new System.Drawing.Point(78, 93);
             this.txtTaiTrong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTaiTrong.Name = "txtTaiTrong";
-            this.txtTaiTrong.Properties.Mask.EditMask = "f0";
             this.txtTaiTrong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTaiTrong.Properties.ReadOnly = true;
             this.txtTaiTrong.Size = new System.Drawing.Size(187, 20);
             this.txtTaiTrong.TabIndex = 43;
             // 
@@ -122,6 +123,7 @@
             this.txtBienSo.Location = new System.Drawing.Point(78, 52);
             this.txtBienSo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBienSo.Name = "txtBienSo";
+            this.txtBienSo.Properties.ReadOnly = true;
             this.txtBienSo.Size = new System.Drawing.Size(187, 20);
             this.txtBienSo.TabIndex = 41;
             // 
@@ -140,6 +142,7 @@
             this.picAnh.Location = new System.Drawing.Point(298, 54);
             this.picAnh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picAnh.Name = "picAnh";
+            this.picAnh.Properties.ReadOnly = true;
             this.picAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picAnh.Size = new System.Drawing.Size(200, 148);
@@ -150,6 +153,7 @@
             this.mmoMieuTa.Location = new System.Drawing.Point(78, 171);
             this.mmoMieuTa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mmoMieuTa.Name = "mmoMieuTa";
+            this.mmoMieuTa.Properties.ReadOnly = true;
             this.mmoMieuTa.Size = new System.Drawing.Size(187, 96);
             this.mmoMieuTa.TabIndex = 38;
             // 
@@ -160,6 +164,7 @@
             this.chkDangHoatDong.Name = "chkDangHoatDong";
             this.chkDangHoatDong.Properties.Caption = "";
             this.chkDangHoatDong.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.chkDangHoatDong.Properties.ReadOnly = true;
             this.chkDangHoatDong.Size = new System.Drawing.Size(25, 19);
             this.chkDangHoatDong.TabIndex = 37;
             // 
@@ -169,6 +174,7 @@
             this.txtTen.Location = new System.Drawing.Point(78, 17);
             this.txtTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTen.Name = "txtTen";
+            this.txtTen.Properties.ReadOnly = true;
             this.txtTen.Size = new System.Drawing.Size(187, 20);
             this.txtTen.TabIndex = 36;
             // 

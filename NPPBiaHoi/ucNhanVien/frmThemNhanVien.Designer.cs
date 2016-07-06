@@ -89,7 +89,7 @@
             // 
             this.txtSoDienThoai.Location = new System.Drawing.Point(108, 60);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Properties.Mask.EditMask = "\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d?\\d";
+            this.txtSoDienThoai.Properties.Mask.EditMask = "((\\+[1-9]{1,2}|0)(12|16|18|19|8|9)[0-9][0-9]{7})|(0([2-8][0-9]{1,2})[0-9]{6})";
             this.txtSoDienThoai.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtSoDienThoai.Size = new System.Drawing.Size(163, 20);
             this.txtSoDienThoai.TabIndex = 7;
@@ -107,6 +107,8 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(345, 60);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Mask.EditMask = "[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\\.[a-zA-Z]{2,4}";
+            this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtEmail.Size = new System.Drawing.Size(163, 20);
             this.txtEmail.TabIndex = 9;
             // 
@@ -168,6 +170,7 @@
             // 
             this.txtTenNhanVien.Location = new System.Drawing.Point(108, 18);
             this.txtTenNhanVien.Name = "txtTenNhanVien";
+            this.txtTenNhanVien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtTenNhanVien.Size = new System.Drawing.Size(163, 20);
             this.txtTenNhanVien.TabIndex = 16;
             // 

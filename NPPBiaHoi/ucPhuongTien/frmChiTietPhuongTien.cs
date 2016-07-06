@@ -38,14 +38,7 @@ namespace NPPBiaHoi.ucPhuongTien
                 {
                     picAnh.Image = aConvertImage.ConvertByteToImage(aPhuongTien.HinhAnh);
                 }
-                if (aPhuongTien.Loai == 1)
-                {
-                    rdoLoai.EditValue = 1;
-                }
-                else
-                {
-                    rdoLoai.EditValue = 0;
-                }
+                rdoLoai.SelectedIndex = (int)(aPhuongTien.Loai - 1);
                 if (aPhuongTien.KichHoat == 1)
                     chkDangHoatDong.Checked = true;
                 else
