@@ -18,6 +18,7 @@ namespace NPPBiaHoi.ucKhachHang
         private KhachHang aKhachHang = null;
         private KhachHangBO aKhachHangBO;
         private ucKhachHang aucKhachHang;
+        private string fileName = null;
 
         public frmSuaKhachHang(int Ma)
         {
@@ -27,7 +28,7 @@ namespace NPPBiaHoi.ucKhachHang
             frmSuaKhachHang_Load(null, null);
         }
 
-        public frmSuaKhachHang(int Ma,ucKhachHang auc)
+        public frmSuaKhachHang(int Ma, ucKhachHang auc)
         {
             InitializeComponent();
             aucKhachHang = auc;
@@ -39,6 +40,7 @@ namespace NPPBiaHoi.ucKhachHang
         {
             try
             {
+                ConvertImage aConvertImage = new ConvertImage();
                 txtTen.Text = aKhachHang.Ten;
                 txtSoDienThoai.Text = aKhachHang.SoDienThoai;
                 txtKhoangCach.Text = aKhachHang.KhoangCach.ToString();
@@ -47,15 +49,20 @@ namespace NPPBiaHoi.ucKhachHang
                 txtEmail.Text = aKhachHang.Email;
                 mmoHoTroDauTu.Text = aKhachHang.GhiChuDauTu;
                 mmoGhiChu.Text = aKhachHang.GhiChu;
+                if (aKhachHang.HinhAnh != null)
+                {
+                    picAnh.Image = aConvertImage.ConvertByteToImage(aKhachHang.HinhAnh);
+                }
                 if (aKhachHang.KichHoat == 1)
                 {
                     chkDangQuanLy.Checked = true;
-                } else
+                }
+                else
                 {
                     chkDangQuanLy.Checked = false;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception("frmSuaKhachHang_Load: " + ex.ToString());
             }
@@ -82,26 +89,45 @@ namespace NPPBiaHoi.ucKhachHang
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try
-            {        
-                aKhachHang.Ten = txtTen.Text;
-                aKhachHang.TenChuCuaHang = txtChuCuaHang.Text;
-                aKhachHang.SoDienThoai = txtSoDienThoai.Text;
-                aKhachHang.DiaChi = txtDiaChi.Text;
-                aKhachHang.Email = txtEmail.Text;
-               // aKhachHang.HinhAnh = "";// picAnh.Text;   //chua biet dau ra la kieu gi
-                aKhachHang.KhoangCach = txtKhoangCach.Text != "" ? double.Parse(txtKhoangCach.Text.ToString()) : 0;
-                aKhachHang.GhiChuDauTu = mmoHoTroDauTu.Text;
-                aKhachHang.GhiChu = mmoGhiChu.Text;
-                if (chkDangQuanLy.Checked == true)
-                    aKhachHang.KichHoat = 1;
-                else {
-                    aKhachHang.KichHoat = 0;
-                }
-                aKhachHangBO.Update(aKhachHang);
-                this.Close();
-                if (aucKhachHang != null)
+            {
+                if (string.IsNullOrEmpty(txtTen.Text))
                 {
-                    aucKhachHang.ucKhachHang_Load(null, null);
+                    MessageBox.Show("Bắt buộc Bạn phải nhập tên khách hàng, vui lòng nhập lại.", "Thông báo..", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else {
+                    ConvertImage aConvertImage = new ConvertImage();
+                    aKhachHang.Ten = txtTen.Text;
+                    aKhachHang.TenChuCuaHang = txtChuCuaHang.Text;
+                    aKhachHang.SoDienThoai = txtSoDienThoai.Text;
+                    aKhachHang.DiaChi = txtDiaChi.Text;
+                    aKhachHang.Email = txtEmail.Text;
+                    // aKhachHang.HinhAnh = "";// picAnh.Text;   //chua biet dau ra la kieu gi
+                    aKhachHang.KhoangCach = !string.IsNullOrEmpty(txtKhoangCach.Text) ? double.Parse(txtKhoangCach.Text.ToString()) : 0;
+                    aKhachHang.GhiChuDauTu = mmoHoTroDauTu.Text;
+                    aKhachHang.GhiChu = mmoGhiChu.Text;
+                    if (fileName != null)
+                    {
+                        aKhachHang.HinhAnh = aConvertImage.ConvertImagePathToByte(fileName);
+                    }
+                    if (chkDangQuanLy.Checked == true)
+                        aKhachHang.KichHoat = 1;
+                    else {
+                        aKhachHang.KichHoat = 0;
+                    }
+                    if(aKhachHangBO.Update(aKhachHang)== true)
+                    {
+                        MessageBox.Show("Cập nhật khách hàng thành công.", "Cập nhật khách hàng", MessageBoxButtons.OK);
+                        aucKhachHang.ucKhachHang_Load(null, null);
+                        this.Close();
+                    }
+                    else {
+                        MessageBox.Show("Không thành công.", "Cập nhật khách hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    this.Close();
+                    if (aucKhachHang != null)
+                    {
+                        aucKhachHang.ucKhachHang_Load(null, null);
+                    }
                 }
             }
             catch (Exception ex)
@@ -119,7 +145,27 @@ namespace NPPBiaHoi.ucKhachHang
             catch (Exception ex)
             {
                 throw new Exception("btnHuy_Click: " + ex.ToString());
-            }   
+            }
+        }
+
+        private void btnThemAnh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog fileDiaLog = new OpenFileDialog();
+                fileDiaLog.Title = "Chọn ảnh sản phẩm";
+                fileDiaLog.Filter = "JPG|*.jpg|PNG|*.png|GIF|*.gif";
+                fileDiaLog.Multiselect = false;
+                if (fileDiaLog.ShowDialog() == DialogResult.OK)
+                {
+                    fileName = fileDiaLog.FileName;
+                    picAnh.Image = Image.FromFile(fileDiaLog.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmSuaSanPham.btnThemAnh_Click: " + ex.ToString());
+            }
         }
     }
 }

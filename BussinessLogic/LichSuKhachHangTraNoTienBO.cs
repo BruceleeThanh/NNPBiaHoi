@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +12,7 @@ namespace BussinessLogic {
     public partial class LichSuKhachHangTraNoTienBO {
 
         private DatabaseDA aDatabaseDA = new DatabaseDA();
+
 
         public List<LichSuKhachHangTraNoTien> SelectAll() {
             try {

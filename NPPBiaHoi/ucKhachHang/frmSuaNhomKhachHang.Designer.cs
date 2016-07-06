@@ -136,6 +136,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSuaNhomKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa thông tin nhóm khách hàng";
             this.Load += new System.EventHandler(this.frmSuaNhomKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chkDangQuanLy.Properties)).EndInit();

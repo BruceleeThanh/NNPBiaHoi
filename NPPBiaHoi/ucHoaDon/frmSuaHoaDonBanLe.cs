@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +12,15 @@ namespace NPPBiaHoi.ucHoaDon
 {
     public partial class frmSuaHoaDonBanLe : DevExpress.XtraEditors.XtraForm
     {
+        ucHoaDonBanLe aucHoaDonBanLe = null;
         public frmSuaHoaDonBanLe()
         {
+            InitializeComponent();
+        }
+
+        public frmSuaHoaDonBanLe(ucHoaDonBanLe auc)
+        {
+            this.aucHoaDonBanLe = auc;
             InitializeComponent();
         }
     }

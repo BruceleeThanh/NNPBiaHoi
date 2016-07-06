@@ -69,8 +69,13 @@
             // 
             this.lueNhomKhachHang.Location = new System.Drawing.Point(166, 38);
             this.lueNhomKhachHang.Name = "lueNhomKhachHang";
+            this.lueNhomKhachHang.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lueNhomKhachHang.Properties.Appearance.Options.UseBackColor = true;
             this.lueNhomKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueNhomKhachHang.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ma", "Mã nhóm"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ten", "Tên nhóm")});
             this.lueNhomKhachHang.Size = new System.Drawing.Size(206, 22);
             this.lueNhomKhachHang.TabIndex = 80;
             // 
@@ -105,6 +110,7 @@
             // 
             // mmoGhiChu
             // 
+            this.mmoGhiChu.Enabled = false;
             this.mmoGhiChu.Location = new System.Drawing.Point(166, 464);
             this.mmoGhiChu.Name = "mmoGhiChu";
             this.mmoGhiChu.Size = new System.Drawing.Size(348, 115);
@@ -112,6 +118,7 @@
             // 
             // mmoHoTroDauTu
             // 
+            this.mmoHoTroDauTu.Enabled = false;
             this.mmoHoTroDauTu.Location = new System.Drawing.Point(166, 290);
             this.mmoHoTroDauTu.Name = "mmoHoTroDauTu";
             this.mmoHoTroDauTu.Size = new System.Drawing.Size(348, 141);
@@ -155,6 +162,7 @@
             // 
             // txtKhoangCach
             // 
+            this.txtKhoangCach.Enabled = false;
             this.txtKhoangCach.Location = new System.Drawing.Point(685, 208);
             this.txtKhoangCach.Name = "txtKhoangCach";
             this.txtKhoangCach.Size = new System.Drawing.Size(48, 22);
@@ -171,6 +179,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Enabled = false;
             this.txtEmail.Location = new System.Drawing.Point(372, 210);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(190, 22);
@@ -187,6 +196,7 @@
             // 
             // txtSoDienThoai
             // 
+            this.txtSoDienThoai.Enabled = false;
             this.txtSoDienThoai.Location = new System.Drawing.Point(166, 208);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(147, 22);
@@ -203,6 +213,7 @@
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.Enabled = false;
             this.txtDiaChi.Location = new System.Drawing.Point(166, 169);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(592, 22);
@@ -219,6 +230,7 @@
             // 
             // txtChuCuaHang
             // 
+            this.txtChuCuaHang.Enabled = false;
             this.txtChuCuaHang.Location = new System.Drawing.Point(166, 126);
             this.txtChuCuaHang.Name = "txtChuCuaHang";
             this.txtChuCuaHang.Size = new System.Drawing.Size(592, 22);
@@ -235,6 +247,7 @@
             // 
             // txtTen
             // 
+            this.txtTen.EditValue = "";
             this.txtTen.Location = new System.Drawing.Point(166, 85);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(592, 22);
@@ -262,6 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(787, 648);
             this.Controls.Add(this.lueNhomKhachHang);
             this.Controls.Add(this.btnThoat);
@@ -288,8 +302,8 @@
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmChiTietKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết khách hàng";
             ((System.ComponentModel.ISupportInitialize)(this.lueNhomKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh.Properties)).EndInit();
@@ -328,8 +342,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtChuCuaHang;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit txtTen;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txtTen;
     }
 }

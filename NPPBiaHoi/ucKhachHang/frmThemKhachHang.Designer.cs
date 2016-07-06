@@ -81,6 +81,9 @@ namespace NPPBiaHoi.ucKhachHang
             // 
             this.txtTen.Location = new System.Drawing.Point(157, 91);
             this.txtTen.Name = "txtTen";
+            this.txtTen.Properties.Mask.BeepOnError = true;
+            this.txtTen.Properties.Mask.EditMask = "([A-ZÀ-Ỹ][a-zà-ỹ]*((\\s)))+[A-ZÀ-Ỹ][a-zà-ỹ]*";
+            this.txtTen.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtTen.Size = new System.Drawing.Size(592, 22);
             this.txtTen.TabIndex = 3;
             // 
@@ -97,6 +100,9 @@ namespace NPPBiaHoi.ucKhachHang
             // 
             this.txtChuCuaHang.Location = new System.Drawing.Point(157, 132);
             this.txtChuCuaHang.Name = "txtChuCuaHang";
+            this.txtChuCuaHang.Properties.Mask.BeepOnError = true;
+            this.txtChuCuaHang.Properties.Mask.EditMask = "([A-ZÀ-Ỹ][a-zà-ỹ]*((\\s)))+[A-ZÀ-Ỹ][a-zà-ỹ]*";
+            this.txtChuCuaHang.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtChuCuaHang.Size = new System.Drawing.Size(592, 22);
             this.txtChuCuaHang.TabIndex = 5;
             // 
@@ -129,6 +135,9 @@ namespace NPPBiaHoi.ucKhachHang
             // 
             this.txtSoDienThoai.Location = new System.Drawing.Point(157, 214);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Properties.Mask.BeepOnError = true;
+            this.txtSoDienThoai.Properties.Mask.EditMask = "((\\+[1-9]{1,2}|0)(12|16|18|19|8|9)[0-9][0-9]{7})|(0([2-8][0-9]{1,2})[0-9]{6})";
+            this.txtSoDienThoai.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtSoDienThoai.Size = new System.Drawing.Size(147, 22);
             this.txtSoDienThoai.TabIndex = 9;
             // 
@@ -145,6 +154,9 @@ namespace NPPBiaHoi.ucKhachHang
             // 
             this.txtEmail.Location = new System.Drawing.Point(363, 216);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Mask.BeepOnError = true;
+            this.txtEmail.Properties.Mask.EditMask = "[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\\.[a-zA-Z]{2,4}";
+            this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtEmail.Size = new System.Drawing.Size(190, 22);
             this.txtEmail.TabIndex = 11;
             // 
@@ -161,6 +173,8 @@ namespace NPPBiaHoi.ucKhachHang
             // 
             this.txtKhoangCach.Location = new System.Drawing.Point(676, 214);
             this.txtKhoangCach.Name = "txtKhoangCach";
+            this.txtKhoangCach.Properties.Mask.EditMask = "f";
+            this.txtKhoangCach.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtKhoangCach.Size = new System.Drawing.Size(48, 22);
             this.txtKhoangCach.TabIndex = 15;
             // 
@@ -176,7 +190,7 @@ namespace NPPBiaHoi.ucKhachHang
             // labelControl9
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl9.Location = new System.Drawing.Point(37, 297);
+            this.labelControl9.Location = new System.Drawing.Point(37, 268);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(95, 17);
             this.labelControl9.TabIndex = 16;
@@ -185,7 +199,7 @@ namespace NPPBiaHoi.ucKhachHang
             // labelControl10
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl10.Location = new System.Drawing.Point(37, 472);
+            this.labelControl10.Location = new System.Drawing.Point(37, 443);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(46, 16);
             this.labelControl10.TabIndex = 18;
@@ -194,7 +208,7 @@ namespace NPPBiaHoi.ucKhachHang
             // labelControl11
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl11.Location = new System.Drawing.Point(448, 50);
+            this.labelControl11.Location = new System.Drawing.Point(462, 42);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(91, 17);
             this.labelControl11.TabIndex = 20;
@@ -203,23 +217,22 @@ namespace NPPBiaHoi.ucKhachHang
             // chkDangQuanLy
             // 
             this.chkDangQuanLy.EditValue = true;
-            this.chkDangQuanLy.Location = new System.Drawing.Point(569, 50);
+            this.chkDangQuanLy.Location = new System.Drawing.Point(583, 42);
             this.chkDangQuanLy.Name = "chkDangQuanLy";
             this.chkDangQuanLy.Properties.Caption = "";
             this.chkDangQuanLy.Size = new System.Drawing.Size(18, 19);
             this.chkDangQuanLy.TabIndex = 21;
-            this.chkDangQuanLy.CheckedChanged += new System.EventHandler(this.chkDangQuanLy_CheckedChanged);
             // 
             // mmoHoTroDauTu
             // 
-            this.mmoHoTroDauTu.Location = new System.Drawing.Point(157, 296);
+            this.mmoHoTroDauTu.Location = new System.Drawing.Point(157, 266);
             this.mmoHoTroDauTu.Name = "mmoHoTroDauTu";
             this.mmoHoTroDauTu.Size = new System.Drawing.Size(348, 141);
             this.mmoHoTroDauTu.TabIndex = 22;
             // 
             // mmoGhiChu
             // 
-            this.mmoGhiChu.Location = new System.Drawing.Point(157, 470);
+            this.mmoGhiChu.Location = new System.Drawing.Point(157, 441);
             this.mmoGhiChu.Name = "mmoGhiChu";
             this.mmoGhiChu.Size = new System.Drawing.Size(348, 115);
             this.mmoGhiChu.TabIndex = 23;
@@ -235,7 +248,7 @@ namespace NPPBiaHoi.ucKhachHang
             // 
             // picAnh
             // 
-            this.picAnh.Location = new System.Drawing.Point(552, 297);
+            this.picAnh.Location = new System.Drawing.Point(552, 268);
             this.picAnh.Name = "picAnh";
             this.picAnh.Properties.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picAnh.Properties.ErrorImage")));
             this.picAnh.Properties.InitialImage = ((System.Drawing.Image)(resources.GetObject("picAnh.Properties.InitialImage")));
@@ -243,14 +256,13 @@ namespace NPPBiaHoi.ucKhachHang
             this.picAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.picAnh.Size = new System.Drawing.Size(197, 191);
             this.picAnh.TabIndex = 25;
-            this.picAnh.EditValueChanged += new System.EventHandler(this.picAnh_EditValueChanged);
             // 
             // btnLuu
             // 
             this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnLuu.Appearance.Options.UseFont = true;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(581, 598);
+            this.btnLuu.Location = new System.Drawing.Point(581, 569);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(72, 38);
             this.btnLuu.TabIndex = 26;
@@ -262,7 +274,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnHuy.Appearance.Options.UseFont = true;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(680, 598);
+            this.btnHuy.Location = new System.Drawing.Point(680, 569);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(69, 38);
             this.btnHuy.TabIndex = 27;
@@ -275,6 +287,11 @@ namespace NPPBiaHoi.ucKhachHang
             this.lueNhomKhachHang.Name = "lueNhomKhachHang";
             this.lueNhomKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueNhomKhachHang.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ma", "Mã nhóm"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ten", "Tên nhóm")});
+            this.lueNhomKhachHang.Properties.DisplayMember = "Ten";
+            this.lueNhomKhachHang.Properties.ValueMember = "Ma";
             this.lueNhomKhachHang.Size = new System.Drawing.Size(206, 22);
             this.lueNhomKhachHang.TabIndex = 28;
             // 
@@ -283,7 +300,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnThemAnh.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnThemAnh.Appearance.Options.UseFont = true;
             this.btnThemAnh.Image = ((System.Drawing.Image)(resources.GetObject("btnThemAnh.Image")));
-            this.btnThemAnh.Location = new System.Drawing.Point(552, 494);
+            this.btnThemAnh.Location = new System.Drawing.Point(552, 465);
             this.btnThemAnh.Name = "btnThemAnh";
             this.btnThemAnh.Size = new System.Drawing.Size(101, 38);
             this.btnThemAnh.TabIndex = 29;
@@ -306,7 +323,7 @@ namespace NPPBiaHoi.ucKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 648);
+            this.ClientSize = new System.Drawing.Size(788, 621);
             this.Controls.Add(this.btnThemNhomKhachHang);
             this.Controls.Add(this.btnThemAnh);
             this.Controls.Add(this.lueNhomKhachHang);
@@ -336,6 +353,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmThemKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm mới khách hàng";
             this.Load += new System.EventHandler(this.frmThemKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).EndInit();

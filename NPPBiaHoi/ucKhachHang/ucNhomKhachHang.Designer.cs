@@ -51,12 +51,14 @@ namespace NPPBiaHoi.ucKhachHang
             // 
             // btnThem
             // 
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(3, 13);
+            this.btnThem.Location = new System.Drawing.Point(15, 15);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(104, 28);
+            this.btnThem.Size = new System.Drawing.Size(75, 32);
             this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm nhóm";
+            this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // grvNhomKhachHang
@@ -83,6 +85,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.colTen.Caption = "Tên";
             this.colTen.FieldName = "Ten";
             this.colTen.Name = "colTen";
+            this.colTen.OptionsColumn.ReadOnly = true;
             this.colTen.Visible = true;
             this.colTen.VisibleIndex = 0;
             this.colTen.Width = 166;
@@ -92,6 +95,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.colMieuTa.Caption = "Miêu tả";
             this.colMieuTa.FieldName = "MieuTa";
             this.colMieuTa.Name = "colMieuTa";
+            this.colMieuTa.OptionsColumn.ReadOnly = true;
             this.colMieuTa.Visible = true;
             this.colMieuTa.VisibleIndex = 1;
             this.colMieuTa.Width = 479;
@@ -102,6 +106,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.colDangQuanLy.ColumnEdit = this.chkDangQuanLy;
             this.colDangQuanLy.FieldName = "KichHoat";
             this.colDangQuanLy.Name = "colDangQuanLy";
+            this.colDangQuanLy.OptionsColumn.ReadOnly = true;
             this.colDangQuanLy.Visible = true;
             this.colDangQuanLy.VisibleIndex = 2;
             this.colDangQuanLy.Width = 108;
@@ -120,6 +125,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.colSua.Caption = "Sửa";
             this.colSua.ColumnEdit = this.btnSua;
             this.colSua.Name = "colSua";
+            this.colSua.OptionsColumn.ReadOnly = true;
             this.colSua.Visible = true;
             this.colSua.VisibleIndex = 3;
             this.colSua.Width = 41;
@@ -138,6 +144,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.colXoa.Caption = "Xóa";
             this.colXoa.ColumnEdit = this.btnXoa;
             this.colXoa.Name = "colXoa";
+            this.colXoa.OptionsColumn.ReadOnly = true;
             this.colXoa.Visible = true;
             this.colXoa.VisibleIndex = 4;
             this.colXoa.Width = 40;
@@ -153,15 +160,17 @@ namespace NPPBiaHoi.ucKhachHang
             // 
             // grdNhomKhachHang
             // 
-            this.grdNhomKhachHang.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grdNhomKhachHang.Location = new System.Drawing.Point(0, 62);
+            this.grdNhomKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdNhomKhachHang.Location = new System.Drawing.Point(0, 65);
             this.grdNhomKhachHang.MainView = this.grvNhomKhachHang;
             this.grdNhomKhachHang.Name = "grdNhomKhachHang";
             this.grdNhomKhachHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.chkDangQuanLy,
             this.btnSua,
             this.btnXoa});
-            this.grdNhomKhachHang.Size = new System.Drawing.Size(854, 577);
+            this.grdNhomKhachHang.Size = new System.Drawing.Size(1230, 605);
             this.grdNhomKhachHang.TabIndex = 0;
             this.grdNhomKhachHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvNhomKhachHang});
@@ -173,7 +182,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.grdNhomKhachHang);
             this.Name = "ucNhomKhachHang";
-            this.Size = new System.Drawing.Size(854, 639);
+            this.Size = new System.Drawing.Size(1230, 670);
             this.Load += new System.EventHandler(this.ucNhomKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grvNhomKhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDangQuanLy)).EndInit();

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,6 +44,18 @@ namespace BussinessLogic {
                 return aDatabaseDA.DonGiaKhachHang.Where(b => b.MaSanPham == maSanPham).ToList();
             }
             catch(Exception ex) {
+                throw new Exception("DonGiaKhachHangBO.Select_ByMaSanPham: " + ex.ToString());
+            }
+        }
+
+        public List<DonGiaKhachHang> Select_ByMaKhachHang_ByMaSanPham(int maKhachHang, int maSanPham)
+        {
+            try
+            {
+                return aDatabaseDA.DonGiaKhachHang.Where(b => b.MaKhachHang == maKhachHang && b.MaSanPham == maSanPham).ToList();
+            }
+            catch (Exception ex)
+            {
                 throw new Exception("DonGiaKhachHangBO.Select_ByMaSanPham: " + ex.ToString());
             }
         }

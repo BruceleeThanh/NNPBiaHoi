@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemHoaDonBanLe));
             this.grdThemHoaDonBanLe = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grvThemHoaDonBanLe = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTenSanPham = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lueTenSanPham = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -41,7 +41,7 @@
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdThemHoaDonBanLe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvThemHoaDonBanLe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGian)).BeginInit();
@@ -51,28 +51,30 @@
             // grdThemHoaDonBanLe
             // 
             this.grdThemHoaDonBanLe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grdThemHoaDonBanLe.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grdThemHoaDonBanLe.Location = new System.Drawing.Point(0, 0);
-            this.grdThemHoaDonBanLe.MainView = this.gridView1;
+            this.grdThemHoaDonBanLe.MainView = this.grvThemHoaDonBanLe;
+            this.grdThemHoaDonBanLe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grdThemHoaDonBanLe.Name = "grdThemHoaDonBanLe";
             this.grdThemHoaDonBanLe.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lueTenSanPham,
             this.spinSoLuong,
             this.dateThoiGian});
-            this.grdThemHoaDonBanLe.Size = new System.Drawing.Size(654, 333);
+            this.grdThemHoaDonBanLe.Size = new System.Drawing.Size(763, 410);
             this.grdThemHoaDonBanLe.TabIndex = 0;
             this.grdThemHoaDonBanLe.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.grvThemHoaDonBanLe});
             // 
-            // gridView1
+            // grvThemHoaDonBanLe
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grvThemHoaDonBanLe.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colTenSanPham,
             this.colSoLuong,
             this.colThoiGian,
             this.colGhiChu});
-            this.gridView1.GridControl = this.grdThemHoaDonBanLe;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.grvThemHoaDonBanLe.GridControl = this.grdThemHoaDonBanLe;
+            this.grvThemHoaDonBanLe.Name = "grvThemHoaDonBanLe";
+            this.grvThemHoaDonBanLe.OptionsView.ShowGroupPanel = false;
             // 
             // colTenSanPham
             // 
@@ -93,7 +95,13 @@
             this.lueTenSanPham.AutoHeight = false;
             this.lueTenSanPham.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.lueTenSanPham.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ma", "Mã"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ten", "Tên Sản Phẩm"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SoLuong", "Số lượng trong kho")});
+            this.lueTenSanPham.DisplayMember = "Ten";
             this.lueTenSanPham.Name = "lueTenSanPham";
+            this.lueTenSanPham.ValueMember = "Ma";
             // 
             // colSoLuong
             // 
@@ -136,7 +144,7 @@
             // 
             this.dateThoiGian.AutoHeight = false;
             this.dateThoiGian.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
             this.dateThoiGian.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateThoiGian.Name = "dateThoiGian";
@@ -159,9 +167,10 @@
             this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnHuy.Appearance.Options.UseFont = true;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(581, 335);
+            this.btnHuy.Location = new System.Drawing.Point(678, 412);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(61, 23);
+            this.btnHuy.Size = new System.Drawing.Size(71, 28);
             this.btnHuy.TabIndex = 2;
             this.btnHuy.Text = "Hủy";
             // 
@@ -170,27 +179,30 @@
             this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnLuu.Appearance.Options.UseFont = true;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(514, 335);
+            this.btnLuu.Location = new System.Drawing.Point(600, 412);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(61, 23);
+            this.btnLuu.Size = new System.Drawing.Size(71, 28);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // frmThemHoaDonBanLe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 361);
+            this.ClientSize = new System.Drawing.Size(763, 444);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.grdThemHoaDonBanLe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmThemHoaDonBanLe";
             this.Text = "Thêm hóa đơn bán lẻ";
             ((System.ComponentModel.ISupportInitialize)(this.grdThemHoaDonBanLe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvThemHoaDonBanLe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGian.CalendarTimeProperties)).EndInit();
@@ -202,7 +214,7 @@
         #endregion
 
         private DevExpress.XtraGrid.GridControl grdThemHoaDonBanLe;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvThemHoaDonBanLe;
         private DevExpress.XtraGrid.Columns.GridColumn colTenSanPham;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueTenSanPham;
         private DevExpress.XtraGrid.Columns.GridColumn colSoLuong;

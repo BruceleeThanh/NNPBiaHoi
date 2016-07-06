@@ -135,14 +135,16 @@
             // 
             // grdSuaLichSuKhachHangTraNoVo
             // 
-            this.grdSuaLichSuKhachHangTraNoVo.Location = new System.Drawing.Point(-1, 81);
+            this.grdSuaLichSuKhachHangTraNoVo.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grdSuaLichSuKhachHangTraNoVo.Location = new System.Drawing.Point(-1, 100);
             this.grdSuaLichSuKhachHangTraNoVo.MainView = this.gridView1;
+            this.grdSuaLichSuKhachHangTraNoVo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grdSuaLichSuKhachHangTraNoVo.Name = "grdSuaLichSuKhachHangTraNoVo";
             this.grdSuaLichSuKhachHangTraNoVo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.dateThoiGian,
             this.repositoryItemSpinEdit1,
             this.lueLoai});
-            this.grdSuaLichSuKhachHangTraNoVo.Size = new System.Drawing.Size(524, 200);
+            this.grdSuaLichSuKhachHangTraNoVo.Size = new System.Drawing.Size(611, 246);
             this.grdSuaLichSuKhachHangTraNoVo.TabIndex = 17;
             this.grdSuaLichSuKhachHangTraNoVo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -150,18 +152,20 @@
             // btnHuy
             // 
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(447, 289);
+            this.btnHuy.Location = new System.Drawing.Point(521, 356);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(59, 23);
+            this.btnHuy.Size = new System.Drawing.Size(69, 28);
             this.btnHuy.TabIndex = 16;
             this.btnHuy.Text = "Hủy";
             // 
             // btnLuu
             // 
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(382, 289);
+            this.btnLuu.Location = new System.Drawing.Point(446, 356);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(59, 23);
+            this.btnLuu.Size = new System.Drawing.Size(69, 28);
             this.btnLuu.TabIndex = 15;
             this.btnLuu.Text = "Lưu";
             // 
@@ -173,60 +177,66 @@
             0,
             0});
             this.spinTongSoLuongNo.Enabled = false;
-            this.spinTongSoLuongNo.Location = new System.Drawing.Point(115, 49);
+            this.spinTongSoLuongNo.Location = new System.Drawing.Point(134, 60);
+            this.spinTongSoLuongNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.spinTongSoLuongNo.Name = "spinTongSoLuongNo";
             this.spinTongSoLuongNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinTongSoLuongNo.Size = new System.Drawing.Size(140, 20);
+            this.spinTongSoLuongNo.Size = new System.Drawing.Size(163, 22);
             this.spinTongSoLuongNo.TabIndex = 14;
             // 
             // lueTenSanPham
             // 
-            this.lueTenSanPham.Location = new System.Drawing.Point(358, 10);
+            this.lueTenSanPham.Location = new System.Drawing.Point(418, 12);
+            this.lueTenSanPham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lueTenSanPham.Name = "lueTenSanPham";
             this.lueTenSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueTenSanPham.Size = new System.Drawing.Size(140, 20);
+            this.lueTenSanPham.Size = new System.Drawing.Size(163, 22);
             this.lueTenSanPham.TabIndex = 13;
             // 
             // lueTenKhachHang
             // 
-            this.lueTenKhachHang.Location = new System.Drawing.Point(115, 10);
+            this.lueTenKhachHang.Location = new System.Drawing.Point(134, 12);
+            this.lueTenKhachHang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lueTenKhachHang.Name = "lueTenKhachHang";
             this.lueTenKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueTenKhachHang.Size = new System.Drawing.Size(140, 20);
+            this.lueTenKhachHang.Size = new System.Drawing.Size(163, 22);
             this.lueTenKhachHang.TabIndex = 12;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(18, 52);
+            this.labelControl3.Location = new System.Drawing.Point(21, 64);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(83, 13);
+            this.labelControl3.Size = new System.Drawing.Size(109, 17);
             this.labelControl3.TabIndex = 11;
             this.labelControl3.Text = "Tổng số lượng nợ";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(276, 13);
+            this.labelControl2.Location = new System.Drawing.Point(322, 16);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(67, 13);
+            this.labelControl2.Size = new System.Drawing.Size(87, 17);
             this.labelControl2.TabIndex = 10;
             this.labelControl2.Text = "Tên sản phẩm";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(18, 13);
+            this.labelControl1.Location = new System.Drawing.Point(21, 16);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(76, 13);
+            this.labelControl1.Size = new System.Drawing.Size(91, 16);
             this.labelControl1.TabIndex = 9;
             this.labelControl1.Text = "Tên khách hàng";
             // 
-            // frmSuaLichSuKhachHangTraNoVo
+            // frmSuaKhachHangTraNoVo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 323);
+            this.ClientSize = new System.Drawing.Size(609, 398);
             this.Controls.Add(this.grdSuaLichSuKhachHangTraNoVo);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
@@ -237,9 +247,11 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmSuaLichSuKhachHangTraNoVo";
+            this.Name = "frmSuaKhachHangTraNoVo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sua khach hàng trả nợ vỏ";
             ((System.ComponentModel.ISupportInitialize)(this.lueLoai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGian.CalendarTimeProperties)).EndInit();

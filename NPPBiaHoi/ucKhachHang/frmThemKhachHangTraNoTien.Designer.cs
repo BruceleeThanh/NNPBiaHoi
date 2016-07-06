@@ -38,12 +38,12 @@
             this.grdThemLichSuKhachHangTraNoTien = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colThoiGian = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dateThoiGian = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colSoTienTraLanNay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.spinSoTienTraLanNay = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
-            this.dateThoiGian = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
-            this.spinSoTienTraLanNay = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTenKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinTongTienNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmoGhiChu.Properties)).BeginInit();
@@ -57,37 +57,41 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Location = new System.Drawing.Point(21, 18);
+            this.labelControl1.Location = new System.Drawing.Point(24, 22);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(89, 13);
+            this.labelControl1.Size = new System.Drawing.Size(110, 17);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tên khách hàng";
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.Location = new System.Drawing.Point(21, 65);
+            this.labelControl2.Location = new System.Drawing.Point(24, 80);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(106, 13);
+            this.labelControl2.Size = new System.Drawing.Size(136, 17);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Tổng tiền nợ (VNĐ)";
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl3.Location = new System.Drawing.Point(308, 18);
+            this.labelControl3.Location = new System.Drawing.Point(359, 22);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(41, 13);
+            this.labelControl3.Size = new System.Drawing.Size(51, 17);
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "Ghi chú";
             // 
             // lueTenKhachHang
             // 
-            this.lueTenKhachHang.Location = new System.Drawing.Point(134, 15);
+            this.lueTenKhachHang.Location = new System.Drawing.Point(156, 18);
+            this.lueTenKhachHang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lueTenKhachHang.Name = "lueTenKhachHang";
             this.lueTenKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueTenKhachHang.Size = new System.Drawing.Size(147, 20);
+            this.lueTenKhachHang.Size = new System.Drawing.Size(171, 22);
             this.lueTenKhachHang.TabIndex = 3;
             // 
             // spinTongTienNo
@@ -98,29 +102,33 @@
             0,
             0});
             this.spinTongTienNo.Enabled = false;
-            this.spinTongTienNo.Location = new System.Drawing.Point(134, 62);
+            this.spinTongTienNo.Location = new System.Drawing.Point(156, 76);
+            this.spinTongTienNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.spinTongTienNo.Name = "spinTongTienNo";
             this.spinTongTienNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinTongTienNo.Size = new System.Drawing.Size(147, 20);
+            this.spinTongTienNo.Size = new System.Drawing.Size(171, 22);
             this.spinTongTienNo.TabIndex = 4;
             // 
             // mmoGhiChu
             // 
-            this.mmoGhiChu.Location = new System.Drawing.Point(368, 16);
+            this.mmoGhiChu.Location = new System.Drawing.Point(429, 20);
+            this.mmoGhiChu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mmoGhiChu.Name = "mmoGhiChu";
-            this.mmoGhiChu.Size = new System.Drawing.Size(218, 66);
+            this.mmoGhiChu.Size = new System.Drawing.Size(254, 81);
             this.mmoGhiChu.TabIndex = 5;
             // 
             // grdThemLichSuKhachHangTraNoTien
             // 
-            this.grdThemLichSuKhachHangTraNoTien.Location = new System.Drawing.Point(0, 98);
+            this.grdThemLichSuKhachHangTraNoTien.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grdThemLichSuKhachHangTraNoTien.Location = new System.Drawing.Point(0, 121);
             this.grdThemLichSuKhachHangTraNoTien.MainView = this.gridView1;
+            this.grdThemLichSuKhachHangTraNoTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grdThemLichSuKhachHangTraNoTien.Name = "grdThemLichSuKhachHangTraNoTien";
             this.grdThemLichSuKhachHangTraNoTien.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.dateThoiGian,
             this.spinSoTienTraLanNay});
-            this.grdThemLichSuKhachHangTraNoTien.Size = new System.Drawing.Size(620, 200);
+            this.grdThemLichSuKhachHangTraNoTien.Size = new System.Drawing.Size(723, 246);
             this.grdThemLichSuKhachHangTraNoTien.TabIndex = 6;
             this.grdThemLichSuKhachHangTraNoTien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -146,6 +154,15 @@
             this.colThoiGian.VisibleIndex = 0;
             this.colThoiGian.Width = 140;
             // 
+            // dateThoiGian
+            // 
+            this.dateThoiGian.AutoHeight = false;
+            this.dateThoiGian.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.dateThoiGian.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateThoiGian.Name = "dateThoiGian";
+            // 
             // colSoTienTraLanNay
             // 
             this.colSoTienTraLanNay.AppearanceHeader.Options.UseTextOptions = true;
@@ -157,6 +174,13 @@
             this.colSoTienTraLanNay.Visible = true;
             this.colSoTienTraLanNay.VisibleIndex = 1;
             this.colSoTienTraLanNay.Width = 147;
+            // 
+            // spinSoTienTraLanNay
+            // 
+            this.spinSoTienTraLanNay.AutoHeight = false;
+            this.spinSoTienTraLanNay.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.spinSoTienTraLanNay.Name = "spinSoTienTraLanNay";
             // 
             // colGhiChu
             // 
@@ -172,42 +196,28 @@
             // btnLuu
             // 
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(493, 304);
+            this.btnLuu.Location = new System.Drawing.Point(575, 374);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(51, 23);
+            this.btnLuu.Size = new System.Drawing.Size(59, 28);
             this.btnLuu.TabIndex = 7;
             this.btnLuu.Text = "Lưu";
             // 
             // btnHuy
             // 
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(550, 304);
+            this.btnHuy.Location = new System.Drawing.Point(642, 374);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(57, 23);
+            this.btnHuy.Size = new System.Drawing.Size(66, 28);
             this.btnHuy.TabIndex = 8;
             this.btnHuy.Text = "Hủy";
             // 
-            // dateThoiGian
+            // frmThemKhachHangTraNoTien
             // 
-            this.dateThoiGian.AutoHeight = false;
-            this.dateThoiGian.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
-            this.dateThoiGian.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateThoiGian.Name = "dateThoiGian";
-            // 
-            // spinSoTienTraLanNay
-            // 
-            this.spinSoTienTraLanNay.AutoHeight = false;
-            this.spinSoTienTraLanNay.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
-            this.spinSoTienTraLanNay.Name = "spinSoTienTraLanNay";
-            // 
-            // frmThemLichSuKhachHangTraNoTien
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 335);
+            this.ClientSize = new System.Drawing.Size(722, 412);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.grdThemLichSuKhachHangTraNoTien);
@@ -218,9 +228,11 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmThemLichSuKhachHangTraNoTien";
+            this.Name = "frmThemKhachHangTraNoTien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm lịch sử khách hàng trả nợ tiền";
             ((System.ComponentModel.ISupportInitialize)(this.lueTenKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinTongTienNo.Properties)).EndInit();

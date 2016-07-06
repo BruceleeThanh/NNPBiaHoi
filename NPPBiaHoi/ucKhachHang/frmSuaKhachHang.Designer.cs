@@ -90,6 +90,7 @@
             this.btnThemAnh.Size = new System.Drawing.Size(101, 38);
             this.btnThemAnh.TabIndex = 55;
             this.btnThemAnh.Text = "Thêm ảnh";
+            this.btnThemAnh.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
             // lueNhomKhachHang
             // 
@@ -129,6 +130,7 @@
             this.picAnh.Location = new System.Drawing.Point(561, 291);
             this.picAnh.Name = "picAnh";
             this.picAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picAnh.Size = new System.Drawing.Size(197, 191);
             this.picAnh.TabIndex = 51;
             // 
@@ -196,6 +198,8 @@
             // 
             this.txtKhoangCach.Location = new System.Drawing.Point(685, 208);
             this.txtKhoangCach.Name = "txtKhoangCach";
+            this.txtKhoangCach.Properties.Mask.EditMask = "f";
+            this.txtKhoangCach.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtKhoangCach.Size = new System.Drawing.Size(48, 22);
             this.txtKhoangCach.TabIndex = 43;
             // 
@@ -212,6 +216,9 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(372, 210);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Mask.BeepOnError = true;
+            this.txtEmail.Properties.Mask.EditMask = "[-0-9a-zA-Z.+_]+@ [-0-9a-zA-Z.+_]+\\.[a-zA-Z]{2,4}";
+            this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtEmail.Size = new System.Drawing.Size(190, 22);
             this.txtEmail.TabIndex = 41;
             // 
@@ -228,6 +235,9 @@
             // 
             this.txtSoDienThoai.Location = new System.Drawing.Point(166, 208);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Properties.Mask.BeepOnError = true;
+            this.txtSoDienThoai.Properties.Mask.EditMask = "((\\+[1-9]{1,2}|0)(12|16|18|19|8|9)[0-9][0-9]{7})|(0([2-8][0-9]{1,2})[0-9]{6})";
+            this.txtSoDienThoai.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtSoDienThoai.Size = new System.Drawing.Size(147, 22);
             this.txtSoDienThoai.TabIndex = 39;
             // 
@@ -260,6 +270,9 @@
             // 
             this.txtChuCuaHang.Location = new System.Drawing.Point(166, 126);
             this.txtChuCuaHang.Name = "txtChuCuaHang";
+            this.txtChuCuaHang.Properties.Mask.BeepOnError = true;
+            this.txtChuCuaHang.Properties.Mask.EditMask = "([A-ZÀ-Ỹ][a-zà-ỹ]*((\\s)))*[A-ZÀ-Ỹ][a-zà-ỹ]*";
+            this.txtChuCuaHang.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtChuCuaHang.Size = new System.Drawing.Size(592, 22);
             this.txtChuCuaHang.TabIndex = 35;
             // 
@@ -276,6 +289,9 @@
             // 
             this.txtTen.Location = new System.Drawing.Point(166, 85);
             this.txtTen.Name = "txtTen";
+            this.txtTen.Properties.Mask.BeepOnError = true;
+            this.txtTen.Properties.Mask.EditMask = "([A-ZÀ-Ỹ][a-zà-ỹ]*((\\s)))*[A-ZÀ-Ỹ][a-zà-ỹ]*";
+            this.txtTen.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtTen.Size = new System.Drawing.Size(592, 22);
             this.txtTen.TabIndex = 33;
             // 
@@ -328,9 +344,11 @@
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSuaKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa thông tin khách hàng";
             this.Load += new System.EventHandler(this.frmSuaKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lueNhomKhachHang.Properties)).EndInit();

@@ -14,18 +14,18 @@ namespace NPPBiaHoi.ucKhachHang
 {
     public partial class ucKhachHang : DevExpress.XtraEditors.XtraUserControl
     {
-        List<KhachHang> aListKhachHang = new List<KhachHang>(); 
+        List<KhachHang> aListKhachHang = new List<KhachHang>();
         public ucKhachHang()
         {
 
             InitializeComponent();
             ucKhachHang_Load(null, null);
         }
-        
+
 
         private void grvKhachHang_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
         {
-            
+
             if (e.Info.IsRowIndicator && e.RowHandle >= 0)
                 e.Info.DisplayText = (e.RowHandle + 1).ToString();
         }
@@ -50,12 +50,13 @@ namespace NPPBiaHoi.ucKhachHang
             {
                 frmThemKhachHang afrmThemKhachHang = new frmThemKhachHang(this);
                 afrmThemKhachHang.ShowDialog();
+
             }
             catch (Exception ex)
             {
                 throw new Exception("btnThem_Click: " + ex.ToString());
             }
-           
+
         }
 
         private void btnChiTiet_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -77,7 +78,7 @@ namespace NPPBiaHoi.ucKhachHang
             try
             {
                 int Ma = int.Parse(grvKhachHang.GetFocusedRowCellValue("Ma").ToString());
-                frmSuaKhachHang afrmSuaKhachHang = new frmSuaKhachHang(Ma,this);
+                frmSuaKhachHang afrmSuaKhachHang = new frmSuaKhachHang(Ma, this);
                 afrmSuaKhachHang.ShowDialog();
             }
             catch (Exception ex)
@@ -94,15 +95,23 @@ namespace NPPBiaHoi.ucKhachHang
                 {
                     int Ma = int.Parse(grvKhachHang.GetFocusedRowCellValue("Ma").ToString());
                     KhachHangBO aKhachHangBO = new KhachHangBO();
-                    aKhachHangBO.Delete(Ma);
-                    this.ucKhachHang_Load(null, null);
+                    
+                    if (aKhachHangBO.Delete(Ma) == true)
+                    {
+                        MessageBox.Show("Xóa khách hàng thành công.", "Xóa khách hàng", MessageBoxButtons.OK);
+                        this.ucKhachHang_Load(null, null);
+                    }
+                    else {
+                        MessageBox.Show("Không thành công.", "Xóa khách hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
             }
             catch (Exception ex)
             {
                 throw new Exception("btnXoa_ButtonClick: " + ex.ToString());
             }
-           
+
         }
     }
 }

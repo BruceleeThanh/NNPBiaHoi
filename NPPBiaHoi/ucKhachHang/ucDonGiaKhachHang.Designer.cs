@@ -1,4 +1,4 @@
-﻿namespace NPPBiaHoi.ucKhachHang
+namespace NPPBiaHoi.ucKhachHang
 {
     partial class ucDonGiaKhachHang
     {
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDonGiaKhachHang));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.grdDonGiaKhachHang = new DevExpress.XtraGrid.GridControl();
             this.grvDonGiaKhachHang = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colKhachHang = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,14 +50,16 @@
             // 
             // grdDonGiaKhachHang
             // 
-            this.grdDonGiaKhachHang.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grdDonGiaKhachHang.Location = new System.Drawing.Point(0, 64);
+            this.grdDonGiaKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdDonGiaKhachHang.Location = new System.Drawing.Point(0, 65);
             this.grdDonGiaKhachHang.MainView = this.grvDonGiaKhachHang;
             this.grdDonGiaKhachHang.Name = "grdDonGiaKhachHang";
             this.grdDonGiaKhachHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnLichSuDonGia,
             this.btnSua});
-            this.grdDonGiaKhachHang.Size = new System.Drawing.Size(1111, 518);
+            this.grdDonGiaKhachHang.Size = new System.Drawing.Size(1230, 605);
             this.grdDonGiaKhachHang.TabIndex = 0;
             this.grdDonGiaKhachHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvDonGiaKhachHang});
@@ -84,6 +86,8 @@
             this.grvDonGiaKhachHang.Name = "grvDonGiaKhachHang";
             this.grvDonGiaKhachHang.OptionsView.AllowCellMerge = true;
             this.grvDonGiaKhachHang.OptionsView.AllowHtmlDrawHeaders = true;
+            this.grvDonGiaKhachHang.OptionsView.EnableAppearanceEvenRow = true;
+            this.grvDonGiaKhachHang.OptionsView.EnableAppearanceOddRow = true;
             this.grvDonGiaKhachHang.OptionsView.ShowAutoFilterRow = true;
             this.grvDonGiaKhachHang.OptionsView.ShowFooter = true;
             this.grvDonGiaKhachHang.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.grvDonGiaKhachHang_CustomDrawRowIndicator);
@@ -157,7 +161,7 @@
             // 
             this.btnLichSuDonGia.AutoHeight = false;
             this.btnLichSuDonGia.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnLichSuDonGia.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnLichSuDonGia.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnLichSuDonGia.Name = "btnLichSuDonGia";
             this.btnLichSuDonGia.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -184,16 +188,17 @@
             this.btnSua.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnSua.AutoHeight = false;
             this.btnSua.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSua.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSua.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnSua.Name = "btnSua";
             this.btnSua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnSua.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSua_ButtonClick);
             // 
             // btnThem
             // 
             this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(37, 26);
+            this.btnThem.Location = new System.Drawing.Point(15, 15);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 32);
             this.btnThem.TabIndex = 1;
@@ -207,7 +212,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.grdDonGiaKhachHang);
             this.Name = "ucDonGiaKhachHang";
-            this.Size = new System.Drawing.Size(1111, 582);
+            this.Size = new System.Drawing.Size(1230, 670);
             this.Load += new System.EventHandler(this.ucDonGiaKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdDonGiaKhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvDonGiaKhachHang)).EndInit();

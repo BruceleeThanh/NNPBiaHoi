@@ -21,19 +21,26 @@ namespace NPPBiaHoi.ucKhachHang
             InitializeComponent();
         }
 
-        private void ucDonGiaKhachHang_Load(object sender, EventArgs e)
+        public void ucDonGiaKhachHang_Load(object sender, EventArgs e)
         {
-            DonGiaKhachHangBO aDonGiaKhachHangBO = new DonGiaKhachHangBO();
-            List<DonGiaKhachHang> aListDonGiaKhachHang = new List<DonGiaKhachHang>();
-           this.aListDonGiaKhachHangEN = new List<DonGiaKhachHangEN>();
-            aListDonGiaKhachHang = aDonGiaKhachHangBO.Select_All();
-            DonGiaKhachHangEN aDonGiaKhachHangEN;
-            foreach(DonGiaKhachHang temp in aListDonGiaKhachHang)
+            try
             {
-               aDonGiaKhachHangEN = new DonGiaKhachHangEN(temp);
-               this.aListDonGiaKhachHangEN.Add(aDonGiaKhachHangEN);
+                DonGiaKhachHangBO aDonGiaKhachHangBO = new DonGiaKhachHangBO();
+                List<DonGiaKhachHang> aListDonGiaKhachHang = new List<DonGiaKhachHang>();
+                this.aListDonGiaKhachHangEN = new List<DonGiaKhachHangEN>();
+                aListDonGiaKhachHang = aDonGiaKhachHangBO.Select_All();
+                DonGiaKhachHangEN aDonGiaKhachHangEN;
+                foreach (DonGiaKhachHang temp in aListDonGiaKhachHang)
+                {
+                    aDonGiaKhachHangEN = new DonGiaKhachHangEN(temp);
+                    this.aListDonGiaKhachHangEN.Add(aDonGiaKhachHangEN);
+                }
+                grdDonGiaKhachHang.DataSource = this.aListDonGiaKhachHangEN;
             }
-            grdDonGiaKhachHang.DataSource = this.aListDonGiaKhachHangEN;
+            catch (Exception ex)
+            {
+                throw new Exception("ucDonGiaKhachHang_Load: " + ex.ToString());
+            }
         }
 
         private void grvDonGiaKhachHang_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
@@ -44,6 +51,30 @@ namespace NPPBiaHoi.ucKhachHang
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                frmThemDonGiaKhachHang afrmThemDonGiaKhachHang = new frmThemDonGiaKhachHang(this);
+                afrmThemDonGiaKhachHang.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("btnThem_Click: " + ex.ToString());
+            }
+
+        }
+
+        private void btnSua_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            try
+            {
+                int MaDonGia = int.Parse(grvDonGiaKhachHang.GetFocusedRowCellValue("Ma").ToString());
+                frmSuaDonGiaKhachHang afrmSuaDonGiaKhachHang = new frmSuaDonGiaKhachHang(MaDonGia, this);
+                afrmSuaDonGiaKhachHang.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("btnSua_ButtonClick: " + ex.ToString());
+            }
 
         }
     }

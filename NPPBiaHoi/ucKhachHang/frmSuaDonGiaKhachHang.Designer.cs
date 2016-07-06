@@ -1,4 +1,4 @@
-﻿namespace NPPBiaHoi.ucKhachHang
+namespace NPPBiaHoi.ucKhachHang
 {
     partial class frmSuaDonGiaKhachHang
     {
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuaDonGiaKhachHang));
-            this.lueSanPham = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtDonGia = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -39,21 +38,13 @@
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.timeThoiGianCapNhat = new DevExpress.XtraEditors.DateEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueSanPham.Properties)).BeginInit();
+            this.txtSanPham = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeThoiGianCapNhat.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeThoiGianCapNhat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSanPham.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lueSanPham
-            // 
-            this.lueSanPham.Location = new System.Drawing.Point(147, 44);
-            this.lueSanPham.Name = "lueSanPham";
-            this.lueSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueSanPham.Size = new System.Drawing.Size(152, 22);
-            this.lueSanPham.TabIndex = 20;
             // 
             // labelControl4
             // 
@@ -93,6 +84,7 @@
             // 
             this.txtKhachHang.Location = new System.Drawing.Point(147, 15);
             this.txtKhachHang.Name = "txtKhachHang";
+            this.txtKhachHang.Properties.ReadOnly = true;
             this.txtKhachHang.Size = new System.Drawing.Size(152, 22);
             this.txtKhachHang.TabIndex = 14;
             // 
@@ -115,6 +107,7 @@
             this.btnHuy.Size = new System.Drawing.Size(71, 29);
             this.btnHuy.TabIndex = 12;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -126,6 +119,7 @@
             this.btnLuu.Size = new System.Drawing.Size(71, 29);
             this.btnLuu.TabIndex = 11;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // timeThoiGianCapNhat
             // 
@@ -145,12 +139,21 @@
             this.timeThoiGianCapNhat.Size = new System.Drawing.Size(152, 22);
             this.timeThoiGianCapNhat.TabIndex = 19;
             // 
+            // txtSanPham
+            // 
+            this.txtSanPham.Enabled = false;
+            this.txtSanPham.Location = new System.Drawing.Point(147, 43);
+            this.txtSanPham.Name = "txtSanPham";
+            this.txtSanPham.Properties.ReadOnly = true;
+            this.txtSanPham.Size = new System.Drawing.Size(152, 22);
+            this.txtSanPham.TabIndex = 20;
+            // 
             // frmSuaDonGiaKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 183);
-            this.Controls.Add(this.lueSanPham);
+            this.Controls.Add(this.txtSanPham);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txtDonGia);
             this.Controls.Add(this.labelControl3);
@@ -164,20 +167,19 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSuaDonGiaKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa đơn giá khách hàng";
-            ((System.ComponentModel.ISupportInitialize)(this.lueSanPham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonGia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeThoiGianCapNhat.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeThoiGianCapNhat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSanPham.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.LookUpEdit lueSanPham;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtDonGia;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -187,5 +189,6 @@
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.DateEdit timeThoiGianCapNhat;
+        private DevExpress.XtraEditors.TextEdit txtSanPham;
     }
 }

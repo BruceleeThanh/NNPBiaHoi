@@ -29,37 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucHoaDonBanLe));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             this.grdHoaDonBanLe = new DevExpress.XtraGrid.GridControl();
             this.grvHoaDonBanLe = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTenSanPham = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.lueTenSanPham = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.spinSoLuong = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.colThoiGian = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dateThoiGian = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.colSua = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnSua = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.lueTenSanPham = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.spinSoLuong = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.dateThoiGian = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdHoaDonBanLe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvHoaDonBanLe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGian)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGian.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSua)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
             this.SuspendLayout();
             // 
             // grdHoaDonBanLe
             // 
-            this.grdHoaDonBanLe.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grdHoaDonBanLe.Location = new System.Drawing.Point(0, 36);
+            this.grdHoaDonBanLe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdHoaDonBanLe.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grdHoaDonBanLe.Location = new System.Drawing.Point(0, 50);
             this.grdHoaDonBanLe.MainView = this.grvHoaDonBanLe;
+            this.grdHoaDonBanLe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grdHoaDonBanLe.Name = "grdHoaDonBanLe";
             this.grdHoaDonBanLe.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lueTenSanPham,
@@ -67,7 +71,7 @@
             this.dateThoiGian,
             this.btnSua,
             this.btnXoa});
-            this.grdHoaDonBanLe.Size = new System.Drawing.Size(650, 297);
+            this.grdHoaDonBanLe.Size = new System.Drawing.Size(986, 434);
             this.grdHoaDonBanLe.TabIndex = 1;
             this.grdHoaDonBanLe.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvHoaDonBanLe});
@@ -84,7 +88,7 @@
             this.grvHoaDonBanLe.GridControl = this.grdHoaDonBanLe;
             this.grvHoaDonBanLe.IndicatorWidth = 30;
             this.grvHoaDonBanLe.Name = "grvHoaDonBanLe";
-            this.grvHoaDonBanLe.OptionsView.ShowGroupPanel = false;
+            this.grvHoaDonBanLe.OptionsView.ShowAutoFilterRow = true;
             this.grvHoaDonBanLe.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.grvHoaDonBanLe_CustomDrawRowIndicator);
             // 
             // colTenSanPham
@@ -96,16 +100,10 @@
             this.colTenSanPham.Caption = "Tên sản phẩm";
             this.colTenSanPham.FieldName = "Ten";
             this.colTenSanPham.Name = "colTenSanPham";
+            this.colTenSanPham.OptionsColumn.ReadOnly = true;
             this.colTenSanPham.Visible = true;
-            this.colTenSanPham.VisibleIndex = 0;
+            this.colTenSanPham.VisibleIndex = 1;
             this.colTenSanPham.Width = 114;
-            // 
-            // lueTenSanPham
-            // 
-            this.lueTenSanPham.AutoHeight = false;
-            this.lueTenSanPham.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
-            this.lueTenSanPham.Name = "lueTenSanPham";
             // 
             // colSoLuong
             // 
@@ -116,16 +114,10 @@
             this.colSoLuong.Caption = "Số lượng";
             this.colSoLuong.FieldName = "SoLuong";
             this.colSoLuong.Name = "colSoLuong";
+            this.colSoLuong.OptionsColumn.ReadOnly = true;
             this.colSoLuong.Visible = true;
-            this.colSoLuong.VisibleIndex = 1;
+            this.colSoLuong.VisibleIndex = 2;
             this.colSoLuong.Width = 85;
-            // 
-            // spinSoLuong
-            // 
-            this.spinSoLuong.AutoHeight = false;
-            this.spinSoLuong.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
-            this.spinSoLuong.Name = "spinSoLuong";
             // 
             // colThoiGian
             // 
@@ -138,18 +130,10 @@
             this.colThoiGian.Caption = "Thời gian";
             this.colThoiGian.FieldName = "ThoiGian";
             this.colThoiGian.Name = "colThoiGian";
+            this.colThoiGian.OptionsColumn.ReadOnly = true;
             this.colThoiGian.Visible = true;
-            this.colThoiGian.VisibleIndex = 2;
+            this.colThoiGian.VisibleIndex = 0;
             this.colThoiGian.Width = 99;
-            // 
-            // dateThoiGian
-            // 
-            this.dateThoiGian.AutoHeight = false;
-            this.dateThoiGian.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateThoiGian.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateThoiGian.Name = "dateThoiGian";
             // 
             // colGhiChu
             // 
@@ -160,18 +144,10 @@
             this.colGhiChu.Caption = "Ghi chú";
             this.colGhiChu.FieldName = "GhiChu";
             this.colGhiChu.Name = "colGhiChu";
+            this.colGhiChu.OptionsColumn.ReadOnly = true;
             this.colGhiChu.Visible = true;
             this.colGhiChu.VisibleIndex = 3;
             this.colGhiChu.Width = 239;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(8, 7);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Thêm";
             // 
             // colSua
             // 
@@ -182,9 +158,20 @@
             this.colSua.Caption = "Sửa";
             this.colSua.ColumnEdit = this.btnSua;
             this.colSua.Name = "colSua";
+            this.colSua.OptionsFilter.AllowAutoFilter = false;
+            this.colSua.OptionsFilter.AllowFilter = false;
             this.colSua.Visible = true;
             this.colSua.VisibleIndex = 4;
             this.colSua.Width = 41;
+            // 
+            // btnSua
+            // 
+            this.btnSua.AutoHeight = false;
+            this.btnSua.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSua.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            this.btnSua.Name = "btnSua";
+            this.btnSua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnSua.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSua_ButtonClick);
             // 
             // colXoa
             // 
@@ -195,42 +182,73 @@
             this.colXoa.Caption = "Xóa";
             this.colXoa.ColumnEdit = this.btnXoa;
             this.colXoa.Name = "colXoa";
+            this.colXoa.OptionsFilter.AllowAutoFilter = false;
+            this.colXoa.OptionsFilter.AllowFilter = false;
             this.colXoa.Visible = true;
             this.colXoa.VisibleIndex = 5;
             this.colXoa.Width = 35;
-            // 
-            // btnSua
-            // 
-            this.btnSua.AutoHeight = false;
-            this.btnSua.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSua.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
-            this.btnSua.Name = "btnSua";
-            this.btnSua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // btnXoa
             // 
             this.btnXoa.AutoHeight = false;
             this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnXoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXoa_ButtonClick);
+            // 
+            // lueTenSanPham
+            // 
+            this.lueTenSanPham.AutoHeight = false;
+            this.lueTenSanPham.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.lueTenSanPham.Name = "lueTenSanPham";
+            // 
+            // spinSoLuong
+            // 
+            this.spinSoLuong.AutoHeight = false;
+            this.spinSoLuong.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.spinSoLuong.Name = "spinSoLuong";
+            // 
+            // dateThoiGian
+            // 
+            this.dateThoiGian.AutoHeight = false;
+            this.dateThoiGian.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateThoiGian.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateThoiGian.Name = "dateThoiGian";
+            // 
+            // btnThem
+            // 
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(14, 12);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(87, 28);
+            this.btnThem.TabIndex = 2;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // ucHoaDonBanLe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.grdHoaDonBanLe);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ucHoaDonBanLe";
-            this.Size = new System.Drawing.Size(650, 333);
+            this.Size = new System.Drawing.Size(986, 484);
+            this.Load += new System.EventHandler(this.ucHoaDonBanLe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdHoaDonBanLe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvHoaDonBanLe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGian.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGian)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSua)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,6 +268,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueTenSanPham;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit spinSoLuong;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit dateThoiGian;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
     }
 }

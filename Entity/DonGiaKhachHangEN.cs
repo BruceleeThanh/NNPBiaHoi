@@ -25,5 +25,18 @@ namespace Entity
             TenSanPham = aSanPhamBO.Select_ByMa(aDonGiaKhachHang.MaSanPham).Ten;
         }
 
+        public DonGiaKhachHangEN(int MaDonGia)
+        {
+            this.Ma = MaDonGia;
+            DonGiaKhachHang aDonGiaKhachHang = new DonGiaKhachHang();
+            DonGiaKhachHangBO aDonGiaKhachHangBO = new DonGiaKhachHangBO();
+            aDonGiaKhachHang = aDonGiaKhachHangBO.Select_ByMa(MaDonGia);
+            this.MaKhachHang = aDonGiaKhachHang.MaKhachHang;
+            this.MaSanPham = aDonGiaKhachHang.MaSanPham;
+            this.DonGia = aDonGiaKhachHang.DonGia;
+            this.ThoiGianCapNhat = aDonGiaKhachHang.ThoiGianCapNhat;
+            TenKhachHang = aKhachHangBO.Select_ByMa(aDonGiaKhachHang.MaKhachHang).Ten;
+            TenSanPham = aSanPhamBO.Select_ByMa(aDonGiaKhachHang.MaSanPham).Ten;
+        }
     }
 }
