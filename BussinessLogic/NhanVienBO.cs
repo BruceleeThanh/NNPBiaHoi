@@ -15,7 +15,7 @@ namespace BussinessLogic {
 
         public List<NhanVien> SelectAll() {
             try {
-                return aDatabaseDA.NhanVien.OrderByDescending(b => b.Ma).ToList();
+                return aDatabaseDA.NhanVien.Where(c => c.ThungRac == 1).OrderByDescending(b => b.Ma).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("NhanVienBO.Select_All:" + ex.ToString());
@@ -24,15 +24,34 @@ namespace BussinessLogic {
 
         public NhanVien Select_ByMa(int ma) {
             try {
-                return aDatabaseDA.NhanVien.Where(b => b.Ma == ma).FirstOrDefault();
+                return aDatabaseDA.NhanVien.Where(b => b.Ma == ma & b.ThungRac == 1).FirstOrDefault();
             }
             catch(Exception ex) {
                 throw new Exception("NhanVienBO.Select_ByMa:" + ex.ToString());
             }
         }
 
+        public List<NhanVien> SelectAll_Hidden() {
+            try {
+                return aDatabaseDA.NhanVien.Where(c => c.ThungRac == 2).OrderByDescending(b => b.Ma).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("NhanVienBO.SelectAll_Hidden:" + ex.ToString());
+            }
+        }
+
+        public NhanVien Select_ByMa_Hidden(int ma) {
+            try {
+                return aDatabaseDA.NhanVien.Where(b => b.Ma == ma & b.ThungRac == 2).FirstOrDefault();
+            }
+            catch(Exception ex) {
+                throw new Exception("NhanVienBO.Select_ByMa_Hidden:" + ex.ToString());
+            }
+        }
+
         public bool Insert(NhanVien aNhanVien) {
             try {
+                aNhanVien.ThungRac = 1;
                 aDatabaseDA.NhanVien.Add(aNhanVien);
                 aDatabaseDA.SaveChanges();
                 return true;
@@ -57,9 +76,9 @@ namespace BussinessLogic {
 
         public bool Delete(int ma) {
             try {
-                aDatabaseDA.NhanVien.Remove(this.Select_ByMa(ma));
-                aDatabaseDA.SaveChanges();
-                return true;
+                NhanVien aNhanVien = this.Select_ByMa(ma);
+                aNhanVien.ThungRac = 2;
+                return this.Update(aNhanVien);
             }
             catch(Exception ex) {
                 return false;

@@ -15,7 +15,7 @@ namespace BussinessLogic {
 
         public List<NhapHang> SelectAll() {
             try {
-                return aDatabaseDA.NhapHang.OrderByDescending(b => b.Ma).ToList();
+                return aDatabaseDA.NhapHang.Where(c => c.ThungRac == 1).OrderByDescending(b => b.Ma).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("NhanHangBO.Select_All:" + ex.ToString());
@@ -24,10 +24,28 @@ namespace BussinessLogic {
 
         public NhapHang Select_ByMa(int ma) {
             try {
-                return aDatabaseDA.NhapHang.Where(b => b.Ma == ma).FirstOrDefault();
+                return aDatabaseDA.NhapHang.Where(b => b.Ma == ma && b.ThungRac == 1).FirstOrDefault();
             }
             catch(Exception ex) {
                 throw new Exception("NhanHangBO.Select_ByMa:" + ex.ToString());
+            }
+        }
+
+        public List<NhapHang> SelectAll_Hidden() {
+            try {
+                return aDatabaseDA.NhapHang.Where(c => c.ThungRac == 2).OrderByDescending(b => b.Ma).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("NhanHangBO.SelectAll_Hidden:" + ex.ToString());
+            }
+        }
+
+        public NhapHang Select_ByMa_Hidden(int ma) {
+            try {
+                return aDatabaseDA.NhapHang.Where(b => b.Ma == ma && b.ThungRac == 2).FirstOrDefault();
+            }
+            catch(Exception ex) {
+                throw new Exception("NhanHangBO.Select_ByMa_Hidden:" + ex.ToString());
             }
         }
 
@@ -35,6 +53,7 @@ namespace BussinessLogic {
 
         public bool Insert(NhapHang aNhapHang) {
             try {
+                aNhapHang.ThungRac = 1;
                 aDatabaseDA.NhapHang.Add(aNhapHang);
                 aDatabaseDA.SaveChanges();
                 return true;
@@ -59,9 +78,9 @@ namespace BussinessLogic {
 
         public bool Delete(int ma) {
             try {
-                aDatabaseDA.NhapHang.Remove(this.Select_ByMa(ma));
-                aDatabaseDA.SaveChanges();
-                return true;
+                NhapHang aNhapHang = this.Select_ByMa(ma);
+                aNhapHang.ThungRac = 2;
+                return this.Update(aNhapHang);
             }
             catch(Exception ex) {
                 return false;

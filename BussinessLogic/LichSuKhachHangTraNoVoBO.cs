@@ -15,7 +15,7 @@ namespace BussinessLogic {
 
         public List<LichSuKhachHangTraNoVo> SelectAll() {
             try {
-                return aDatabaseDA.LichSuKhachHangTraNoVo.OrderByDescending(b => b.Ma).ToList();
+                return aDatabaseDA.LichSuKhachHangTraNoVo.Where(c => c.ThungRac == 1).OrderByDescending(b => b.Ma).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("LichSuKhachHangTraNoBO.Select_All:" + ex.ToString());
@@ -24,7 +24,7 @@ namespace BussinessLogic {
 
         public LichSuKhachHangTraNoVo Select_ByMa(int ma) {
             try {
-                return aDatabaseDA.LichSuKhachHangTraNoVo.Where(b => b.Ma == ma).FirstOrDefault();
+                return aDatabaseDA.LichSuKhachHangTraNoVo.Where(b => b.Ma == ma && b.ThungRac == 1).FirstOrDefault();
             }
             catch(Exception ex) {
                 throw new Exception("LichSuKhachHangTraNoBO.Select_ByMa:" + ex.ToString());
@@ -33,7 +33,7 @@ namespace BussinessLogic {
 
         public List<LichSuKhachHangTraNoVo> Select_ByMaKhachHangNoVo(int maKhachHangNoVo) {
             try {
-                return aDatabaseDA.LichSuKhachHangTraNoVo.Where(b => b.MaKhachHangNoVo == maKhachHangNoVo).ToList();
+                return aDatabaseDA.LichSuKhachHangTraNoVo.Where(b => b.MaKhachHangNoVo == maKhachHangNoVo && b.ThungRac == 1).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("LichSuKhachHangTraNoBO.Select_ByMaKhachHangNoVo:" + ex.ToString());
@@ -44,10 +44,48 @@ namespace BussinessLogic {
 
         public List<LichSuKhachHangTraNoVo> Select_ByLoai(int loai) {
             try {
-                return aDatabaseDA.LichSuKhachHangTraNoVo.Where(b => b.Loai == loai).ToList();
+                return aDatabaseDA.LichSuKhachHangTraNoVo.Where(b => b.Loai == loai && b.ThungRac == 1).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("LichSuKhachHangTraNoBO.Select_ByLoai:" + ex.ToString());
+            }
+        }
+
+        public List<LichSuKhachHangTraNoVo> SelectAll_Hidden() {
+            try {
+                return aDatabaseDA.LichSuKhachHangTraNoVo.Where(c => c.ThungRac == 2).OrderByDescending(b => b.Ma).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("LichSuKhachHangTraNoBO.SelectAll_Hidden:" + ex.ToString());
+            }
+        }
+
+        public LichSuKhachHangTraNoVo Select_ByMa_Hidden(int ma) {
+            try {
+                return aDatabaseDA.LichSuKhachHangTraNoVo.Where(b => b.Ma == ma && b.ThungRac == 2).FirstOrDefault();
+            }
+            catch(Exception ex) {
+                throw new Exception("LichSuKhachHangTraNoBO.Select_ByMa_Hidden:" + ex.ToString());
+            }
+        }
+
+        public List<LichSuKhachHangTraNoVo> Select_ByMaKhachHangNoVo_Hidden(int maKhachHangNoVo) {
+            try {
+                return aDatabaseDA.LichSuKhachHangTraNoVo.Where(b => b.MaKhachHangNoVo == maKhachHangNoVo && b.ThungRac == 2).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("LichSuKhachHangTraNoBO.Select_ByMaKhachHangNoVo_Hidden:" + ex.ToString());
+            }
+        }
+
+        //public List<LichSuKhachHangTraNoVo> Select_ByThoiGian(DateTime thoiGian);
+
+        public List<LichSuKhachHangTraNoVo> Select_ByLoai_Hidden(int loai) {
+            try {
+                return aDatabaseDA.LichSuKhachHangTraNoVo.Where(b => b.Loai == loai && b.ThungRac == 2).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("LichSuKhachHangTraNoBO.Select_ByLoai_Hidden:" + ex.ToString());
             }
         }
 
@@ -77,9 +115,9 @@ namespace BussinessLogic {
 
         public bool Delete(int ma) {
             try {
-                aDatabaseDA.LichSuKhachHangTraNoVo.Remove(this.Select_ByMa(ma));
-                aDatabaseDA.SaveChanges();
-                return true;
+                LichSuKhachHangTraNoVo aLichSuKhachHangTraNoVo = this.Select_ByMa(ma);
+                aLichSuKhachHangTraNoVo.ThungRac = 2;
+                return this.Update(aLichSuKhachHangTraNoVo);
             }
             catch(Exception ex) {
                 return false;

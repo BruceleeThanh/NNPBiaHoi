@@ -20,7 +20,12 @@ namespace NPPBiaHoi.ucSanPham
         public frmThemSanPham(ucSanPham aucSanPham)
         {
             InitializeComponent();
+            this.frmThemSanPham_Load(aucSanPham);
+        }
+
+        public void frmThemSanPham_Load(ucSanPham aucSanPham) {
             this.aucSanPham = aucSanPham;
+            rdoLoai.SelectedIndex = 0;
         }
 
         private void btnThemAnh_Click(object sender, EventArgs e) {
@@ -41,12 +46,25 @@ namespace NPPBiaHoi.ucSanPham
 
         private void btnLuu_Click(object sender, EventArgs e) {
             try {
+                if(string.IsNullOrEmpty(txtTenSanPham.Text)) {
+                    MessageBox.Show("Tên sản phẩm không được để trống.", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+                if(string.IsNullOrEmpty(txtDungTich.Text) && rdoLoai.SelectedIndex == 0) {
+                    MessageBox.Show("Dung tích sản phẩm không được để trống", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
                 SanPham aSanPham = new SanPham();
                 SanPhamBO aSanPhamBO = new SanPhamBO();
                 ConvertImage aConvertImage = new ConvertImage();
                 aSanPham.Ten = txtTenSanPham.Text;
-                aSanPham.DungTich = Double.Parse(txtDungTich.Text);
-                aSanPham.Loai = (byte) rdoLoai.EditValue;
+                if(rdoLoai.SelectedIndex == 1) {
+                    aSanPham.DungTich = 0;
+                }
+                else {
+                    aSanPham.DungTich = Double.Parse(txtDungTich.Text);
+                }
+                aSanPham.Loai = (byte?)(rdoLoai.SelectedIndex + 1);
                 aSanPham.MieuTa = mmoMieuTa.Text;
                 if(fileName != null) {
                     aSanPham.HinhAnh = aConvertImage.ConvertImagePathToByte(fileName);

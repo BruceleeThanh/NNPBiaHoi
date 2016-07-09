@@ -15,7 +15,7 @@ namespace BussinessLogic {
 
         public List<PhuongTien> SelectAll() {
             try {
-                return aDatabaseDA.PhuongTien.OrderByDescending(b => b.Ma).ToList();
+                return aDatabaseDA.PhuongTien.Where(c => c.ThungRac == 1).OrderByDescending(b => b.Ma).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("PhuongTienBO.Select_All:" + ex.ToString());
@@ -24,15 +24,34 @@ namespace BussinessLogic {
 
         public PhuongTien Select_ByMa(int ma) {
             try {
-                return aDatabaseDA.PhuongTien.Where(b => b.Ma == ma).FirstOrDefault();
+                return aDatabaseDA.PhuongTien.Where(b => b.Ma == ma && b.ThungRac == 1).FirstOrDefault();
             }
             catch(Exception ex) {
                 throw new Exception("PhuongTienBO.Select_ByMa:" + ex.ToString());
             }
         }
 
+        public List<PhuongTien> SelectAll_Hidden() {
+            try {
+                return aDatabaseDA.PhuongTien.Where(c => c.ThungRac == 2).OrderByDescending(b => b.Ma).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("PhuongTienBO.SelectAll_Hidden:" + ex.ToString());
+            }
+        }
+
+        public PhuongTien Select_ByMa_Hidden(int ma) {
+            try {
+                return aDatabaseDA.PhuongTien.Where(b => b.Ma == ma && b.ThungRac == 2).FirstOrDefault();
+            }
+            catch(Exception ex) {
+                throw new Exception("PhuongTienBO.Select_ByMa_Hidden:" + ex.ToString());
+            }
+        }
+
         public bool Insert(PhuongTien aPhuongTien) {
             try {
+                aPhuongTien.ThungRac = 1;
                 aDatabaseDA.PhuongTien.Add(aPhuongTien);
                 aDatabaseDA.SaveChanges();
                 return true;
@@ -57,9 +76,9 @@ namespace BussinessLogic {
 
         public bool Delete(int ma) {
             try {
-                aDatabaseDA.PhuongTien.Remove(this.Select_ByMa(ma));
-                aDatabaseDA.SaveChanges();
-                return true;
+                PhuongTien aPhuongTien = this.Select_ByMa(ma);
+                aPhuongTien.ThungRac = 2;
+                return this.Update(aPhuongTien);
             }
             catch(Exception ex) {
                 return false;

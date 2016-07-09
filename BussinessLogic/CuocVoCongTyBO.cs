@@ -15,7 +15,7 @@ namespace BussinessLogic {
 
         public List<CuocVoCongTy> Select_All() {
             try {
-                return aDatabaseDA.CuocVoCongTy.OrderByDescending(b => b.Ma).ToList();
+                return aDatabaseDA.CuocVoCongTy.Where(c=>c.ThungRac == 1).OrderByDescending(b => b.Ma).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("CuocVoCongTyBO.Select_All:" + ex.ToString());
@@ -24,24 +24,52 @@ namespace BussinessLogic {
 
         public CuocVoCongTy Select_ByMa(int ma) {
             try {
-                return aDatabaseDA.CuocVoCongTy.Where(b => b.Ma == ma).FirstOrDefault();
+                return aDatabaseDA.CuocVoCongTy.Where(b => b.Ma == ma && b.ThungRac == 1).FirstOrDefault();
             }
             catch(Exception ex) {
-                throw new Exception("CuocVoCongTyBO.Select_All: " + ex.ToString());
+                throw new Exception("CuocVoCongTyBO.Select_ByMa: " + ex.ToString());
             }
         }
 
         public List<CuocVoCongTy> Select_ByMaSanPham(int maSanPham) {
             try {
-                return aDatabaseDA.CuocVoCongTy.Where(b => b.MaSanPham == maSanPham).ToList();
+                return aDatabaseDA.CuocVoCongTy.Where(b => b.MaSanPham == maSanPham && b.ThungRac == 1).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("CuocVoCongTyBO.Select_ByMaSanPham: " + ex.ToString());
             }
         }
 
+        public List<CuocVoCongTy> Select_All_Hidden() {
+            try {
+                return aDatabaseDA.CuocVoCongTy.Where(c => c.ThungRac == 2).OrderByDescending(b => b.Ma).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("CuocVoCongTyBO.Select_All_Hidden:" + ex.ToString());
+            }
+        }
+
+        public CuocVoCongTy Select_ByMa_Hidden(int ma) {
+            try {
+                return aDatabaseDA.CuocVoCongTy.Where(b => b.Ma == ma && b.ThungRac == 2).FirstOrDefault();
+            }
+            catch(Exception ex) {
+                throw new Exception("CuocVoCongTyBO.Select_ByMa_Hidden: " + ex.ToString());
+            }
+        }
+
+        public List<CuocVoCongTy> Select_ByMaSanPham_Hidden(int maSanPham) {
+            try {
+                return aDatabaseDA.CuocVoCongTy.Where(b => b.MaSanPham == maSanPham && b.ThungRac == 2).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("CuocVoCongTyBO.Select_ByMaSanPham_Hidden: " + ex.ToString());
+            }
+        }
+
         public bool Insert(CuocVoCongTy aCuocVoCongTy) {
             try {
+                aCuocVoCongTy.ThungRac = 1;
                 aDatabaseDA.CuocVoCongTy.Add(aCuocVoCongTy);
                 aDatabaseDA.SaveChanges();
                 return true;
@@ -66,9 +94,9 @@ namespace BussinessLogic {
 
         public bool Delete(int ma) {
             try {
-                aDatabaseDA.CuocVoCongTy.Remove(this.Select_ByMa(ma));
-                aDatabaseDA.SaveChanges();
-                return true;
+                CuocVoCongTy aCuocVoCongTy = this.Select_ByMa(ma);
+                aCuocVoCongTy.ThungRac = 2;
+                return Update(aCuocVoCongTy);
             }
             catch(Exception ex) {
                 return false;

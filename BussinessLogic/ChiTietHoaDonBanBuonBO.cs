@@ -14,7 +14,7 @@ namespace BussinessLogic {
 
         public List<ChiTietHoaDonBanBuon> Select_All() {
             try {
-                return aDatabaseDA.ChiTietHoaDonBanBuon.OrderByDescending(b => b.MaHoaDonBanBuon).ToList();
+                return aDatabaseDA.ChiTietHoaDonBanBuon.Where(c => c.ThungRac == 1).OrderByDescending(b => b.MaHoaDonBanBuon).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("ChiTietHoaDonBanBuonBO.Select_All" + ex.ToString());
@@ -23,7 +23,7 @@ namespace BussinessLogic {
 
         public List<ChiTietHoaDonBanBuon> Select_ByMaHoaDonBanBuon(int maHoaDonBanBuon) {
             try {
-                return aDatabaseDA.ChiTietHoaDonBanBuon.Where(b => b.MaHoaDonBanBuon == maHoaDonBanBuon).ToList();
+                return aDatabaseDA.ChiTietHoaDonBanBuon.Where(b => b.MaHoaDonBanBuon == maHoaDonBanBuon && b.ThungRac == 1).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("ChiTietHoaDonBanBuonBO.Select_ByMaHoaDonBanBuon" + ex.ToString());
@@ -32,7 +32,7 @@ namespace BussinessLogic {
 
         public List<ChiTietHoaDonBanBuon> Select_ByMaSanPham(int maSanPham) {
             try {
-                return aDatabaseDA.ChiTietHoaDonBanBuon.Where(b => b.MaSanPham == maSanPham).ToList();
+                return aDatabaseDA.ChiTietHoaDonBanBuon.Where(b => b.MaSanPham == maSanPham && b.ThungRac == 1).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("ChiTietHoaDonBanBuonBO.Select_ByMaSanPham" + ex.ToString());
@@ -41,15 +41,52 @@ namespace BussinessLogic {
 
         public ChiTietHoaDonBanBuon Select_ByMaHoaDonBanBuon_ByMaSanPham(int maHoaDonBanBuon, int maSanPham) {
             try {
-                return aDatabaseDA.ChiTietHoaDonBanBuon.Where(b => b.MaHoaDonBanBuon == maHoaDonBanBuon && b.MaSanPham == maSanPham).FirstOrDefault();
+                return aDatabaseDA.ChiTietHoaDonBanBuon.Where(b => b.MaHoaDonBanBuon == maHoaDonBanBuon && b.MaSanPham == maSanPham && b.ThungRac == 1).FirstOrDefault();
             }
             catch(Exception ex) {
                 throw new Exception("ChiTietHoaDonBanBuonBO.Select_ByMaHoaDonBanBuon_ByMaSanPham" + ex.ToString());
             }
         }
 
+        public List<ChiTietHoaDonBanBuon> Select_All_Hidden() {
+            try {
+                return aDatabaseDA.ChiTietHoaDonBanBuon.Where(c => c.ThungRac == 2).OrderByDescending(b => b.MaHoaDonBanBuon).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("ChiTietHoaDonBanBuonBO.Select_All_Hidden" + ex.ToString());
+            }
+        }
+
+        public List<ChiTietHoaDonBanBuon> Select_ByMaHoaDonBanBuon_Hidden(int maHoaDonBanBuon) {
+            try {
+                return aDatabaseDA.ChiTietHoaDonBanBuon.Where(b => b.MaHoaDonBanBuon == maHoaDonBanBuon && b.ThungRac == 2).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("ChiTietHoaDonBanBuonBO.Select_ByMaHoaDonBanBuon_Hidden" + ex.ToString());
+            }
+        }
+
+        public List<ChiTietHoaDonBanBuon> Select_ByMaSanPham_Hidden(int maSanPham) {
+            try {
+                return aDatabaseDA.ChiTietHoaDonBanBuon.Where(b => b.MaSanPham == maSanPham && b.ThungRac == 2).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("ChiTietHoaDonBanBuonBO.Select_ByMaSanPham_Hidden" + ex.ToString());
+            }
+        }
+
+        public ChiTietHoaDonBanBuon Select_ByMaHoaDonBanBuon_ByMaSanPham_Hidden(int maHoaDonBanBuon, int maSanPham) {
+            try {
+                return aDatabaseDA.ChiTietHoaDonBanBuon.Where(b => b.MaHoaDonBanBuon == maHoaDonBanBuon && b.MaSanPham == maSanPham && b.ThungRac == 2).FirstOrDefault();
+            }
+            catch(Exception ex) {
+                throw new Exception("ChiTietHoaDonBanBuonBO.Select_ByMaHoaDonBanBuon_ByMaSanPham_Hidden" + ex.ToString());
+            }
+        }
+
         public bool Insert(ChiTietHoaDonBanBuon aChiTietHoaDonBanBuon) {
             try {
+                aChiTietHoaDonBanBuon.ThungRac = 1;
                 aDatabaseDA.ChiTietHoaDonBanBuon.Add(aChiTietHoaDonBanBuon);
                 aDatabaseDA.SaveChanges();
                 return true;
@@ -74,9 +111,9 @@ namespace BussinessLogic {
 
         public bool Delete(int maHoaDonBanBuon, int maSanPham) {
             try {
-                aDatabaseDA.ChiTietHoaDonBanBuon.Remove(this.Select_ByMaHoaDonBanBuon_ByMaSanPham(maHoaDonBanBuon, maSanPham));
-                aDatabaseDA.SaveChanges();
-                return true;
+                ChiTietHoaDonBanBuon aChiTietHoaDonBanBuon = this.Select_ByMaHoaDonBanBuon_ByMaSanPham(maHoaDonBanBuon, maSanPham);
+                aChiTietHoaDonBanBuon.ThungRac = 2;
+                return this.Update(aChiTietHoaDonBanBuon);
             }
             catch(Exception ex) {
                 return false;

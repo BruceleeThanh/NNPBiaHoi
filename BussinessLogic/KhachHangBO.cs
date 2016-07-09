@@ -14,7 +14,7 @@ namespace BussinessLogic {
 
         public List<KhachHang> SelectAll() {
             try {
-                return aDatabaseDA.KhachHang.OrderByDescending(b => b.Ma).ToList();
+                return aDatabaseDA.KhachHang.Where(c => c.ThungRac == 1).OrderByDescending(b => b.Ma).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("KhachHangBO.Select_All:" + ex.ToString());
@@ -23,15 +23,34 @@ namespace BussinessLogic {
 
         public KhachHang Select_ByMa(int ma) {
             try {
-                return aDatabaseDA.KhachHang.Where(b => b.Ma == ma).FirstOrDefault();
+                return aDatabaseDA.KhachHang.Where(b => b.Ma == ma && b.ThungRac == 1).FirstOrDefault();
             }
             catch(Exception ex) {
-                throw new Exception("KhachHangBO.Select_All:" + ex.ToString());
+                throw new Exception("KhachHangBO.Select_ByMa:" + ex.ToString());
+            }
+        }
+
+        public List<KhachHang> SelectAll_Hidden() {
+            try {
+                return aDatabaseDA.KhachHang.Where(c => c.ThungRac == 2).OrderByDescending(b => b.Ma).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("KhachHangBO.SelectAll_Hidden:" + ex.ToString());
+            }
+        }
+
+        public KhachHang Select_ByMa_Hidden(int ma) {
+            try {
+                return aDatabaseDA.KhachHang.Where(b => b.Ma == ma && b.ThungRac == 2).FirstOrDefault();
+            }
+            catch(Exception ex) {
+                throw new Exception("KhachHangBO.Select_ByMa_Hidden:" + ex.ToString());
             }
         }
 
         public bool Insert(KhachHang aKhachHang) {
             try {
+                aKhachHang.ThungRac = 1;
                 aDatabaseDA.KhachHang.Add(aKhachHang);
                 aDatabaseDA.SaveChanges();
                 return true;
@@ -56,9 +75,9 @@ namespace BussinessLogic {
 
         public bool Delete(int ma) {
             try {
-                aDatabaseDA.KhachHang.Remove(this.Select_ByMa(ma));
-                aDatabaseDA.SaveChanges();
-                return true;
+                KhachHang aKhachHang = this.Select_ByMa(ma);
+                aKhachHang.ThungRac = 2;
+                return this.Update(aKhachHang);
             }
             catch(Exception ex) {
                 return false;

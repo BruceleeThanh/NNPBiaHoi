@@ -9,13 +9,14 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BussinessLogic;
 using DataAccess;
+using Entity;
 
 namespace NPPBiaHoi.ucSanPham
 {
     public partial class ucSanPham : DevExpress.XtraEditors.XtraUserControl
     {
         private SanPhamBO aSanPhamBO;
-        private List<SanPham> aListSanPham;
+        private List<SanPhamEN> aListSanPhamEN;
 
         public ucSanPham()
         {
@@ -24,10 +25,14 @@ namespace NPPBiaHoi.ucSanPham
         }
 
         public void ucSanPham_Load() {
-            aListSanPham = new List<SanPham>();
+            aListSanPhamEN = new List<SanPhamEN>();
             aSanPhamBO = new SanPhamBO();
+            List<SanPham> aListSanPham = new List<SanPham>();
             aListSanPham = aSanPhamBO.SelectAll();
-            grdSanPham.DataSource = aListSanPham;
+            foreach(SanPham temp in aListSanPham) {
+                aListSanPhamEN.Add(new SanPhamEN(temp));
+            }
+            grdSanPham.DataSource = aListSanPhamEN;
         }
 
         private void grvSanPham_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
@@ -46,6 +51,18 @@ namespace NPPBiaHoi.ucSanPham
         private void btnChiTiet_Click(object sender, EventArgs e) {
             frmChiTietSanPham afrmChiTietSanPham = new frmChiTietSanPham(int.Parse(grvSanPham.GetFocusedRowCellValue("Ma").ToString()));
             afrmChiTietSanPham.ShowDialog();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e) {
+            frmSuaSanPham afrmSuaSanPham = new frmSuaSanPham(int.Parse(grvSanPham.GetFocusedRowCellValue("Ma").ToString()), this);
+            afrmSuaSanPham.ShowDialog();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e) {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá sản phẩm này.", "Xoá sản phẩm", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes) {
+
+            }
         }
 
         

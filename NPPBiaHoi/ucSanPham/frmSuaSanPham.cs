@@ -19,7 +19,7 @@ namespace NPPBiaHoi.ucSanPham
         private SanPham aSanPham = null;
         private ConvertImage aConvertImage;
         private ucSanPham aucSanPham = null;
-        private SanPhamBO aSanPhamBO;
+        private SanPhamBO aSanPhamBO = new SanPhamBO();
 
         public frmSuaSanPham(int ma, ucSanPham aucSanPham)
         {
@@ -64,11 +64,19 @@ namespace NPPBiaHoi.ucSanPham
 
         private void btnLuu_Click(object sender, EventArgs e) {
             try {
+                if(string.IsNullOrEmpty(txtTenSanPham.Text)) {
+                    MessageBox.Show("Tên sản phẩm không được để trống.", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+                if(string.IsNullOrEmpty(txtDungTich.Text) && rdoLoai.SelectedIndex == 0) {
+                    MessageBox.Show("Dung tích sản phẩm không được để trống", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
                 aSanPhamBO = new SanPhamBO();
                 ConvertImage aConvertImage = new ConvertImage();
                 aSanPham.Ten = txtTenSanPham.Text;
                 aSanPham.DungTich = Double.Parse(txtDungTich.Text);
-                aSanPham.Loai = (byte)rdoLoai.EditValue;
+                aSanPham.Loai = (byte?)(rdoLoai.SelectedIndex + 1);
                 aSanPham.MieuTa = mmoMieuTa.Text;
                 if(fileName != null) {
                     aSanPham.HinhAnh = aConvertImage.ConvertImagePathToByte(fileName);

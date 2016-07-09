@@ -32,7 +32,7 @@ namespace NPPBiaHoi.ucSanPham
             txtSoLuongSanPham.Text = aSanPham.SoLuongSanPham.ToString();
             txtSoLuongVo.Text = aSanPham.SoLuongVo.ToString();
             mmoMieuTa.Text = aSanPham.MieuTa;
-            rdoLoai.EditValue = aSanPham.Loai;
+            rdoLoai.SelectedIndex = (int) aSanPham.Loai - 1;
             if(aSanPham.KichHoat == 1) {
                 chkDangQuanLy.Checked = true;
             }

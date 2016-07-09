@@ -141,6 +141,7 @@
             // 
             this.txtTenSanPham.Location = new System.Drawing.Point(137, 18);
             this.txtTenSanPham.Name = "txtTenSanPham";
+            this.txtTenSanPham.Properties.ReadOnly = true;
             this.txtTenSanPham.Size = new System.Drawing.Size(187, 20);
             this.txtTenSanPham.TabIndex = 28;
             // 

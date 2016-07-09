@@ -89,6 +89,7 @@
             this.grvSanPham.GridControl = this.grdSanPham;
             this.grvSanPham.IndicatorWidth = 30;
             this.grvSanPham.Name = "grvSanPham";
+            this.grvSanPham.OptionsBehavior.ReadOnly = true;
             this.grvSanPham.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.grvSanPham_CustomDrawRowIndicator);
             // 
             // colTenSanPham
@@ -150,7 +151,7 @@
             this.colLoai.AppearanceHeader.Options.UseTextOptions = true;
             this.colLoai.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colLoai.Caption = "Loại";
-            this.colLoai.FieldName = "Loai";
+            this.colLoai.FieldName = "sLoai";
             this.colLoai.Name = "colLoai";
             this.colLoai.Visible = true;
             this.colLoai.VisibleIndex = 4;
@@ -174,6 +175,8 @@
             // 
             this.chkKichHoat.AutoHeight = false;
             this.chkKichHoat.Name = "chkKichHoat";
+            this.chkKichHoat.ValueChecked = ((byte)(1));
+            this.chkKichHoat.ValueUnchecked = ((byte)(0));
             // 
             // colSua
             // 
@@ -195,6 +198,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSua.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnSua.Name = "btnSua";
             this.btnSua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // colXoa
             // 
@@ -216,6 +220,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // colChiTiet
             // 

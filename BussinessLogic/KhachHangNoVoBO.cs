@@ -17,7 +17,7 @@ namespace BussinessLogic {
 
         public List<KhachHangNoVo> SelectAll() {
             try {
-                return aDatabaseDA.KhachHangNoVo.OrderByDescending(b => b.Ma).ToList();
+                return aDatabaseDA.KhachHangNoVo.Where(c => c.ThungRac == 1).OrderByDescending(b => b.Ma).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("KhachHangNoVoBO.Select_All:" + ex.ToString());
@@ -26,7 +26,7 @@ namespace BussinessLogic {
 
         public KhachHangNoVo Select_ByMa(int ma) {
             try {
-                return aDatabaseDA.KhachHangNoVo.Where(b => b.Ma == ma).FirstOrDefault();
+                return aDatabaseDA.KhachHangNoVo.Where(b => b.Ma == ma && b.ThungRac == 1).FirstOrDefault();
             }
             catch(Exception ex) {
                 throw new Exception("KhachHangNoVoBO.Select_ByMa:" + ex.ToString());
@@ -35,7 +35,7 @@ namespace BussinessLogic {
 
         public List<KhachHangNoVo> Select_ByMaKhachHang(int maKhachHang) {
             try {
-                return aDatabaseDA.KhachHangNoVo.Where(b => b.MaKhachHang == maKhachHang).ToList();
+                return aDatabaseDA.KhachHangNoVo.Where(b => b.MaKhachHang == maKhachHang && b.ThungRac == 1).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("KhachHangNoVoBO.Select_ByMaKhachHang:" + ex.ToString());
@@ -44,7 +44,7 @@ namespace BussinessLogic {
 
         public List<KhachHangNoVo> Select_ByMaSanPham(int maSanPham) {
             try {
-                return aDatabaseDA.KhachHangNoVo.Where(b => b.MaSanPham == maSanPham).ToList();
+                return aDatabaseDA.KhachHangNoVo.Where(b => b.MaSanPham == maSanPham && b.ThungRac == 1).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("KhachHangNoVoBO.Select_ByMaSanPham:" + ex.ToString());
@@ -53,15 +53,61 @@ namespace BussinessLogic {
 
         public KhachHangNoVo Select_ByMaKhachHang_ByMaSanPham(int maKhachHang, int maSanPham) {
             try {
-                return aDatabaseDA.KhachHangNoVo.Where(b => b.MaKhachHang == maKhachHang && b.MaSanPham == maSanPham).FirstOrDefault();
+                return aDatabaseDA.KhachHangNoVo.Where(b => b.MaKhachHang == maKhachHang && b.MaSanPham == maSanPham && b.ThungRac == 1).FirstOrDefault();
             }
             catch(Exception ex) {
-                throw new Exception("KhachHangNoVoBO.Select_ByMaKhachHang:" + ex.ToString());
+                throw new Exception("KhachHangNoVoBO.Select_ByMaKhachHang_ByMaSanPham:" + ex.ToString());
+            }
+        }
+
+        public List<KhachHangNoVo> SelectAll_Hidden() {
+            try {
+                return aDatabaseDA.KhachHangNoVo.Where(c => c.ThungRac == 2).OrderByDescending(b => b.Ma).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("KhachHangNoVoBO.SelectAll_Hidden:" + ex.ToString());
+            }
+        }
+
+        public KhachHangNoVo Select_ByMa_Hidden(int ma) {
+            try {
+                return aDatabaseDA.KhachHangNoVo.Where(b => b.Ma == ma && b.ThungRac == 2).FirstOrDefault();
+            }
+            catch(Exception ex) {
+                throw new Exception("KhachHangNoVoBO.Select_ByMa_Hidden:" + ex.ToString());
+            }
+        }
+
+        public List<KhachHangNoVo> Select_ByMaKhachHang_Hidden(int maKhachHang) {
+            try {
+                return aDatabaseDA.KhachHangNoVo.Where(b => b.MaKhachHang == maKhachHang && b.ThungRac == 2).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("KhachHangNoVoBO.Select_ByMaKhachHang_Hidden:" + ex.ToString());
+            }
+        }
+
+        public List<KhachHangNoVo> Select_ByMaSanPham_Hidden(int maSanPham) {
+            try {
+                return aDatabaseDA.KhachHangNoVo.Where(b => b.MaSanPham == maSanPham && b.ThungRac == 2).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("KhachHangNoVoBO.Select_ByMaSanPham_Hidden:" + ex.ToString());
+            }
+        }
+
+        public KhachHangNoVo Select_ByMaKhachHang_ByMaSanPham_Hidden(int maKhachHang, int maSanPham) {
+            try {
+                return aDatabaseDA.KhachHangNoVo.Where(b => b.MaKhachHang == maKhachHang && b.MaSanPham == maSanPham && b.ThungRac == 2).FirstOrDefault();
+            }
+            catch(Exception ex) {
+                throw new Exception("KhachHangNoVoBO.Select_ByMaKhachHang_ByMaSanPham_Hidden:" + ex.ToString());
             }
         }
 
         public bool Insert(KhachHangNoVo aKhachHangNoVo) {
             try {
+                aKhachHangNoVo.ThungRac = 1;
                 aDatabaseDA.KhachHangNoVo.Add(aKhachHangNoVo);
                 aDatabaseDA.SaveChanges();
                 return true;
@@ -86,9 +132,9 @@ namespace BussinessLogic {
 
         public bool Delete(int ma) {
             try {
-                aDatabaseDA.KhachHangNoVo.Remove(this.Select_ByMa(ma));
-                aDatabaseDA.SaveChanges();
-                return true;
+                KhachHangNoVo aKhachHangNoVo = this.Select_ByMa(ma);
+                aKhachHangNoVo.ThungRac = 2;
+                return this.Update(aKhachHangNoVo);
             }
             catch(Exception ex) {
                 return false;

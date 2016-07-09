@@ -16,7 +16,7 @@ namespace BussinessLogic {
 
         public List<TaiKhoanDangNhap> SelectAll() {
             try {
-                return aDatabaseDA.TaiKhoanDangNhap.OrderByDescending(b => b.Ma).ToList();
+                return aDatabaseDA.TaiKhoanDangNhap.Where(c => c.ThungRac == 1).OrderByDescending(b => b.Ma).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("TaiKhoanDangNhapBO.Select_All:" + ex.ToString());
@@ -25,7 +25,7 @@ namespace BussinessLogic {
 
         public TaiKhoanDangNhap Select_ByMa(int ma) {
             try {
-                return aDatabaseDA.TaiKhoanDangNhap.Where(b => b.Ma == ma).FirstOrDefault();
+                return aDatabaseDA.TaiKhoanDangNhap.Where(b => b.Ma == ma && b.ThungRac == 1).FirstOrDefault();
             }
             catch(Exception ex) {
                 throw new Exception("TaiKhoanDangNhapBO.Select_ByMa:" + ex.ToString());
@@ -36,7 +36,7 @@ namespace BussinessLogic {
         public bool Select_ByTenDangNhap_ByMatKhau(string tenDangNhap, string matKhau) {
             try {
                 string maHoaMatKhau = this.ToSHA1(matKhau);
-                if(aDatabaseDA.TaiKhoanDangNhap.Where(b => b.TenDangNhap == tenDangNhap && b.MatKhau == maHoaMatKhau).Any()) {
+                if(aDatabaseDA.TaiKhoanDangNhap.Where(b => b.TenDangNhap == tenDangNhap && b.MatKhau == maHoaMatKhau && b.ThungRac == 1).Any()) {
                     return true;
                 }
                 else {
@@ -48,8 +48,27 @@ namespace BussinessLogic {
             }
         }
 
+        public List<TaiKhoanDangNhap> SelectAll_Hidden() {
+            try {
+                return aDatabaseDA.TaiKhoanDangNhap.Where(c => c.ThungRac == 2).OrderByDescending(b => b.Ma).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("TaiKhoanDangNhapBO.SelectAll_Hidden:" + ex.ToString());
+            }
+        }
+
+        public TaiKhoanDangNhap Select_ByMa_Hidden(int ma) {
+            try {
+                return aDatabaseDA.TaiKhoanDangNhap.Where(b => b.Ma == ma && b.ThungRac == 2).FirstOrDefault();
+            }
+            catch(Exception ex) {
+                throw new Exception("TaiKhoanDangNhapBO.Select_ByMa_Hidden:" + ex.ToString());
+            }
+        }
+
         public bool Insert(TaiKhoanDangNhap aTaiKhoanDangNhap) {
             try {
+                aTaiKhoanDangNhap.ThungRac = 1;
                 aTaiKhoanDangNhap.MatKhau = this.ToSHA1(aTaiKhoanDangNhap.MatKhau);
                 aDatabaseDA.TaiKhoanDangNhap.Add(aTaiKhoanDangNhap);
                 aDatabaseDA.SaveChanges();
@@ -76,9 +95,9 @@ namespace BussinessLogic {
 
         public bool Delete(int ma) {
             try {
-                aDatabaseDA.TaiKhoanDangNhap.Remove(this.Select_ByMa(ma));
-                aDatabaseDA.SaveChanges();
-                return true;
+                TaiKhoanDangNhap aTaiKhoanDangNhap = this.Select_ByMa(ma);
+                aTaiKhoanDangNhap.ThungRac = 2;
+                return this.Update(aTaiKhoanDangNhap);
             }
             catch(Exception ex) {
                 return false;

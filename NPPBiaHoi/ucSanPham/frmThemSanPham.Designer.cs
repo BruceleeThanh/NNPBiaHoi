@@ -71,6 +71,8 @@
             // 
             this.txtDungTich.Location = new System.Drawing.Point(111, 61);
             this.txtDungTich.Name = "txtDungTich";
+            this.txtDungTich.Properties.Mask.EditMask = "f";
+            this.txtDungTich.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDungTich.Size = new System.Drawing.Size(187, 20);
             this.txtDungTich.TabIndex = 7;
             // 
@@ -209,6 +211,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmThemSanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm sản phẩm";
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSanPham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDungTich.Properties)).EndInit();

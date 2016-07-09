@@ -16,7 +16,7 @@ namespace BussinessLogic {
 
         public List<LichSuKhachHangTraNoTien> SelectAll() {
             try {
-                return aDatabaseDA.LichSuKhachHangTraNoTien.OrderByDescending(b => b.Ma).ToList();
+                return aDatabaseDA.LichSuKhachHangTraNoTien.Where(c => c.ThungRac == 1).OrderByDescending(b => b.Ma).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("LichSuKhachHangTraNoTienBO.Select_All:" + ex.ToString());
@@ -25,16 +25,16 @@ namespace BussinessLogic {
 
         public LichSuKhachHangTraNoTien Select_ByMa(int ma) {
             try {
-                return aDatabaseDA.LichSuKhachHangTraNoTien.Where(b => b.Ma == ma).FirstOrDefault();
+                return aDatabaseDA.LichSuKhachHangTraNoTien.Where(b => b.Ma == ma && b.ThungRac == 1).FirstOrDefault();
             }
             catch(Exception ex) {
-                throw new Exception("LichSuKhachHangTraNoTienBO.Select_ByMaKhachHang:" + ex.ToString());
+                throw new Exception("LichSuKhachHangTraNoTienBO.Select_ByMa:" + ex.ToString());
             }
         }
 
         public List<LichSuKhachHangTraNoTien> Select_ByMaKhachHang(int maKhachHang) {
             try {
-                return aDatabaseDA.LichSuKhachHangTraNoTien.Where(b => b.MaKhachHang == maKhachHang).ToList();
+                return aDatabaseDA.LichSuKhachHangTraNoTien.Where(b => b.MaKhachHang == maKhachHang && b.ThungRac == 1).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("LichSuKhachHangTraNoTienBO.Select_ByMaKhachHang:" + ex.ToString());
@@ -43,8 +43,36 @@ namespace BussinessLogic {
 
         //public List<LichSuKhachHangTraNoTien> Select_ByThoiGian(DateTime thoiGian);
 
+        public List<LichSuKhachHangTraNoTien> SelectAll_Hidden() {
+            try {
+                return aDatabaseDA.LichSuKhachHangTraNoTien.Where(c => c.ThungRac == 2).OrderByDescending(b => b.Ma).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("LichSuKhachHangTraNoTienBO.SelectAll_Hidden:" + ex.ToString());
+            }
+        }
+
+        public LichSuKhachHangTraNoTien Select_ByMa_Hidden(int ma) {
+            try {
+                return aDatabaseDA.LichSuKhachHangTraNoTien.Where(b => b.Ma == ma && b.ThungRac == 2).FirstOrDefault();
+            }
+            catch(Exception ex) {
+                throw new Exception("LichSuKhachHangTraNoTienBO.Select_ByMa_Hidden:" + ex.ToString());
+            }
+        }
+
+        public List<LichSuKhachHangTraNoTien> Select_ByMaKhachHang_Hidden(int maKhachHang) {
+            try {
+                return aDatabaseDA.LichSuKhachHangTraNoTien.Where(b => b.MaKhachHang == maKhachHang && b.ThungRac == 2).ToList();
+            }
+            catch(Exception ex) {
+                throw new Exception("LichSuKhachHangTraNoTienBO.Select_ByMaKhachHang_Hidden:" + ex.ToString());
+            }
+        }
+
         public bool Insert(LichSuKhachHangTraNoTien aLichSuKhachHangTraNoTien) {
             try {
+                aLichSuKhachHangTraNoTien.ThungRac = 1;
                 aDatabaseDA.LichSuKhachHangTraNoTien.Add(aLichSuKhachHangTraNoTien);
                 aDatabaseDA.SaveChanges();
                 return true;
@@ -69,9 +97,9 @@ namespace BussinessLogic {
 
         public bool Delete(int ma) {
             try {
-                aDatabaseDA.LichSuKhachHangTraNoTien.Remove(this.Select_ByMa(ma));
-                aDatabaseDA.SaveChanges();
-                return true;
+                LichSuKhachHangTraNoTien aLichSuKhachHangNoTien = this.Select_ByMa(ma);
+                aLichSuKhachHangNoTien.ThungRac = 2;
+                return this.Update(aLichSuKhachHangNoTien);
             }
             catch(Exception ex) {
                 return false;
