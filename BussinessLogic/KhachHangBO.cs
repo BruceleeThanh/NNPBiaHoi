@@ -48,15 +48,14 @@ namespace BussinessLogic {
             }
         }
 
-        public bool Insert(KhachHang aKhachHang) {
+        public int Insert(KhachHang aKhachHang) {
             try {
                 aKhachHang.ThungRac = 1;
                 aDatabaseDA.KhachHang.Add(aKhachHang);
                 aDatabaseDA.SaveChanges();
-                return true;
+                return aKhachHang.Ma;
             }
             catch(Exception ex) {
-                return false;
                 throw new Exception("KhachHangBO.Insert: " + ex.ToString());
             }
         }
