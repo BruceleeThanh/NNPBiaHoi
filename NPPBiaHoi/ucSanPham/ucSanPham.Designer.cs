@@ -48,6 +48,7 @@
             this.colChiTiet = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnChiTiet = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnThemSanPham = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkKichHoat)).BeginInit();
@@ -69,7 +70,7 @@
             this.btnSua,
             this.btnXoa,
             this.btnChiTiet});
-            this.grdSanPham.Size = new System.Drawing.Size(679, 334);
+            this.grdSanPham.Size = new System.Drawing.Size(682, 334);
             this.grdSanPham.TabIndex = 0;
             this.grdSanPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvSanPham});
@@ -254,15 +255,25 @@
             this.btnThemSanPham.Text = "Thêm sản phẩm";
             this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(543, 10);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(114, 23);
+            this.simpleButton1.TabIndex = 2;
+            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // ucSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.btnThemSanPham);
             this.Controls.Add(this.grdSanPham);
             this.Name = "ucSanPham";
-            this.Size = new System.Drawing.Size(679, 373);
+            this.Size = new System.Drawing.Size(682, 373);
             ((System.ComponentModel.ISupportInitialize)(this.grdSanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvSanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkKichHoat)).EndInit();
@@ -291,5 +302,6 @@
         private DevExpress.XtraEditors.SimpleButton btnThemSanPham;
         private DevExpress.XtraGrid.Columns.GridColumn colChiTiet;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnChiTiet;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

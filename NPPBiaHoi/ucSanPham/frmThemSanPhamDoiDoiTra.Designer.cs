@@ -34,19 +34,19 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.chkDaNhanHanDoi = new DevExpress.XtraEditors.CheckEdit();
-            this.dateThoiGianDemDi = new DevExpress.XtraEditors.DateEdit();
-            this.dateThoiGianNhanLai = new DevExpress.XtraEditors.DateEdit();
             this.lueTenSanPham = new DevExpress.XtraEditors.LookUpEdit();
             this.spinSoLuong = new DevExpress.XtraEditors.SpinEdit();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.dateThoiGianDemDi = new DevExpress.XtraEditors.DateEdit();
+            this.dateThoiGianNhanLai = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDaNhanHanDoi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianDemDi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianDemDi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianNhanLai.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianNhanLai.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -93,43 +93,23 @@
             this.chkDaNhanHanDoi.Size = new System.Drawing.Size(149, 19);
             this.chkDaNhanHanDoi.TabIndex = 5;
             // 
-            // dateThoiGianDemDi
-            // 
-            this.dateThoiGianDemDi.EditValue = null;
-            this.dateThoiGianDemDi.Location = new System.Drawing.Point(119, 43);
-            this.dateThoiGianDemDi.Name = "dateThoiGianDemDi";
-            this.dateThoiGianDemDi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateThoiGianDemDi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateThoiGianDemDi.Size = new System.Drawing.Size(126, 20);
-            this.dateThoiGianDemDi.TabIndex = 6;
-            // 
-            // dateThoiGianNhanLai
-            // 
-            this.dateThoiGianNhanLai.EditValue = null;
-            this.dateThoiGianNhanLai.Location = new System.Drawing.Point(119, 79);
-            this.dateThoiGianNhanLai.Name = "dateThoiGianNhanLai";
-            this.dateThoiGianNhanLai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateThoiGianNhanLai.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateThoiGianNhanLai.Size = new System.Drawing.Size(126, 20);
-            this.dateThoiGianNhanLai.TabIndex = 7;
-            // 
             // lueTenSanPham
             // 
             this.lueTenSanPham.Location = new System.Drawing.Point(119, 9);
             this.lueTenSanPham.Name = "lueTenSanPham";
             this.lueTenSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueTenSanPham.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ten", "Tên sản phẩm"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DungTich", "Dung tích")});
+            this.lueTenSanPham.Properties.NullText = "Chọn sản phẩm";
             this.lueTenSanPham.Size = new System.Drawing.Size(126, 20);
             this.lueTenSanPham.TabIndex = 8;
             // 
             // spinSoLuong
             // 
             this.spinSoLuong.EditValue = new decimal(new int[] {
-            0,
+            1,
             0,
             0,
             0});
@@ -137,6 +117,16 @@
             this.spinSoLuong.Name = "spinSoLuong";
             this.spinSoLuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinSoLuong.Properties.MaxValue = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.spinSoLuong.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.spinSoLuong.Size = new System.Drawing.Size(77, 20);
             this.spinSoLuong.TabIndex = 9;
             // 
@@ -162,34 +152,81 @@
             this.btnHuy.TabIndex = 11;
             this.btnHuy.Text = "Hủy";
             // 
+            // dateThoiGianDemDi
+            // 
+            this.dateThoiGianDemDi.EditValue = null;
+            this.dateThoiGianDemDi.Location = new System.Drawing.Point(119, 43);
+            this.dateThoiGianDemDi.Name = "dateThoiGianDemDi";
+            this.dateThoiGianDemDi.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.dateThoiGianDemDi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateThoiGianDemDi.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
+            this.dateThoiGianDemDi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateThoiGianDemDi.Properties.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm";
+            this.dateThoiGianDemDi.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateThoiGianDemDi.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
+            this.dateThoiGianDemDi.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateThoiGianDemDi.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
+            this.dateThoiGianDemDi.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dateThoiGianDemDi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.dateThoiGianDemDi.Properties.ShowOk = DevExpress.Utils.DefaultBoolean.True;
+            this.dateThoiGianDemDi.Size = new System.Drawing.Size(126, 20);
+            this.dateThoiGianDemDi.TabIndex = 6;
+            // 
+            // dateThoiGianNhanLai
+            // 
+            this.dateThoiGianNhanLai.EditValue = null;
+            this.dateThoiGianNhanLai.Location = new System.Drawing.Point(119, 79);
+            this.dateThoiGianNhanLai.Name = "dateThoiGianNhanLai";
+            this.dateThoiGianNhanLai.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.dateThoiGianNhanLai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateThoiGianNhanLai.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
+            this.dateThoiGianNhanLai.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateThoiGianNhanLai.Properties.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm";
+            this.dateThoiGianNhanLai.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateThoiGianNhanLai.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
+            this.dateThoiGianNhanLai.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateThoiGianNhanLai.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
+            this.dateThoiGianNhanLai.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dateThoiGianNhanLai.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.dateThoiGianNhanLai.Properties.ShowOk = DevExpress.Utils.DefaultBoolean.True;
+            this.dateThoiGianNhanLai.Size = new System.Drawing.Size(126, 20);
+            this.dateThoiGianNhanLai.TabIndex = 12;
+            // 
             // frmThemSanPhamDoiDoiTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 166);
+            this.Controls.Add(this.dateThoiGianNhanLai);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.spinSoLuong);
             this.Controls.Add(this.lueTenSanPham);
-            this.Controls.Add(this.dateThoiGianNhanLai);
-            this.Controls.Add(this.dateThoiGianDemDi);
             this.Controls.Add(this.chkDaNhanHanDoi);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.dateThoiGianDemDi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmThemSanPhamDoiDoiTra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thêm sản phẩm đợi đổi trả";
             ((System.ComponentModel.ISupportInitialize)(this.chkDaNhanHanDoi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianDemDi.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianDemDi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianNhanLai.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianNhanLai.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueTenSanPham.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinSoLuong.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,11 +239,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.CheckEdit chkDaNhanHanDoi;
-        private DevExpress.XtraEditors.DateEdit dateThoiGianDemDi;
-        private DevExpress.XtraEditors.DateEdit dateThoiGianNhanLai;
         private DevExpress.XtraEditors.LookUpEdit lueTenSanPham;
         private DevExpress.XtraEditors.SpinEdit spinSoLuong;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
+        private DevExpress.XtraEditors.DateEdit dateThoiGianDemDi;
+        private DevExpress.XtraEditors.DateEdit dateThoiGianNhanLai;
     }
 }

@@ -129,7 +129,7 @@
             this.MinimizeBox = false;
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLogin";
+            this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();

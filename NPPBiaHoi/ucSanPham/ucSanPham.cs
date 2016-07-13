@@ -65,6 +65,11 @@ namespace NPPBiaHoi.ucSanPham
             }
         }
 
+        private void simpleButton1_Click(object sender, EventArgs e) {
+            frmThemSanPhamDoiDoiTra temp = new frmThemSanPhamDoiDoiTra();
+            temp.ShowDialog();
+        }
+
         
     }
 }

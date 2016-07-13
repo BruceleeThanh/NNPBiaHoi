@@ -208,6 +208,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSuaSanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Sửa thông tin sản phẩm";
             ((System.ComponentModel.ISupportInitialize)(this.rdoLoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmoMieuTa.Properties)).EndInit();

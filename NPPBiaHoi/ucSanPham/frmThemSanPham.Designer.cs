@@ -211,7 +211,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmThemSanPham";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thêm sản phẩm";
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSanPham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDungTich.Properties)).EndInit();

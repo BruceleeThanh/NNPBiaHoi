@@ -33,7 +33,7 @@ namespace NPPBiaHoi.ucSanPham
             aConvertImage = new ConvertImage();
             txtTenSanPham.Text = aSanPham.Ten;
             txtDungTich.Text = aSanPham.DungTich.ToString();
-            rdoLoai.EditValue = aSanPham.Loai;
+            rdoLoai.SelectedIndex = (int)aSanPham.Loai - 1;
             mmoMieuTa.Text = aSanPham.MieuTa;
             if(aSanPham.KichHoat == 1) {
                 chkDangQuanLy.Checked = true;

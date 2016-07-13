@@ -65,6 +65,7 @@
             this.rdoLoai.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Keg"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Sọt")});
+            this.rdoLoai.Properties.ReadOnly = true;
             this.rdoLoai.Size = new System.Drawing.Size(127, 25);
             this.rdoLoai.TabIndex = 38;
             // 
@@ -72,6 +73,7 @@
             // 
             this.mmoMieuTa.Location = new System.Drawing.Point(137, 163);
             this.mmoMieuTa.Name = "mmoMieuTa";
+            this.mmoMieuTa.Properties.ReadOnly = true;
             this.mmoMieuTa.Size = new System.Drawing.Size(187, 86);
             this.mmoMieuTa.TabIndex = 36;
             // 
@@ -91,6 +93,7 @@
             this.chkDangQuanLy.Location = new System.Drawing.Point(447, 54);
             this.chkDangQuanLy.Name = "chkDangQuanLy";
             this.chkDangQuanLy.Properties.Caption = "";
+            this.chkDangQuanLy.Properties.ReadOnly = true;
             this.chkDangQuanLy.Size = new System.Drawing.Size(19, 19);
             this.chkDangQuanLy.TabIndex = 34;
             // 
@@ -125,6 +128,7 @@
             // 
             this.txtDungTich.Location = new System.Drawing.Point(137, 54);
             this.txtDungTich.Name = "txtDungTich";
+            this.txtDungTich.Properties.ReadOnly = true;
             this.txtDungTich.Size = new System.Drawing.Size(187, 20);
             this.txtDungTich.TabIndex = 30;
             // 
@@ -158,6 +162,7 @@
             // 
             this.txtSoLuongSanPham.Location = new System.Drawing.Point(137, 92);
             this.txtSoLuongSanPham.Name = "txtSoLuongSanPham";
+            this.txtSoLuongSanPham.Properties.ReadOnly = true;
             this.txtSoLuongSanPham.Size = new System.Drawing.Size(187, 20);
             this.txtSoLuongSanPham.TabIndex = 40;
             // 
@@ -174,6 +179,7 @@
             // 
             this.txtSoLuongVo.Location = new System.Drawing.Point(137, 129);
             this.txtSoLuongVo.Name = "txtSoLuongVo";
+            this.txtSoLuongVo.Properties.ReadOnly = true;
             this.txtSoLuongVo.Size = new System.Drawing.Size(187, 20);
             this.txtSoLuongVo.TabIndex = 42;
             // 
@@ -210,7 +216,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmChiTietSanPham";
-            this.Text = "frmChiTietSanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Chi tiết sản phẩm";
             ((System.ComponentModel.ISupportInitialize)(this.rdoLoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mmoMieuTa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh.Properties)).EndInit();
