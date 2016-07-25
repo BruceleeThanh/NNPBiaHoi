@@ -15,6 +15,7 @@ namespace NPPBiaHoi.ucKhachHang
     public partial class frmChiTietKhachHang : DevExpress.XtraEditors.XtraForm
     {
         KhachHang aKhachHang = new KhachHang();
+        ConvertImage aConvertImage = new ConvertImage();
         public frmChiTietKhachHang(int Ma)
         {
             InitializeComponent();
@@ -29,6 +30,10 @@ namespace NPPBiaHoi.ucKhachHang
             txtKhoangCach.Text = aKhachHang.KhoangCach.ToString();
             mmoHoTroDauTu.Text = aKhachHang.GhiChuDauTu.ToString();
             mmoGhiChu.Text = aKhachHang.GhiChu.ToString();
+            if (aKhachHang.HinhAnh != null)
+            {
+                picAnh.Image = aConvertImage.ConvertByteToImage(aKhachHang.HinhAnh);
+            }
             if (aKhachHang.KichHoat == 1)
             {
                 chkDangQuanLy.Checked = true;
@@ -37,11 +42,18 @@ namespace NPPBiaHoi.ucKhachHang
             {
                 chkDangQuanLy.Checked = false;
             }
+            NhomKhachHang_KhachHangBO aNhomKhachHang_KhachHangBO = new NhomKhachHang_KhachHangBO();
+            grdChiTietKhachHang.DataSource = aNhomKhachHang_KhachHangBO.SelectNhomKhachHang_ByMaKhachHang(Ma);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmChiTietKhachHang_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

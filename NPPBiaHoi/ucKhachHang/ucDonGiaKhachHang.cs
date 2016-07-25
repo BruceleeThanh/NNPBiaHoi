@@ -15,7 +15,7 @@ namespace NPPBiaHoi.ucKhachHang
 {
     public partial class ucDonGiaKhachHang : DevExpress.XtraEditors.XtraUserControl
     {
-        List<DonGiaKhachHangEN> aListDonGiaKhachHangEN;
+        List<DonGiaKhachHangEN> aListDonGiaKhachHangEN = new List<DonGiaKhachHangEN>();
         public ucDonGiaKhachHang()
         {
             InitializeComponent();
@@ -27,12 +27,12 @@ namespace NPPBiaHoi.ucKhachHang
             {
                 DonGiaKhachHangBO aDonGiaKhachHangBO = new DonGiaKhachHangBO();
                 List<DonGiaKhachHang> aListDonGiaKhachHang = new List<DonGiaKhachHang>();
-                this.aListDonGiaKhachHangEN = new List<DonGiaKhachHangEN>();
+                //this.aListDonGiaKhachHangEN = new List<DonGiaKhachHangEN>();
                 aListDonGiaKhachHang = aDonGiaKhachHangBO.Select_All();
-                DonGiaKhachHangEN aDonGiaKhachHangEN;
+               // DonGiaKhachHangEN aDonGiaKhachHangEN;
                 foreach (DonGiaKhachHang temp in aListDonGiaKhachHang)
                 {
-                    aDonGiaKhachHangEN = new DonGiaKhachHangEN(temp);
+                    DonGiaKhachHangEN aDonGiaKhachHangEN = new DonGiaKhachHangEN(temp);
                     this.aListDonGiaKhachHangEN.Add(aDonGiaKhachHangEN);
                 }
                 grdDonGiaKhachHang.DataSource = this.aListDonGiaKhachHangEN;
@@ -76,6 +76,18 @@ namespace NPPBiaHoi.ucKhachHang
                 throw new Exception("btnSua_ButtonClick: " + ex.ToString());
             }
 
+        }
+
+        private void btnLichSuDonGia_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("btnLichSuDonGia_ButtonClick: " + ex.ToString());
+            }
         }
     }
 }

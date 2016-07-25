@@ -61,6 +61,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnSua});
             this.grdDonGiaKhachHang.Size = new System.Drawing.Size(1230, 605);
             this.grdDonGiaKhachHang.TabIndex = 0;
+            this.grdDonGiaKhachHang.UseEmbeddedNavigator = true;
             this.grdDonGiaKhachHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvDonGiaKhachHang});
             // 
@@ -84,11 +85,12 @@ namespace NPPBiaHoi.ucKhachHang
             this.grvDonGiaKhachHang.GroupPanelText = "Kéo cột vào đây để gộp nhóm!";
             this.grvDonGiaKhachHang.IndicatorWidth = 50;
             this.grvDonGiaKhachHang.Name = "grvDonGiaKhachHang";
+            this.grvDonGiaKhachHang.OptionsFind.AlwaysVisible = true;
+            this.grvDonGiaKhachHang.OptionsFind.FindNullPrompt = "Nhập nội dung tìm kiếm";
             this.grvDonGiaKhachHang.OptionsView.AllowCellMerge = true;
             this.grvDonGiaKhachHang.OptionsView.AllowHtmlDrawHeaders = true;
             this.grvDonGiaKhachHang.OptionsView.EnableAppearanceEvenRow = true;
             this.grvDonGiaKhachHang.OptionsView.EnableAppearanceOddRow = true;
-            this.grvDonGiaKhachHang.OptionsView.ShowAutoFilterRow = true;
             this.grvDonGiaKhachHang.OptionsView.ShowFooter = true;
             this.grvDonGiaKhachHang.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.grvDonGiaKhachHang_CustomDrawRowIndicator);
             // 
@@ -131,6 +133,8 @@ namespace NPPBiaHoi.ucKhachHang
             // colThoiGianCapNhat
             // 
             this.colThoiGianCapNhat.Caption = "Thời gian cập nhật";
+            this.colThoiGianCapNhat.DisplayFormat.FormatString = "g";
+            this.colThoiGianCapNhat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colThoiGianCapNhat.FieldName = "ThoiGianCapNhat";
             this.colThoiGianCapNhat.Name = "colThoiGianCapNhat";
             this.colThoiGianCapNhat.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
@@ -164,6 +168,7 @@ namespace NPPBiaHoi.ucKhachHang
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnLichSuDonGia.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnLichSuDonGia.Name = "btnLichSuDonGia";
             this.btnLichSuDonGia.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnLichSuDonGia.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnLichSuDonGia_ButtonClick);
             // 
             // colSua
             // 

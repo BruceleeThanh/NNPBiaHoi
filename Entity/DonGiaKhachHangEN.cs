@@ -21,8 +21,10 @@ namespace Entity
             this.MaSanPham = aDonGiaKhachHang.MaSanPham;
             this.DonGia = aDonGiaKhachHang.DonGia;
             this.ThoiGianCapNhat = aDonGiaKhachHang.ThoiGianCapNhat;
-            TenKhachHang = aKhachHangBO.Select_ByMa(aDonGiaKhachHang.MaKhachHang).Ten;
-            TenSanPham = aSanPhamBO.Select_ByMa(aDonGiaKhachHang.MaSanPham).Ten;
+            this.ThungRac = aDonGiaKhachHang.ThungRac;
+            //@bug: fuck this bug
+            TenKhachHang = aKhachHangBO.Select_ByMa/*_Hidden*/(aDonGiaKhachHang.MaKhachHang).Ten;
+            TenSanPham =  aSanPhamBO.Select_ByMa/*_Hidden*/(aDonGiaKhachHang.MaSanPham).Ten;
         }
 
         public DonGiaKhachHangEN(int MaDonGia)
@@ -35,6 +37,7 @@ namespace Entity
             this.MaSanPham = aDonGiaKhachHang.MaSanPham;
             this.DonGia = aDonGiaKhachHang.DonGia;
             this.ThoiGianCapNhat = aDonGiaKhachHang.ThoiGianCapNhat;
+            this.ThungRac = aDonGiaKhachHang.ThungRac;
             TenKhachHang = aKhachHangBO.Select_ByMa(aDonGiaKhachHang.MaKhachHang).Ten;
             TenSanPham = aSanPhamBO.Select_ByMa(aDonGiaKhachHang.MaSanPham).Ten;
         }
