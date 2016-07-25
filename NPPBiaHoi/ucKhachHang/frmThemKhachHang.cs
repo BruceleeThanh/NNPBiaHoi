@@ -14,6 +14,9 @@ namespace NPPBiaHoi.ucKhachHang
 {
     public partial class frmThemKhachHang : DevExpress.XtraEditors.XtraForm
     {
+        List<NhomKhachHang> aListNhomKhachHang1 = new List<NhomKhachHang>();//luu tru nhom cho lue
+        List<NhomKhachHang> aListNhomKhachHang2 = new List<NhomKhachHang>();//luu tru nhom cho grv
+        private NhomKhachHangBO aNhomKhachHangBO = null;
         private ucKhachHang aucKhachHang;
         private string fileName = null;
         public frmThemKhachHang()
@@ -26,6 +29,10 @@ namespace NPPBiaHoi.ucKhachHang
         {
             aucKhachHang = auc;
             InitializeComponent();
+            aNhomKhachHangBO = new NhomKhachHangBO();
+            aListNhomKhachHang1 = aNhomKhachHangBO.SelectAll();
+            aListNhomKhachHang1.RemoveAll(r => r.KichHoat == 0);
+            lueNhomKhachHang.Properties.DataSource = aListNhomKhachHang1;
 
         }
 
@@ -72,9 +79,24 @@ namespace NPPBiaHoi.ucKhachHang
                     else {
                         aKhachHang.KichHoat = 0;
                     }
-
-                    if (aKhachHangBO.Insert(aKhachHang) == true)
+                    int MaKH = aKhachHangBO.Insert(aKhachHang);
+                    if (MaKH != -1)
                     {
+                        NhomKhachHang_KhachHangBO aNhomKhachhang_KhachHangBO = new NhomKhachHang_KhachHangBO();
+                        NhomKhachHang_KhachHang aNhomKhachHang_KhachHang = new NhomKhachHang_KhachHang();
+                        
+                        foreach (NhomKhachHang obj in aListNhomKhachHang2)
+                        {
+                            aNhomKhachHang_KhachHang = new NhomKhachHang_KhachHang();
+                            aNhomKhachHang_KhachHang.MaKhachHang = MaKH;
+                            aNhomKhachHang_KhachHang.MaNhomKhachHang = obj.Ma;
+                            if(aNhomKhachhang_KhachHangBO.Insert(aNhomKhachHang_KhachHang))
+                                MessageBox.Show("Thêm khách hàng vao nhom khach hang thành công.", "Thêm khách hàng", MessageBoxButtons.OK);
+                            else
+                            {
+                                MessageBox.Show("co gi do sai sai", "Thêm khách hàng", MessageBoxButtons.OK);
+                            }
+                        }
                         MessageBox.Show("Thêm khách hàng thành công.", "Thêm khách hàng", MessageBoxButtons.OK);
                         aucKhachHang.ucKhachHang_Load(null, null);
                         this.Close();
@@ -110,12 +132,19 @@ namespace NPPBiaHoi.ucKhachHang
         {
             try
             {
-                frmThemNhomKhachHang afrmThemKhachHang = new frmThemNhomKhachHang(this);
-                afrmThemKhachHang.ShowDialog();
+                NhomKhachHang aNhomKhachHang = new NhomKhachHang();
+                aNhomKhachHang = (NhomKhachHang)lueNhomKhachHang.GetSelectedDataRow();
+                if (aNhomKhachHang == null)
+                    return;
+                aListNhomKhachHang1.Remove(aNhomKhachHang);
+                aListNhomKhachHang2.Add(aNhomKhachHang);
+                lueNhomKhachHang.Properties.DataSource = aListNhomKhachHang1;
+                grdThemKhachHang.DataSource = aListNhomKhachHang2;
+                grvThemKhachHang.RefreshData();
             }
             catch (Exception ex)
             {
-                throw new Exception("btnThemNhomKhachHang_Click" + ex.ToString());
+                throw new Exception("btnThemNhomKhachHang_Click: " + ex.ToString());
             }
         }
 
@@ -138,17 +167,17 @@ namespace NPPBiaHoi.ucKhachHang
                 MessageBox.Show("frmThemSanPham.btnThemAnh_Click: " + ex.ToString());
             }
         }
+
+        private void btnXoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+            NhomKhachHang aNhomKhachHang = new NhomKhachHang();
+            aNhomKhachHang = (NhomKhachHang)grvThemKhachHang.GetFocusedRow();
+            if (aNhomKhachHang == null)
+                return;
+            aListNhomKhachHang2.Remove(aNhomKhachHang);
+            aListNhomKhachHang1.Add(aNhomKhachHang);
+            grvThemKhachHang.RefreshData();
+        }
     }
 }
-//private void frmThemKhachHang_Load()
-//{
-//    try
-//    {
-//        picAnh.Image = Image.FromFile("D:\\default-avatar.png");
-//    }
-//    catch (Exception ex)
-//    {
-//        throw new Exception("frmThemKhachHang_Load" + ex.ToString());
-//    }
-//}
-

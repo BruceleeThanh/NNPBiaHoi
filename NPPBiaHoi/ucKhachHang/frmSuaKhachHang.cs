@@ -14,7 +14,10 @@ namespace NPPBiaHoi.ucKhachHang
 {
     public partial class frmSuaKhachHang : DevExpress.XtraEditors.XtraForm
     {
-
+        List<NhomKhachHang> aListNhomKhachHang1 = new List<NhomKhachHang>();//luu tru nhom cho lue
+        List<NhomKhachHang> aListNhomKhachHang2 = new List<NhomKhachHang>();//luu tru nhom cho grv
+        List<NhomKhachHang> aListNhomKhachHang3 = new List<NhomKhachHang>();//luu tru nhom cho grv de hidden toàn bộ
+        private NhomKhachHangBO aNhomKhachHangBO = null;
         private KhachHang aKhachHang = null;
         private KhachHangBO aKhachHangBO;
         private ucKhachHang aucKhachHang;
@@ -22,24 +25,11 @@ namespace NPPBiaHoi.ucKhachHang
 
         public frmSuaKhachHang(int Ma)
         {
-            InitializeComponent();
-            aKhachHangBO = new KhachHangBO();
-            aKhachHang = aKhachHangBO.Select_ByMa(Ma);
-            frmSuaKhachHang_Load(null, null);
-        }
-
-        public frmSuaKhachHang(int Ma, ucKhachHang auc)
-        {
-            InitializeComponent();
-            aucKhachHang = auc;
-            aKhachHangBO = new KhachHangBO();
-            aKhachHang = aKhachHangBO.Select_ByMa(Ma);
-            frmSuaKhachHang_Load(null, null);
-        }
-        public void frmSuaKhachHang_Load(object sender, EventArgs e)
-        {
             try
             {
+                InitializeComponent();
+                aKhachHangBO = new KhachHangBO();
+                aKhachHang = aKhachHangBO.Select_ByMa(Ma);
                 ConvertImage aConvertImage = new ConvertImage();
                 txtTen.Text = aKhachHang.Ten;
                 txtSoDienThoai.Text = aKhachHang.SoDienThoai;
@@ -61,6 +51,61 @@ namespace NPPBiaHoi.ucKhachHang
                 {
                     chkDangQuanLy.Checked = false;
                 }
+                NhomKhachHang_KhachHangBO aNhomKhachHang_KhachHangBO = new NhomKhachHang_KhachHangBO();
+                grdSuaKhachHang.DataSource = aNhomKhachHang_KhachHangBO.SelectNhomKhachHang_ByMaKhachHang(Ma);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("frmSuaKhachHang: " + ex.ToString());
+            }
+        }
+
+        public frmSuaKhachHang(int Ma, ucKhachHang auc)
+        {
+            this.aucKhachHang = auc;
+            InitializeComponent();
+            aKhachHangBO = new KhachHangBO();
+            aNhomKhachHangBO = new NhomKhachHangBO();
+            aKhachHang = aKhachHangBO.Select_ByMa(Ma);
+            ConvertImage aConvertImage = new ConvertImage();
+            txtTen.Text = aKhachHang.Ten;
+            txtSoDienThoai.Text = aKhachHang.SoDienThoai;
+            txtKhoangCach.Text = aKhachHang.KhoangCach.ToString();
+            txtChuCuaHang.Text = aKhachHang.TenChuCuaHang;
+            txtDiaChi.Text = aKhachHang.DiaChi;
+            txtEmail.Text = aKhachHang.Email;
+            mmoHoTroDauTu.Text = aKhachHang.GhiChuDauTu;
+            mmoGhiChu.Text = aKhachHang.GhiChu;
+            if (aKhachHang.HinhAnh != null)
+            {
+                picAnh.Image = aConvertImage.ConvertByteToImage(aKhachHang.HinhAnh);
+            }
+            if (aKhachHang.KichHoat == 1)
+            {
+                chkDangQuanLy.Checked = true;
+            }
+            else
+            {
+                chkDangQuanLy.Checked = false;
+            }
+            NhomKhachHang_KhachHangBO aNhomKhachHang_KhachHangBO = new NhomKhachHang_KhachHangBO();
+            aListNhomKhachHang1 = aNhomKhachHangBO.SelectAll();
+            aListNhomKhachHang1.RemoveAll(r => r.KichHoat == 0);
+            aListNhomKhachHang2 = aNhomKhachHang_KhachHangBO.SelectNhomKhachHang_ByMaKhachHang(Ma);
+            foreach (NhomKhachHang obj in aListNhomKhachHang2)
+            {
+                aListNhomKhachHang1.Remove(aListNhomKhachHang1.Where(b=>b.Ma == obj.Ma).First());
+                //@#bug: vẫn không remove được. @#done
+            }
+            grdSuaKhachHang.DataSource = aListNhomKhachHang2;
+            aListNhomKhachHang3.AddRange(aListNhomKhachHang2);
+            lueNhomKhachHang.Properties.DataSource = aListNhomKhachHang1;
+        }
+        public void frmSuaKhachHang_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                
             }
             catch (Exception ex)
             {
@@ -72,12 +117,19 @@ namespace NPPBiaHoi.ucKhachHang
         {
             try
             {
-                frmThemNhomKhachHang afrmThemKhachHang = new frmThemNhomKhachHang(this);
-                afrmThemKhachHang.ShowDialog();
+                NhomKhachHang aNhomKhachHang = new NhomKhachHang();
+                aNhomKhachHang = (NhomKhachHang)lueNhomKhachHang.GetSelectedDataRow();
+                if (aNhomKhachHang == null)
+                    return;
+                aListNhomKhachHang1.Remove(aNhomKhachHang);
+                aListNhomKhachHang2.Add(aNhomKhachHang);
+                lueNhomKhachHang.Properties.DataSource = aListNhomKhachHang1;
+                grdSuaKhachHang.DataSource = aListNhomKhachHang2;
+                grvSuaKhachHang.RefreshData();
             }
             catch (Exception ex)
             {
-                throw new Exception("btnThemNhomKhachHang_Click" + ex.ToString());
+                throw new Exception("btnThemNhomKhachHang_Click: " + ex.ToString());
             }
         }
 
@@ -90,40 +142,71 @@ namespace NPPBiaHoi.ucKhachHang
         {
             try
             {
+                KhachHangBO aKhachHangBO = new KhachHangBO();
+                //KhachHang aKhachHang = new KhachHang();
+                ConvertImage aConvertImage = new ConvertImage();
                 if (string.IsNullOrEmpty(txtTen.Text))
                 {
                     MessageBox.Show("Bắt buộc Bạn phải nhập tên khách hàng, vui lòng nhập lại.", "Thông báo..", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else {
-                    ConvertImage aConvertImage = new ConvertImage();
                     aKhachHang.Ten = txtTen.Text;
                     aKhachHang.TenChuCuaHang = txtChuCuaHang.Text;
                     aKhachHang.SoDienThoai = txtSoDienThoai.Text;
                     aKhachHang.DiaChi = txtDiaChi.Text;
                     aKhachHang.Email = txtEmail.Text;
-                    // aKhachHang.HinhAnh = "";// picAnh.Text;   //chua biet dau ra la kieu gi
-                    aKhachHang.KhoangCach = !string.IsNullOrEmpty(txtKhoangCach.Text) ? double.Parse(txtKhoangCach.Text.ToString()) : 0;
-                    aKhachHang.GhiChuDauTu = mmoHoTroDauTu.Text;
-                    aKhachHang.GhiChu = mmoGhiChu.Text;
                     if (fileName != null)
                     {
                         aKhachHang.HinhAnh = aConvertImage.ConvertImagePathToByte(fileName);
                     }
+                    aKhachHang.KhoangCach = !string.IsNullOrEmpty(txtKhoangCach.Text) ? double.Parse(txtKhoangCach.Text.ToString()) : 0;
+                    aKhachHang.GhiChuDauTu = mmoHoTroDauTu.Text;
+                    aKhachHang.GhiChu = mmoGhiChu.Text;
                     if (chkDangQuanLy.Checked == true)
                         aKhachHang.KichHoat = 1;
                     else {
                         aKhachHang.KichHoat = 0;
                     }
-                    if(aKhachHangBO.Update(aKhachHang)== true)
+                    int MaKH = aKhachHangBO.Update(aKhachHang);
+                    if (MaKH != -1)
                     {
-                        MessageBox.Show("Cập nhật khách hàng thành công.", "Cập nhật khách hàng", MessageBoxButtons.OK);
+                        NhomKhachHang_KhachHangBO aNhomKhachhang_KhachHangBO = new NhomKhachHang_KhachHangBO();
+                        NhomKhachHang_KhachHang aNhomKhachHang_KhachHang = new NhomKhachHang_KhachHang();
+
+                        // @#temp: xem xét có cần thiết phải xóa hết quan hệ trc k? @#done vì đằng nào cũng xét 2 phía
+                        foreach (NhomKhachHang obj in aListNhomKhachHang3)
+                        {
+                            aNhomKhachHang_KhachHang = new NhomKhachHang_KhachHang();
+                            aNhomKhachHang_KhachHang.MaKhachHang = MaKH;
+                            aNhomKhachHang_KhachHang.MaNhomKhachHang = obj.Ma;
+                            aNhomKhachHang_KhachHang.ThungRac = 2;                  // thùng rác bằng 2 để xóa quan hệ
+                            
+                            if (!aNhomKhachhang_KhachHangBO.Update(aNhomKhachHang_KhachHang))
+                            {
+                                MessageBox.Show("Có lỗi, không cập nhật được quan hệ.", "Sửa khách hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+
+                        foreach (NhomKhachHang obj in aListNhomKhachHang2)
+                        {
+                            aNhomKhachHang_KhachHang = new NhomKhachHang_KhachHang();
+                            aNhomKhachHang_KhachHang.MaKhachHang = MaKH;
+                            aNhomKhachHang_KhachHang.MaNhomKhachHang = obj.Ma;
+                            aNhomKhachHang_KhachHang.ThungRac = 1;
+
+                            // @#temp: in ra thông báo, không cần thiết @#done
+                            if (!aNhomKhachhang_KhachHangBO.Update(aNhomKhachHang_KhachHang))
+                            {
+                                MessageBox.Show("Có lỗi, không cập nhật được quan hệ.", "Sửa khách hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        MessageBox.Show("Sửa khách hàng thành công.", "Sửa khách hàng", MessageBoxButtons.OK);
                         aucKhachHang.ucKhachHang_Load(null, null);
                         this.Close();
                     }
                     else {
-                        MessageBox.Show("Không thành công.", "Cập nhật khách hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Không thành công.", "Sửa khách hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    this.Close();
                     if (aucKhachHang != null)
                     {
                         aucKhachHang.ucKhachHang_Load(null, null);
@@ -166,6 +249,17 @@ namespace NPPBiaHoi.ucKhachHang
             {
                 MessageBox.Show("frmSuaSanPham.btnThemAnh_Click: " + ex.ToString());
             }
+        }
+
+        private void btnXoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            NhomKhachHang aNhomKhachHang = new NhomKhachHang();
+            aNhomKhachHang = (NhomKhachHang)grvSuaKhachHang.GetFocusedRow();
+            if (aNhomKhachHang == null)
+                return;
+            aListNhomKhachHang2.Remove(aNhomKhachHang);
+            aListNhomKhachHang1.Add(aNhomKhachHang);
+            grvSuaKhachHang.RefreshData();
         }
     }
 }

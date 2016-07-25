@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,18 +56,19 @@ namespace BussinessLogic {
                 return aKhachHang.Ma;
             }
             catch(Exception ex) {
+                return -1;
                 throw new Exception("KhachHangBO.Insert: " + ex.ToString());
             }
         }
 
-        public bool Update(KhachHang aKhachHang) {
+        public int Update(KhachHang aKhachHang) {
             try {
                 aDatabaseDA.KhachHang.AddOrUpdate(aKhachHang);
                 aDatabaseDA.SaveChanges();
-                return true;
+                return aKhachHang.Ma;
             }
             catch(Exception ex) {
-                return false;
+                return -1;
                 throw new Exception("KhachHangBO.Update: " + ex.ToString());
             }
         }
@@ -76,7 +77,7 @@ namespace BussinessLogic {
             try {
                 KhachHang aKhachHang = this.Select_ByMa(ma);
                 aKhachHang.ThungRac = 2;
-                return this.Update(aKhachHang);
+                return this.Update(aKhachHang)!=-1;
             }
             catch(Exception ex) {
                 return false;

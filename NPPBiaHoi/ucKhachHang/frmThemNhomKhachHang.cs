@@ -14,8 +14,6 @@ namespace NPPBiaHoi.ucKhachHang
     public partial class frmThemNhomKhachHang : DevExpress.XtraEditors.XtraForm
     {
        // private NhomKhachHang aNhomKhachHang = new NhomKhachHang();
-        private frmThemKhachHang afrmThemKhachHang;
-        private frmSuaKhachHang afrmSuaKhachHang;
         private ucNhomKhachHang aucNhomKhachHang;
         public frmThemNhomKhachHang()
         {
@@ -24,16 +22,6 @@ namespace NPPBiaHoi.ucKhachHang
         public frmThemNhomKhachHang(ucNhomKhachHang auc)
         {
             aucNhomKhachHang = auc;
-            InitializeComponent();
-        }
-        public frmThemNhomKhachHang(frmThemKhachHang afrm)
-        {
-            afrmThemKhachHang = afrm;
-            InitializeComponent();
-        }
-        public frmThemNhomKhachHang(frmSuaKhachHang afrm)
-        {
-            afrmSuaKhachHang = afrm;
             InitializeComponent();
         }
 
@@ -53,14 +41,7 @@ namespace NPPBiaHoi.ucKhachHang
                     aNhomKhachHang.KichHoat = 0;
                 }
                 aNhomKhachHangBO.Insert(aNhomKhachHang);
-                if (afrmThemKhachHang != null)
-                {
-                    afrmThemKhachHang.frmThemKhachHang_Load(null, null);
-                }
-                if (afrmSuaKhachHang != null)
-                {
-                    afrmSuaKhachHang.frmSuaKhachHang_Load(null, null);
-                }
+                
                 if (aucNhomKhachHang != null)
                 {
                     aucNhomKhachHang.ucNhomKhachHang_Load(null, null);

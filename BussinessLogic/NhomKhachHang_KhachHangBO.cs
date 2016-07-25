@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +36,14 @@ namespace BussinessLogic {
         // Quan hệ nhiều nhiều. Truy vấn dữ liệu: danh sách Nhóm Khách Hàng theo Mã Khách Hàng.
         public List<NhomKhachHang> SelectNhomKhachHang_ByMaKhachHang(int maKhachHang) {
             try {
-                return aDatabaseDA.NhomKhachHang.Where(a => a.NhomKhachHang_KhachHang.Any(b => b.MaKhachHang == maKhachHang)).ToList();
+                //List<NhomKhachHang> aNhomKhachHang = new List<NhomKhachHang>();
+                //List<NhomKhachHang_KhachHang> aNhomKhachHang_KhachHang = aDatabaseDA.NhomKhachHang_KhachHang.Where(b => b.MaKhachHang == maKhachHang && b.ThungRac == 1).ToList();
+                //foreach(NhomKhachHang_KhachHang temp in aNhomKhachHang_KhachHang)
+                //{
+                //    aNhomKhachHang.Add(aDatabaseDA.NhomKhachHang.Where(b => b.Ma == temp.MaNhomKhachHang && b.ThungRac == 1).FirstOrDefault());
+                //}
+                //return aNhomKhachHang;
+                return aDatabaseDA.NhomKhachHang.Where(a => a.NhomKhachHang_KhachHang.Any(b => b.MaKhachHang == maKhachHang && b.ThungRac == 1)&& a.ThungRac==1).ToList();
             }
             catch(Exception ex) {
                 throw new Exception("NhomKhachHang_KhachHangBO.SelectNhomKhachHang_ByMaKhachHang:" + ex.ToString());
@@ -48,7 +55,7 @@ namespace BussinessLogic {
                 return aDatabaseDA.NhomKhachHang_KhachHang.Where(b => b.MaKhachHang == maKhachHang && b.MaNhomKhachHang == maNhomKhachHang && b.ThungRac == 2).FirstOrDefault();
             }
             catch(Exception ex) {
-                throw new Exception("NhomKhachHang_KhachHangBO.Select_ByMaKhachHang_ByMaNhomKhachHang_Hidden:" + ex.ToString());
+                throw new Exception("NhomKhachHang_KhachHangBO.Select_ByMaKhachHang_ByMaNhomKhachHang_Hidden: " + ex.ToString());
             }
         }
 
