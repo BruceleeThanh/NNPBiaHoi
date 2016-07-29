@@ -63,7 +63,7 @@
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(64, 26);
-            this.btnHuy.TabIndex = 0;
+            this.btnHuy.TabIndex = 9;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -76,7 +76,7 @@
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(64, 26);
-            this.btnLuu.TabIndex = 1;
+            this.btnLuu.TabIndex = 8;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -87,7 +87,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(19, 12);
-            this.labelControl1.TabIndex = 2;
+            this.labelControl1.TabIndex = 10;
             this.labelControl1.Text = "Tên";
             // 
             // txtTen
@@ -97,7 +97,7 @@
             this.txtTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(187, 20);
-            this.txtTen.TabIndex = 3;
+            this.txtTen.TabIndex = 0;
             // 
             // chkDangHoatDong
             // 
@@ -108,7 +108,7 @@
             this.chkDangHoatDong.Properties.Caption = "";
             this.chkDangHoatDong.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.chkDangHoatDong.Size = new System.Drawing.Size(25, 19);
-            this.chkDangHoatDong.TabIndex = 4;
+            this.chkDangHoatDong.TabIndex = 1;
             // 
             // mmoMieuTa
             // 
@@ -135,7 +135,7 @@
             this.txtBienSo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBienSo.Name = "txtBienSo";
             this.txtBienSo.Size = new System.Drawing.Size(187, 20);
-            this.txtBienSo.TabIndex = 8;
+            this.txtBienSo.TabIndex = 2;
             // 
             // labelControl2
             // 
@@ -144,7 +144,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(40, 13);
-            this.labelControl2.TabIndex = 7;
+            this.labelControl2.TabIndex = 12;
             this.labelControl2.Text = "Biển số";
             // 
             // txtTaiTrong
@@ -156,7 +156,7 @@
             this.txtTaiTrong.Properties.Mask.EditMask = "f";
             this.txtTaiTrong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTaiTrong.Size = new System.Drawing.Size(187, 20);
-            this.txtTaiTrong.TabIndex = 10;
+            this.txtTaiTrong.TabIndex = 3;
             // 
             // labelControl3
             // 
@@ -165,7 +165,7 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(51, 13);
-            this.labelControl3.TabIndex = 9;
+            this.labelControl3.TabIndex = 13;
             this.labelControl3.Text = "Tải trọng";
             // 
             // labelControl4
@@ -175,7 +175,7 @@
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(23, 13);
-            this.labelControl4.TabIndex = 11;
+            this.labelControl4.TabIndex = 14;
             this.labelControl4.Text = "Loại";
             // 
             // btnThemAnh
@@ -187,7 +187,7 @@
             this.btnThemAnh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemAnh.Name = "btnThemAnh";
             this.btnThemAnh.Size = new System.Drawing.Size(90, 26);
-            this.btnThemAnh.TabIndex = 13;
+            this.btnThemAnh.TabIndex = 7;
             this.btnThemAnh.Text = "Thêm ảnh";
             this.btnThemAnh.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
@@ -198,7 +198,7 @@
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(42, 13);
-            this.labelControl5.TabIndex = 14;
+            this.labelControl5.TabIndex = 15;
             this.labelControl5.Text = "Miêu tả";
             // 
             // labelControl6
@@ -208,7 +208,7 @@
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(90, 13);
-            this.labelControl6.TabIndex = 15;
+            this.labelControl6.TabIndex = 11;
             this.labelControl6.Text = "Đang hoạt động";
             // 
             // rdoLoai
@@ -226,7 +226,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(0)), "Xe máy"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Ô tô")});
             this.rdoLoai.Size = new System.Drawing.Size(187, 20);
-            this.rdoLoai.TabIndex = 16;
+            this.rdoLoai.TabIndex = 4;
             // 
             // frmThemPhuongTien
             // 

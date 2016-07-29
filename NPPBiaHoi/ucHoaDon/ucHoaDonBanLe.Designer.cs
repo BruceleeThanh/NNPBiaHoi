@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucHoaDonBanLe));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.grdHoaDonBanLe = new DevExpress.XtraGrid.GridControl();
             this.grvHoaDonBanLe = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTenSanPham = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,10 +60,8 @@
             this.grdHoaDonBanLe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grdHoaDonBanLe.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grdHoaDonBanLe.Location = new System.Drawing.Point(0, 50);
+            this.grdHoaDonBanLe.Location = new System.Drawing.Point(0, 41);
             this.grdHoaDonBanLe.MainView = this.grvHoaDonBanLe;
-            this.grdHoaDonBanLe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grdHoaDonBanLe.Name = "grdHoaDonBanLe";
             this.grdHoaDonBanLe.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lueTenSanPham,
@@ -71,7 +69,7 @@
             this.dateThoiGian,
             this.btnSua,
             this.btnXoa});
-            this.grdHoaDonBanLe.Size = new System.Drawing.Size(986, 434);
+            this.grdHoaDonBanLe.Size = new System.Drawing.Size(845, 353);
             this.grdHoaDonBanLe.TabIndex = 1;
             this.grdHoaDonBanLe.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvHoaDonBanLe});
@@ -88,7 +86,6 @@
             this.grvHoaDonBanLe.GridControl = this.grdHoaDonBanLe;
             this.grvHoaDonBanLe.IndicatorWidth = 30;
             this.grvHoaDonBanLe.Name = "grvHoaDonBanLe";
-            this.grvHoaDonBanLe.OptionsView.ShowAutoFilterRow = true;
             this.grvHoaDonBanLe.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.grvHoaDonBanLe_CustomDrawRowIndicator);
             // 
             // colTenSanPham
@@ -98,11 +95,11 @@
             this.colTenSanPham.AppearanceHeader.Options.UseTextOptions = true;
             this.colTenSanPham.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTenSanPham.Caption = "Tên sản phẩm";
-            this.colTenSanPham.FieldName = "Ten";
+            this.colTenSanPham.FieldName = "TenSP";
             this.colTenSanPham.Name = "colTenSanPham";
             this.colTenSanPham.OptionsColumn.ReadOnly = true;
             this.colTenSanPham.Visible = true;
-            this.colTenSanPham.VisibleIndex = 1;
+            this.colTenSanPham.VisibleIndex = 0;
             this.colTenSanPham.Width = 114;
             // 
             // colSoLuong
@@ -132,7 +129,7 @@
             this.colThoiGian.Name = "colThoiGian";
             this.colThoiGian.OptionsColumn.ReadOnly = true;
             this.colThoiGian.Visible = true;
-            this.colThoiGian.VisibleIndex = 0;
+            this.colThoiGian.VisibleIndex = 1;
             this.colThoiGian.Width = 99;
             // 
             // colGhiChu
@@ -168,7 +165,7 @@
             // 
             this.btnSua.AutoHeight = false;
             this.btnSua.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSua.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSua.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnSua.Name = "btnSua";
             this.btnSua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSua.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSua_ButtonClick);
@@ -192,7 +189,7 @@
             // 
             this.btnXoa.AutoHeight = false;
             this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXoa_ButtonClick);
@@ -223,24 +220,21 @@
             // btnThem
             // 
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(14, 12);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThem.Location = new System.Drawing.Point(12, 10);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(87, 28);
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // ucHoaDonBanLe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.grdHoaDonBanLe);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ucHoaDonBanLe";
-            this.Size = new System.Drawing.Size(986, 484);
-            this.Load += new System.EventHandler(this.ucHoaDonBanLe_Load);
+            this.Size = new System.Drawing.Size(845, 393);
             ((System.ComponentModel.ISupportInitialize)(this.grdHoaDonBanLe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvHoaDonBanLe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSua)).EndInit();

@@ -26,10 +26,16 @@ namespace NPPBiaHoi.ucPhuongTien
         {
             try
             {
+
+                if (string.IsNullOrEmpty(txtTen.Text))
+                {
+                    MessageBox.Show("Tên phương tiện không được để trống", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
                 ConvertImage aConvertImage = new ConvertImage();
                 PhuongTien aPhuongTien = new PhuongTien();
                 aPhuongTien.Ten = txtTen.Text;
-                aPhuongTien.TaiTrong = int.Parse(txtTaiTrong.Text);
+                aPhuongTien.TaiTrong = float.Parse(txtTaiTrong.Text);
                 aPhuongTien.BienSo = txtBienSo.Text;
                 aPhuongTien.MieuTa = mmoMieuTa.Text;
                 if (fileName != null)
@@ -46,8 +52,6 @@ namespace NPPBiaHoi.ucPhuongTien
                     aPhuongTien.KichHoat = 0;
                 }
 
-                if (string.IsNullOrEmpty(txtTen.Text))
-                    return;
                 PhuongTienBO aPhuongTienBO = new PhuongTienBO();
                 aPhuongTienBO.Insert(aPhuongTien);
                 aucPhuongTien.ucPhuongTien_Load();

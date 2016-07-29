@@ -51,6 +51,16 @@ namespace NPPBiaHoi.ucNhanVien
         {
             try
             {
+                if (string.IsNullOrEmpty(txtTenNhanVien.Text))
+                {
+                    MessageBox.Show("Tên nhân viên không được để trống", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+                if (string.IsNullOrEmpty(txtSoDienThoai.Text))
+                {
+                    MessageBox.Show("Số điện thoại không được để trống", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
                 //aNhanVien = new NhanVien();
                 aNhanVien.Ten = txtTenNhanVien.Text;
                 aNhanVien.CMND = txtCMND.Text;
@@ -66,8 +76,7 @@ namespace NPPBiaHoi.ucNhanVien
                     aNhanVien.KichHoat = 0;
                 }
 
-                if (string.IsNullOrEmpty(txtTenNhanVien.Text))
-                    return;
+                
                 //aNhanVienBO = new NhanVienBO();
                 if (aNhanVienBO.Update(aNhanVien) == true)
                 {

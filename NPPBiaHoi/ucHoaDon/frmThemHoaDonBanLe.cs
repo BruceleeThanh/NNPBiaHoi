@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,12 +7,20 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using BussinessLogic;
+using DataAccess;
+using Entity;
 
 namespace NPPBiaHoi.ucHoaDon
 {
     public partial class frmThemHoaDonBanLe : DevExpress.XtraEditors.XtraForm
     {
-        ucHoaDonBanLe aucHoaDonBanLe=null;
+        ucHoaDonBanLe aucHoaDonBanLe = null;
+        List<SanPham> aListSanPham = new List<SanPham>();
+        List<HoaDonBanLe> aListHoaDonBanLe = new List<HoaDonBanLe>();
+        List<ThemHoaDonBanLeEN> aListThemHoaDonBanLeEN = new List<ThemHoaDonBanLeEN>();
+        List<ThemHoaDonBanLeEN> bListThemHoaDonBanLeEN;
+
         public frmThemHoaDonBanLe()
         {
             InitializeComponent();
@@ -23,28 +31,114 @@ namespace NPPBiaHoi.ucHoaDon
             {
                 this.aucHoaDonBanLe = aucHoaDonBanLe;
                 InitializeComponent();
+                this.frmThemHoaDonBanLe_Load();
             }
             catch (Exception ex)
             {
-                throw new Exception("frmThemHoaDonBanLe: " +ex.ToString());
+                throw new Exception("frmThemHoaDonBanLe: " + ex.ToString());
             }
 
+        }
+
+        public void frmThemHoaDonBanLe_Load()
+        {
+            SanPhamBO aSanPhamBO = new SanPhamBO();
+            aListSanPham = aSanPhamBO.SelectAll();
+            lueTenSanPham.Properties.DataSource = aListSanPham;
+            lueTenSanPham.Properties.ValueMember = "Ma";
+            lueTenSanPham.Properties.DisplayMember = "Ten";
+            timeThoiGian.DateTime = DateTime.Now;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try
             {
-                if (aucHoaDonBanLe != null)
+                int SoDong = grvThemHoaDonBanLe.RowCount;
+                HoaDonBanLeBO aHoaDonBanLeBO = new HoaDonBanLeBO();
+                for (int i = 0; i < SoDong; i++)
                 {
-                    aucHoaDonBanLe.Refresh();
+                    HoaDonBanLe aHoaDonBanLe = new HoaDonBanLe();
+                    aHoaDonBanLe.MaSanPham = aListThemHoaDonBanLeEN[i].MaSanPham;
+                    aHoaDonBanLe.SoLuong = aListThemHoaDonBanLeEN[i].SoLuong;
+                    aHoaDonBanLe.ThoiGian = aListThemHoaDonBanLeEN[i].ThoiGian;
+                    aHoaDonBanLe.GhiChu = aListThemHoaDonBanLeEN[i].GhiChu;
+
+                    aHoaDonBanLeBO.Insert(aHoaDonBanLe);
                 }
+                aucHoaDonBanLe.ucHoaDonBanLe_Load();
                 this.Close();
             }
             catch (Exception ex)
             {
                 throw new Exception("btnLuu_Click: " + ex.ToString());
             }
+            btnLuu.Enabled = false;
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Bạn muốn hủy!", "Thông báo..", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("btnHuy_Click" + ex.ToString());
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(lueTenSanPham.EditValue.ToString()))
+                {
+                    MessageBox.Show("Tên sản phẩm không được để trống", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+                if (string.IsNullOrEmpty(spinSoLuong.Text.ToString()))
+                {
+                    MessageBox.Show("Số lượng không được để trống", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+                HoaDonBanLe aHoaDonBanLe = new HoaDonBanLe();
+                aHoaDonBanLe.MaSanPham = int.Parse(lueTenSanPham.EditValue.ToString());
+                aHoaDonBanLe.SoLuong = int.Parse(spinSoLuong.Text);
+                aHoaDonBanLe.ThoiGian = timeThoiGian.DateTime;
+                aHoaDonBanLe.GhiChu = mmoGhiChu.Text;
+                aListHoaDonBanLe.Add(aHoaDonBanLe);
+                bListThemHoaDonBanLeEN = new List<ThemHoaDonBanLeEN>();
+                foreach (HoaDonBanLe temp in aListHoaDonBanLe)
+                {
+                    bListThemHoaDonBanLeEN.Add(new ThemHoaDonBanLeEN(temp));
+                }
+                grdThemHoaDonBanLe.DataSource = bListThemHoaDonBanLeEN;
+                aListThemHoaDonBanLeEN = bListThemHoaDonBanLeEN;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("btnLuu_Click: " + ex.ToString());
+            }
+            btnThem.Enabled = true;
+        }
+
+        private void btnXoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            try
+            {
+                grvThemHoaDonBanLe.DeleteSelectedRows();
+                grvThemHoaDonBanLe.RefreshData();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("btnXoa_ButtonClick: " + ex.ToString());
+            }
+        }
+        
     }
 }
+

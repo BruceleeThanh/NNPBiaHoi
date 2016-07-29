@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DataAccess;
 using BussinessLogic;
+using Entity;
 
 namespace NPPBiaHoi.ucPhuongTien
 {
@@ -28,7 +29,12 @@ namespace NPPBiaHoi.ucPhuongTien
                 ChiPhiPhuongTienBO aChiPhiPhuongTienBO = new ChiPhiPhuongTienBO();
                 alistChiPhiPhuongTien = new List<ChiPhiPhuongTien>();
                 alistChiPhiPhuongTien = aChiPhiPhuongTienBO.Select_All();
-                grdChiPhiPhuongTien.DataSource = alistChiPhiPhuongTien;
+                List<ChiPhiPhuongTienEN> alistChiPhiPhuongTienEN = new List<ChiPhiPhuongTienEN>();
+                foreach (ChiPhiPhuongTien temp in alistChiPhiPhuongTien)
+                {
+                    alistChiPhiPhuongTienEN.Add(new ChiPhiPhuongTienEN(temp));
+                }
+                grdChiPhiPhuongTien.DataSource = alistChiPhiPhuongTienEN;
             }
             catch (Exception ex)
             {

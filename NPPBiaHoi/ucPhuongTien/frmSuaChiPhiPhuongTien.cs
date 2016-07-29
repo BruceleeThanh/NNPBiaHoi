@@ -73,7 +73,7 @@ namespace NPPBiaHoi.ucPhuongTien
                     return;
                 }
                 aChiPhiPhuongTien.Ten = txtTen.Text;
-                aChiPhiPhuongTien.TienPhi = int.Parse(txtSoTien.Text);
+                aChiPhiPhuongTien.TienPhi = float.Parse(txtSoTien.Text);
                 aChiPhiPhuongTien.MieuTa = mmoMieuTa.Text;
                 aChiPhiPhuongTien.ThoiGian = timeThoiGian.DateTime;
 

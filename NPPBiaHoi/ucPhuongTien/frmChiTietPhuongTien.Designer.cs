@@ -64,7 +64,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Ô tô")});
             this.rdoLoai.Properties.ReadOnly = true;
             this.rdoLoai.Size = new System.Drawing.Size(187, 20);
-            this.rdoLoai.TabIndex = 48;
+            this.rdoLoai.TabIndex = 4;
             // 
             // labelControl6
             // 
@@ -73,7 +73,7 @@
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(90, 13);
-            this.labelControl6.TabIndex = 47;
+            this.labelControl6.TabIndex = 8;
             this.labelControl6.Text = "Đang hoạt động";
             // 
             // labelControl5
@@ -83,7 +83,7 @@
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(42, 13);
-            this.labelControl5.TabIndex = 46;
+            this.labelControl5.TabIndex = 12;
             this.labelControl5.Text = "Miêu tả";
             // 
             // labelControl4
@@ -93,7 +93,7 @@
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(23, 13);
-            this.labelControl4.TabIndex = 44;
+            this.labelControl4.TabIndex = 11;
             this.labelControl4.Text = "Loại";
             // 
             // txtTaiTrong
@@ -105,7 +105,7 @@
             this.txtTaiTrong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTaiTrong.Properties.ReadOnly = true;
             this.txtTaiTrong.Size = new System.Drawing.Size(187, 20);
-            this.txtTaiTrong.TabIndex = 43;
+            this.txtTaiTrong.TabIndex = 3;
             // 
             // labelControl3
             // 
@@ -114,7 +114,7 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(51, 13);
-            this.labelControl3.TabIndex = 42;
+            this.labelControl3.TabIndex = 10;
             this.labelControl3.Text = "Tải trọng";
             // 
             // txtBienSo
@@ -125,7 +125,7 @@
             this.txtBienSo.Name = "txtBienSo";
             this.txtBienSo.Properties.ReadOnly = true;
             this.txtBienSo.Size = new System.Drawing.Size(187, 20);
-            this.txtBienSo.TabIndex = 41;
+            this.txtBienSo.TabIndex = 2;
             // 
             // labelControl2
             // 
@@ -134,7 +134,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(40, 13);
-            this.labelControl2.TabIndex = 40;
+            this.labelControl2.TabIndex = 9;
             this.labelControl2.Text = "Biển số";
             // 
             // picAnh
@@ -146,7 +146,7 @@
             this.picAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picAnh.Size = new System.Drawing.Size(200, 148);
-            this.picAnh.TabIndex = 39;
+            this.picAnh.TabIndex = 6;
             // 
             // mmoMieuTa
             // 
@@ -155,7 +155,7 @@
             this.mmoMieuTa.Name = "mmoMieuTa";
             this.mmoMieuTa.Properties.ReadOnly = true;
             this.mmoMieuTa.Size = new System.Drawing.Size(187, 96);
-            this.mmoMieuTa.TabIndex = 38;
+            this.mmoMieuTa.TabIndex = 5;
             // 
             // chkDangHoatDong
             // 
@@ -166,7 +166,7 @@
             this.chkDangHoatDong.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.chkDangHoatDong.Properties.ReadOnly = true;
             this.chkDangHoatDong.Size = new System.Drawing.Size(25, 19);
-            this.chkDangHoatDong.TabIndex = 37;
+            this.chkDangHoatDong.TabIndex = 1;
             // 
             // txtTen
             // 
@@ -176,7 +176,7 @@
             this.txtTen.Name = "txtTen";
             this.txtTen.Properties.ReadOnly = true;
             this.txtTen.Size = new System.Drawing.Size(187, 20);
-            this.txtTen.TabIndex = 36;
+            this.txtTen.TabIndex = 0;
             // 
             // labelControl1
             // 
@@ -185,7 +185,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(19, 12);
-            this.labelControl1.TabIndex = 35;
+            this.labelControl1.TabIndex = 7;
             this.labelControl1.Text = "Tên";
             // 
             // frmChiTietPhuongTien

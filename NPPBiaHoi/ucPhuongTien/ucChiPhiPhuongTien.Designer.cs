@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucChiPhiPhuongTien));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.grdChiPhiPhuongTien = new DevExpress.XtraGrid.GridControl();
             this.grvChiPhiPhuongTien = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTenPhuongTien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTenChiPhiPhuongTien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colThoiGian = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTienPhi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMieuTa = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -68,6 +69,7 @@
             // 
             this.grvChiPhiPhuongTien.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colTenPhuongTien,
+            this.colTenChiPhiPhuongTien,
             this.colThoiGian,
             this.colTienPhi,
             this.colMieuTa,
@@ -80,16 +82,25 @@
             // 
             // colTenPhuongTien
             // 
-            this.colTenPhuongTien.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.colTenPhuongTien.AppearanceHeader.Options.UseFont = true;
-            this.colTenPhuongTien.AppearanceHeader.Options.UseTextOptions = true;
-            this.colTenPhuongTien.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colTenPhuongTien.Caption = "Tên chi phí";
-            this.colTenPhuongTien.FieldName = "Ten";
+            this.colTenPhuongTien.Caption = "Tên phương tiện";
+            this.colTenPhuongTien.FieldName = "sTen";
             this.colTenPhuongTien.Name = "colTenPhuongTien";
             this.colTenPhuongTien.OptionsColumn.ReadOnly = true;
             this.colTenPhuongTien.Visible = true;
             this.colTenPhuongTien.VisibleIndex = 0;
+            // 
+            // colTenChiPhiPhuongTien
+            // 
+            this.colTenChiPhiPhuongTien.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTenChiPhiPhuongTien.AppearanceHeader.Options.UseFont = true;
+            this.colTenChiPhiPhuongTien.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTenChiPhiPhuongTien.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTenChiPhiPhuongTien.Caption = "Tên chi phí";
+            this.colTenChiPhiPhuongTien.FieldName = "Ten";
+            this.colTenChiPhiPhuongTien.Name = "colTenChiPhiPhuongTien";
+            this.colTenChiPhiPhuongTien.OptionsColumn.ReadOnly = true;
+            this.colTenChiPhiPhuongTien.Visible = true;
+            this.colTenChiPhiPhuongTien.VisibleIndex = 1;
             // 
             // colThoiGian
             // 
@@ -98,11 +109,13 @@
             this.colThoiGian.AppearanceHeader.Options.UseTextOptions = true;
             this.colThoiGian.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colThoiGian.Caption = "Thời gian";
+            this.colThoiGian.DisplayFormat.FormatString = "g";
+            this.colThoiGian.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colThoiGian.FieldName = "ThoiGian";
             this.colThoiGian.Name = "colThoiGian";
             this.colThoiGian.OptionsColumn.ReadOnly = true;
             this.colThoiGian.Visible = true;
-            this.colThoiGian.VisibleIndex = 1;
+            this.colThoiGian.VisibleIndex = 2;
             // 
             // colTienPhi
             // 
@@ -115,7 +128,7 @@
             this.colTienPhi.Name = "colTienPhi";
             this.colTienPhi.OptionsColumn.ReadOnly = true;
             this.colTienPhi.Visible = true;
-            this.colTienPhi.VisibleIndex = 2;
+            this.colTienPhi.VisibleIndex = 3;
             // 
             // colMieuTa
             // 
@@ -128,7 +141,7 @@
             this.colMieuTa.Name = "colMieuTa";
             this.colMieuTa.OptionsColumn.ReadOnly = true;
             this.colMieuTa.Visible = true;
-            this.colMieuTa.VisibleIndex = 3;
+            this.colMieuTa.VisibleIndex = 4;
             // 
             // colSua
             // 
@@ -140,14 +153,14 @@
             this.colSua.ColumnEdit = this.btnSua;
             this.colSua.Name = "colSua";
             this.colSua.Visible = true;
-            this.colSua.VisibleIndex = 4;
+            this.colSua.VisibleIndex = 5;
             this.colSua.Width = 42;
             // 
             // btnSua
             // 
             this.btnSua.AutoHeight = false;
             this.btnSua.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSua.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSua.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnSua.Name = "btnSua";
             this.btnSua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSua.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSua_ButtonClick);
@@ -162,14 +175,14 @@
             this.colXoa.ColumnEdit = this.btnXoa;
             this.colXoa.Name = "colXoa";
             this.colXoa.Visible = true;
-            this.colXoa.VisibleIndex = 5;
+            this.colXoa.VisibleIndex = 6;
             this.colXoa.Width = 42;
             // 
             // btnXoa
             // 
             this.btnXoa.AutoHeight = false;
             this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXoa_ButtonClick);
@@ -205,7 +218,7 @@
         private DevExpress.XtraGrid.GridControl grdChiPhiPhuongTien;
         private DevExpress.XtraGrid.Views.Grid.GridView grvChiPhiPhuongTien;
         private DevExpress.XtraEditors.SimpleButton btnThem;
-        private DevExpress.XtraGrid.Columns.GridColumn colTenPhuongTien;
+        private DevExpress.XtraGrid.Columns.GridColumn colTenChiPhiPhuongTien;
         private DevExpress.XtraGrid.Columns.GridColumn colThoiGian;
         private DevExpress.XtraGrid.Columns.GridColumn colTienPhi;
         private DevExpress.XtraGrid.Columns.GridColumn colMieuTa;
@@ -213,5 +226,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colXoa;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSua;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
+        private DevExpress.XtraGrid.Columns.GridColumn colTenPhuongTien;
     }
 }

@@ -66,7 +66,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Xe máy"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Ô tô")});
             this.rdoLoai.Size = new System.Drawing.Size(187, 20);
-            this.rdoLoai.TabIndex = 32;
+            this.rdoLoai.TabIndex = 4;
             // 
             // labelControl6
             // 
@@ -75,7 +75,7 @@
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(90, 13);
-            this.labelControl6.TabIndex = 31;
+            this.labelControl6.TabIndex = 11;
             this.labelControl6.Text = "Đang hoạt động";
             // 
             // labelControl5
@@ -85,7 +85,7 @@
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(42, 13);
-            this.labelControl5.TabIndex = 30;
+            this.labelControl5.TabIndex = 15;
             this.labelControl5.Text = "Miêu tả";
             // 
             // btnThemAnh
@@ -96,7 +96,7 @@
             this.btnThemAnh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemAnh.Name = "btnThemAnh";
             this.btnThemAnh.Size = new System.Drawing.Size(90, 26);
-            this.btnThemAnh.TabIndex = 29;
+            this.btnThemAnh.TabIndex = 7;
             this.btnThemAnh.Text = "Thêm ảnh";
             this.btnThemAnh.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
@@ -107,7 +107,7 @@
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(23, 13);
-            this.labelControl4.TabIndex = 28;
+            this.labelControl4.TabIndex = 14;
             this.labelControl4.Text = "Loại";
             // 
             // txtTaiTrong
@@ -119,7 +119,7 @@
             this.txtTaiTrong.Properties.Mask.EditMask = "f";
             this.txtTaiTrong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTaiTrong.Size = new System.Drawing.Size(187, 20);
-            this.txtTaiTrong.TabIndex = 27;
+            this.txtTaiTrong.TabIndex = 3;
             // 
             // labelControl3
             // 
@@ -128,7 +128,7 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(51, 13);
-            this.labelControl3.TabIndex = 26;
+            this.labelControl3.TabIndex = 13;
             this.labelControl3.Text = "Tải trọng";
             // 
             // txtBienSo
@@ -138,7 +138,7 @@
             this.txtBienSo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBienSo.Name = "txtBienSo";
             this.txtBienSo.Size = new System.Drawing.Size(187, 20);
-            this.txtBienSo.TabIndex = 25;
+            this.txtBienSo.TabIndex = 2;
             // 
             // labelControl2
             // 
@@ -147,7 +147,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(40, 13);
-            this.labelControl2.TabIndex = 24;
+            this.labelControl2.TabIndex = 12;
             this.labelControl2.Text = "Biển số";
             // 
             // picAnh
@@ -158,7 +158,7 @@
             this.picAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picAnh.Size = new System.Drawing.Size(200, 148);
-            this.picAnh.TabIndex = 23;
+            this.picAnh.TabIndex = 6;
             // 
             // mmoMieuTa
             // 
@@ -166,7 +166,7 @@
             this.mmoMieuTa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mmoMieuTa.Name = "mmoMieuTa";
             this.mmoMieuTa.Size = new System.Drawing.Size(187, 96);
-            this.mmoMieuTa.TabIndex = 22;
+            this.mmoMieuTa.TabIndex = 5;
             // 
             // chkDangHoatDong
             // 
@@ -176,7 +176,7 @@
             this.chkDangHoatDong.Properties.Caption = "";
             this.chkDangHoatDong.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.chkDangHoatDong.Size = new System.Drawing.Size(25, 19);
-            this.chkDangHoatDong.TabIndex = 21;
+            this.chkDangHoatDong.TabIndex = 1;
             // 
             // txtTen
             // 
@@ -185,7 +185,7 @@
             this.txtTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(187, 20);
-            this.txtTen.TabIndex = 20;
+            this.txtTen.TabIndex = 0;
             // 
             // labelControl1
             // 
@@ -194,7 +194,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(19, 12);
-            this.labelControl1.TabIndex = 19;
+            this.labelControl1.TabIndex = 10;
             this.labelControl1.Text = "Tên";
             // 
             // btnLuu
@@ -205,7 +205,7 @@
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(64, 26);
-            this.btnLuu.TabIndex = 18;
+            this.btnLuu.TabIndex = 8;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -217,7 +217,7 @@
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(64, 26);
-            this.btnHuy.TabIndex = 17;
+            this.btnHuy.TabIndex = 9;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 

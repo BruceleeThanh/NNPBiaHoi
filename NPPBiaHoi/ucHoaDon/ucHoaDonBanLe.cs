@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DataAccess;
 using BussinessLogic;
+using Entity;
 
 namespace NPPBiaHoi.ucHoaDon
 {
@@ -19,6 +20,7 @@ namespace NPPBiaHoi.ucHoaDon
         public ucHoaDonBanLe()
         {
             InitializeComponent();
+            ucHoaDonBanLe_Load();
         }
 
         private void grvHoaDonBanLe_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
@@ -34,6 +36,7 @@ namespace NPPBiaHoi.ucHoaDon
             try
             {
                 frmThemHoaDonBanLe afrmThemHoaDonBanLe = new frmThemHoaDonBanLe(this);
+                //frmThemHoaDonBanLeThu afrmThemHoaDonBanLe = new frmThemHoaDonBanLeThu(this);
                 afrmThemHoaDonBanLe.ShowDialog();
             }
             catch (Exception ex)
@@ -46,7 +49,8 @@ namespace NPPBiaHoi.ucHoaDon
         {
             try
             {
-                frmSuaHoaDonBanLe afrmSuaHoaDonBanLe = new frmSuaHoaDonBanLe(this);
+                int ma = int.Parse(grvHoaDonBanLe.GetFocusedRowCellValue("Ma").ToString());
+                frmSuaHoaDonBanLe afrmSuaHoaDonBanLe = new frmSuaHoaDonBanLe(ma, this);
                 afrmSuaHoaDonBanLe.ShowDialog();
             }
             catch (Exception ex)
@@ -68,7 +72,7 @@ namespace NPPBiaHoi.ucHoaDon
                     if (aHoaDonBanLeBO.Delete(Ma) == true)
                     {
                         MessageBox.Show("Xóa hóa đơn bán lẻ thành công.", "Xóa hóa đơn", MessageBoxButtons.OK);
-                        this.ucHoaDonBanLe_Load(null, null);
+                        this.ucHoaDonBanLe_Load();
                     }
                     else {
                         MessageBox.Show("Không thành công.", "Xóa hóa đơn bán lẻ", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -82,17 +86,22 @@ namespace NPPBiaHoi.ucHoaDon
             }
         }
 
-        public void ucHoaDonBanLe_Load(object sender, EventArgs e)
+        public void ucHoaDonBanLe_Load()
         {
             try
             {
                 aHoaDonBanLeBO = new HoaDonBanLeBO();
                 aListHoaDonBanLe = aHoaDonBanLeBO.Select_All();
-                //grdKhachHang.DataSource = aListKhachHang;
+                List<ThemHoaDonBanLeEN> bListHoaDonBanLeEN = new List<ThemHoaDonBanLeEN>();
+                foreach (HoaDonBanLe temp in aListHoaDonBanLe)
+                {
+                    bListHoaDonBanLeEN.Add(new ThemHoaDonBanLeEN(temp));
+                }
+                grdHoaDonBanLe.DataSource = bListHoaDonBanLeEN;
             }
             catch (Exception ex)
             {
-                throw new Exception("ucKhachHang_Load: " + ex.ToString());
+                throw new Exception("ucHoaDonBanLe_Load: " + ex.ToString());
             }
         }
     }

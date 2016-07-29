@@ -19,6 +19,7 @@ namespace Entity
             this.MieuTa = aPhuongTien.MieuTa;
             this.HinhAnh = aPhuongTien.HinhAnh;
             this.KichHoat = aPhuongTien.KichHoat;
+            this.ThungRac = aPhuongTien.ThungRac;
             if(aPhuongTien.Loai == 1)
             {
                 this.sLoai = "Xe máy";
