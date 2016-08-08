@@ -23,8 +23,24 @@ namespace Entity
             this.ThoiGianCapNhat = aDonGiaKhachHang.ThoiGianCapNhat;
             this.ThungRac = aDonGiaKhachHang.ThungRac;
             //@bug: fuck this bug
-            TenKhachHang = aKhachHangBO.Select_ByMa/*_Hidden*/(aDonGiaKhachHang.MaKhachHang).Ten;
-            TenSanPham =  aSanPhamBO.Select_ByMa/*_Hidden*/(aDonGiaKhachHang.MaSanPham).Ten;
+            KhachHang KhachHang1 = aKhachHangBO.Select_ByMa(aDonGiaKhachHang.MaKhachHang);
+            
+            if (KhachHang1 == null)
+            {
+                this.TenKhachHang = aKhachHangBO.Select_ByMa_Hidden(aDonGiaKhachHang.MaKhachHang).Ten;
+            }
+            else
+            {
+                this.TenKhachHang = KhachHang1.Ten;
+            }
+            SanPham SanPham1 = aSanPhamBO.Select_ByMa(aDonGiaKhachHang.MaSanPham);
+            if (SanPham1 == null)
+            {
+                TenSanPham = aSanPhamBO.Select_ByMa_Hidden(aDonGiaKhachHang.MaSanPham).Ten;
+            } else
+            {
+                TenSanPham = SanPham1.Ten;
+            }
         }
 
         public DonGiaKhachHangEN(int MaDonGia)

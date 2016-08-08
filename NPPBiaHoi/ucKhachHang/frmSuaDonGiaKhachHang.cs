@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +16,8 @@ namespace NPPBiaHoi.ucKhachHang
     public partial class frmSuaDonGiaKhachHang : DevExpress.XtraEditors.XtraForm
     {
         ucDonGiaKhachHang aucDonGiaKhachHang;
+        DonGiaKhachHangBO aDonGiaKhachHangBO = new DonGiaKhachHangBO();
+        DonGiaKhachHang aDonGiaKhachHang = new DonGiaKhachHang();
         DonGiaKhachHangEN aDonGiaKhachHangEN;
         public frmSuaDonGiaKhachHang()
         {
@@ -33,7 +35,8 @@ namespace NPPBiaHoi.ucKhachHang
             try
             {
                 InitializeComponent();
-                this.aDonGiaKhachHangEN = new DonGiaKhachHangEN(MaDonGia);
+                aDonGiaKhachHang = aDonGiaKhachHangBO.Select_ByMa(MaDonGia);
+                this.aDonGiaKhachHangEN = new DonGiaKhachHangEN(aDonGiaKhachHang);
                 txtKhachHang.Text = aDonGiaKhachHangEN.TenKhachHang;
                 txtSanPham.Text = aDonGiaKhachHangEN.TenSanPham;
                 txtDonGia.Text = aDonGiaKhachHangEN.DonGia.ToString();
@@ -49,8 +52,7 @@ namespace NPPBiaHoi.ucKhachHang
         {
             try
             {
-                DonGiaKhachHangBO aDonGiaKhachHangBO = new DonGiaKhachHangBO();
-                DonGiaKhachHang aDonGiaKhachHang = new DonGiaKhachHang();
+                // @bug: khong cap nhat ma lai thanh them moi
                 aDonGiaKhachHang.MaKhachHang = aDonGiaKhachHangEN.MaKhachHang;
                 aDonGiaKhachHang.MaSanPham = aDonGiaKhachHangEN.MaSanPham;
                 if (double.Parse(txtDonGia.Text) != aDonGiaKhachHangEN.DonGia)

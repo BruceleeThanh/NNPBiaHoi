@@ -31,6 +31,7 @@ namespace NPPBiaHoi.ucKhachHang
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucNhomKhachHang));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.grvNhomKhachHang = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTen = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -41,11 +42,14 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnSua = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colDanhSach = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnDanhSach = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.grdNhomKhachHang = new DevExpress.XtraGrid.GridControl();
             ((System.ComponentModel.ISupportInitialize)(this.grvNhomKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDangQuanLy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdNhomKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +76,8 @@ namespace NPPBiaHoi.ucKhachHang
             this.colMieuTa,
             this.colDangQuanLy,
             this.colSua,
-            this.colXoa});
+            this.colXoa,
+            this.colDanhSach});
             this.grvNhomKhachHang.GridControl = this.grdNhomKhachHang;
             this.grvNhomKhachHang.IndicatorWidth = 50;
             this.grvNhomKhachHang.Name = "grvNhomKhachHang";
@@ -127,7 +132,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.colSua.Name = "colSua";
             this.colSua.OptionsColumn.ReadOnly = true;
             this.colSua.Visible = true;
-            this.colSua.VisibleIndex = 3;
+            this.colSua.VisibleIndex = 4;
             this.colSua.Width = 41;
             // 
             // btnSua
@@ -146,7 +151,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.colXoa.Name = "colXoa";
             this.colXoa.OptionsColumn.ReadOnly = true;
             this.colXoa.Visible = true;
-            this.colXoa.VisibleIndex = 4;
+            this.colXoa.VisibleIndex = 5;
             this.colXoa.Width = 40;
             // 
             // btnXoa
@@ -157,6 +162,23 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXoa_ButtonClick);
+            // 
+            // colDanhSach
+            // 
+            this.colDanhSach.Caption = "Danh sách";
+            this.colDanhSach.ColumnEdit = this.btnDanhSach;
+            this.colDanhSach.Name = "colDanhSach";
+            this.colDanhSach.Visible = true;
+            this.colDanhSach.VisibleIndex = 3;
+            // 
+            // btnDanhSach
+            // 
+            this.btnDanhSach.AutoHeight = false;
+            this.btnDanhSach.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDanhSach.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.btnDanhSach.Name = "btnDanhSach";
+            this.btnDanhSach.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnDanhSach.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDanhSach_ButtonClick);
             // 
             // grdNhomKhachHang
             // 
@@ -169,9 +191,10 @@ namespace NPPBiaHoi.ucKhachHang
             this.grdNhomKhachHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.chkDangQuanLy,
             this.btnSua,
-            this.btnXoa});
+            this.btnXoa,
+            this.btnDanhSach});
             this.grdNhomKhachHang.Size = new System.Drawing.Size(1230, 605);
-            this.grdNhomKhachHang.TabIndex = 0;
+            this.grdNhomKhachHang.TabIndex = 2;
             this.grdNhomKhachHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvNhomKhachHang});
             // 
@@ -188,6 +211,7 @@ namespace NPPBiaHoi.ucKhachHang
             ((System.ComponentModel.ISupportInitialize)(this.chkDangQuanLy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdNhomKhachHang)).EndInit();
             this.ResumeLayout(false);
 
@@ -206,5 +230,7 @@ namespace NPPBiaHoi.ucKhachHang
         private DevExpress.XtraGrid.Columns.GridColumn colXoa;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
         private DevExpress.XtraGrid.GridControl grdNhomKhachHang;
+        private DevExpress.XtraGrid.Columns.GridColumn colDanhSach;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDanhSach;
     }
 }

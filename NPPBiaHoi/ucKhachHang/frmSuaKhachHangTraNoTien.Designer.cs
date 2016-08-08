@@ -65,7 +65,7 @@
             this.dateThoiGian,
             this.spinSoTienTraLanNay});
             this.grdSuaLichSuKhachHangTraNoTien.Size = new System.Drawing.Size(723, 246);
-            this.grdSuaLichSuKhachHangTraNoTien.TabIndex = 15;
+            this.grdSuaLichSuKhachHangTraNoTien.TabIndex = 6;
             this.grdSuaLichSuKhachHangTraNoTien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -135,7 +135,7 @@
             this.mmoGhiChu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mmoGhiChu.Name = "mmoGhiChu";
             this.mmoGhiChu.Size = new System.Drawing.Size(254, 81);
-            this.mmoGhiChu.TabIndex = 14;
+            this.mmoGhiChu.TabIndex = 3;
             // 
             // spinTongTienNo
             // 
@@ -151,7 +151,7 @@
             this.spinTongTienNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spinTongTienNo.Size = new System.Drawing.Size(171, 22);
-            this.spinTongTienNo.TabIndex = 13;
+            this.spinTongTienNo.TabIndex = 2;
             // 
             // lueTenKhachHang
             // 
@@ -161,7 +161,7 @@
             this.lueTenKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueTenKhachHang.Size = new System.Drawing.Size(171, 22);
-            this.lueTenKhachHang.TabIndex = 12;
+            this.lueTenKhachHang.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -200,7 +200,7 @@
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(66, 28);
-            this.btnHuy.TabIndex = 17;
+            this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             // 
             // btnLuu
@@ -210,7 +210,7 @@
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(59, 28);
-            this.btnLuu.TabIndex = 16;
+            this.btnLuu.TabIndex = 4;
             this.btnLuu.Text = "Lưu";
             // 
             // frmSuaKhachHangTraNoTien

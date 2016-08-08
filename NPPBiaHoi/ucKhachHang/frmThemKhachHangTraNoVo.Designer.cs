@@ -92,7 +92,7 @@
             this.lueTenKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueTenKhachHang.Size = new System.Drawing.Size(163, 22);
-            this.lueTenKhachHang.TabIndex = 3;
+            this.lueTenKhachHang.TabIndex = 1;
             // 
             // lueTenSanPham
             // 
@@ -102,7 +102,7 @@
             this.lueTenSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueTenSanPham.Size = new System.Drawing.Size(163, 22);
-            this.lueTenSanPham.TabIndex = 4;
+            this.lueTenSanPham.TabIndex = 2;
             // 
             // spinTongSoLuongNo
             // 
@@ -118,7 +118,7 @@
             this.spinTongSoLuongNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spinTongSoLuongNo.Size = new System.Drawing.Size(163, 22);
-            this.spinTongSoLuongNo.TabIndex = 5;
+            this.spinTongSoLuongNo.TabIndex = 3;
             // 
             // btnLuu
             // 
@@ -127,7 +127,7 @@
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(69, 28);
-            this.btnLuu.TabIndex = 6;
+            this.btnLuu.TabIndex = 4;
             this.btnLuu.Text = "Lưu";
             // 
             // btnHuy
@@ -137,7 +137,7 @@
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(69, 28);
-            this.btnHuy.TabIndex = 7;
+            this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             // 
             // grdThemLichSuKhachHangTraNoVo
@@ -152,7 +152,7 @@
             this.repositoryItemSpinEdit1,
             this.lueLoai});
             this.grdThemLichSuKhachHangTraNoVo.Size = new System.Drawing.Size(611, 246);
-            this.grdThemLichSuKhachHangTraNoVo.TabIndex = 8;
+            this.grdThemLichSuKhachHangTraNoVo.TabIndex = 6;
             this.grdThemLichSuKhachHangTraNoVo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 

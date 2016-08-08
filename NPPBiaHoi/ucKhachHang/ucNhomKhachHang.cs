@@ -86,5 +86,19 @@ namespace NPPBiaHoi.ucKhachHang
             if (e.Info.IsRowIndicator && e.RowHandle >= 0)
                 e.Info.DisplayText = (e.RowHandle + 1).ToString();
         }
+
+        private void btnDanhSach_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            try
+            {
+                int maNhomKH = int.Parse(grvNhomKhachHang.GetFocusedRowCellValue("Ma").ToString());
+                frmDanhSachKhachHang afrmDanhSachKhachHang = new frmDanhSachKhachHang(maNhomKH);
+                afrmDanhSachKhachHang.ShowDialog();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("btnDanhSach_ButtonClick: " + ex.ToString());
+            }
+        }
     }
 }

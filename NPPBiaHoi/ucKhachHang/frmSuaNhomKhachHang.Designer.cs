@@ -50,21 +50,21 @@ namespace NPPBiaHoi.ucKhachHang
             this.chkDangQuanLy.Properties.Caption = "";
             this.chkDangQuanLy.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.chkDangQuanLy.Size = new System.Drawing.Size(26, 19);
-            this.chkDangQuanLy.TabIndex = 15;
+            this.chkDangQuanLy.TabIndex = 3;
             // 
             // mmoMoTa
             // 
             this.mmoMoTa.Location = new System.Drawing.Point(93, 96);
             this.mmoMoTa.Name = "mmoMoTa";
             this.mmoMoTa.Size = new System.Drawing.Size(467, 155);
-            this.mmoMoTa.TabIndex = 14;
+            this.mmoMoTa.TabIndex = 2;
             // 
             // txtTen
             // 
             this.txtTen.Location = new System.Drawing.Point(93, 47);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(201, 22);
-            this.txtTen.TabIndex = 13;
+            this.txtTen.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -102,7 +102,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnHuy.Location = new System.Drawing.Point(473, 263);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(86, 32);
-            this.btnHuy.TabIndex = 9;
+            this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -115,7 +115,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnLuu.Location = new System.Drawing.Point(370, 263);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(86, 32);
-            this.btnLuu.TabIndex = 8;
+            this.btnLuu.TabIndex = 4;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 

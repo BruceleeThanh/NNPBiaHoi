@@ -29,7 +29,7 @@ namespace NPPBiaHoi.ucKhachHang
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemKhachHang));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtTen = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -114,7 +114,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.txtChuCuaHang.Properties.Mask.EditMask = "([A-ZÀ-Ỹ][a-zà-ỹ]*((\\s)))+[A-ZÀ-Ỹ][a-zà-ỹ]*";
             this.txtChuCuaHang.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtChuCuaHang.Size = new System.Drawing.Size(244, 22);
-            this.txtChuCuaHang.TabIndex = 5;
+            this.txtChuCuaHang.TabIndex = 4;
             // 
             // labelControl3
             // 
@@ -130,7 +130,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.txtDiaChi.Location = new System.Drawing.Point(157, 169);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(244, 22);
-            this.txtDiaChi.TabIndex = 7;
+            this.txtDiaChi.TabIndex = 5;
             // 
             // labelControl4
             // 
@@ -149,7 +149,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.txtSoDienThoai.Properties.Mask.EditMask = "((\\+[1-9]{1,2}|0)(12|16|18|19|8|9)[0-9][0-9]{7})|(0([2-8][0-9]{1,2})[0-9]{6})";
             this.txtSoDienThoai.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtSoDienThoai.Size = new System.Drawing.Size(244, 22);
-            this.txtSoDienThoai.TabIndex = 9;
+            this.txtSoDienThoai.TabIndex = 6;
             // 
             // labelControl5
             // 
@@ -168,7 +168,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.txtEmail.Properties.Mask.EditMask = "[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\\.[a-zA-Z]{2,4}";
             this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtEmail.Size = new System.Drawing.Size(244, 22);
-            this.txtEmail.TabIndex = 11;
+            this.txtEmail.TabIndex = 7;
             // 
             // labelControl6
             // 
@@ -186,7 +186,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.txtKhoangCach.Properties.Mask.EditMask = "f";
             this.txtKhoangCach.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtKhoangCach.Size = new System.Drawing.Size(48, 22);
-            this.txtKhoangCach.TabIndex = 15;
+            this.txtKhoangCach.TabIndex = 8;
             // 
             // labelControl8
             // 
@@ -231,21 +231,21 @@ namespace NPPBiaHoi.ucKhachHang
             this.chkDangQuanLy.Name = "chkDangQuanLy";
             this.chkDangQuanLy.Properties.Caption = "";
             this.chkDangQuanLy.Size = new System.Drawing.Size(18, 19);
-            this.chkDangQuanLy.TabIndex = 21;
+            this.chkDangQuanLy.TabIndex = 9;
             // 
             // mmoHoTroDauTu
             // 
             this.mmoHoTroDauTu.Location = new System.Drawing.Point(157, 321);
             this.mmoHoTroDauTu.Name = "mmoHoTroDauTu";
             this.mmoHoTroDauTu.Size = new System.Drawing.Size(421, 114);
-            this.mmoHoTroDauTu.TabIndex = 22;
+            this.mmoHoTroDauTu.TabIndex = 10;
             // 
             // mmoGhiChu
             // 
             this.mmoGhiChu.Location = new System.Drawing.Point(157, 441);
             this.mmoGhiChu.Name = "mmoGhiChu";
             this.mmoGhiChu.Size = new System.Drawing.Size(421, 115);
-            this.mmoGhiChu.TabIndex = 23;
+            this.mmoGhiChu.TabIndex = 11;
             // 
             // labelControl7
             // 
@@ -266,7 +266,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.picAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.picAnh.Size = new System.Drawing.Size(192, 191);
-            this.picAnh.TabIndex = 25;
+            this.picAnh.TabIndex = 16;
             // 
             // btnLuu
             // 
@@ -276,7 +276,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnLuu.Location = new System.Drawing.Point(584, 571);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(93, 38);
-            this.btnLuu.TabIndex = 26;
+            this.btnLuu.TabIndex = 13;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -288,7 +288,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnHuy.Location = new System.Drawing.Point(683, 571);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(93, 38);
-            this.btnHuy.TabIndex = 27;
+            this.btnHuy.TabIndex = 14;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -304,7 +304,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.lueNhomKhachHang.Properties.DisplayMember = "Ten";
             this.lueNhomKhachHang.Properties.ValueMember = "Ma";
             this.lueNhomKhachHang.Size = new System.Drawing.Size(206, 22);
-            this.lueNhomKhachHang.TabIndex = 28;
+            this.lueNhomKhachHang.TabIndex = 1;
             // 
             // btnThemAnh
             // 
@@ -314,7 +314,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnThemAnh.Location = new System.Drawing.Point(584, 518);
             this.btnThemAnh.Name = "btnThemAnh";
             this.btnThemAnh.Size = new System.Drawing.Size(192, 38);
-            this.btnThemAnh.TabIndex = 29;
+            this.btnThemAnh.TabIndex = 12;
             this.btnThemAnh.Text = "Thêm ảnh";
             this.btnThemAnh.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
@@ -327,7 +327,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnThemNhomKhachHang.Location = new System.Drawing.Point(369, 20);
             this.btnThemNhomKhachHang.Name = "btnThemNhomKhachHang";
             this.btnThemNhomKhachHang.Size = new System.Drawing.Size(32, 25);
-            this.btnThemNhomKhachHang.TabIndex = 30;
+            this.btnThemNhomKhachHang.TabIndex = 2;
             this.btnThemNhomKhachHang.Click += new System.EventHandler(this.btnThemNhomKhachHang_Click);
             // 
             // grdThemKhachHang
@@ -338,7 +338,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.grdThemKhachHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnXoa});
             this.grdThemKhachHang.Size = new System.Drawing.Size(369, 220);
-            this.grdThemKhachHang.TabIndex = 31;
+            this.grdThemKhachHang.TabIndex = 15;
             this.grdThemKhachHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvThemKhachHang});
             // 
@@ -392,7 +392,7 @@ namespace NPPBiaHoi.ucKhachHang
             // 
             this.btnXoa.AutoHeight = false;
             this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXoa_ButtonClick);

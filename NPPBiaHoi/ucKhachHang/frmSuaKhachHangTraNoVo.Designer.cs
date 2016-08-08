@@ -145,7 +145,7 @@
             this.repositoryItemSpinEdit1,
             this.lueLoai});
             this.grdSuaLichSuKhachHangTraNoVo.Size = new System.Drawing.Size(611, 246);
-            this.grdSuaLichSuKhachHangTraNoVo.TabIndex = 17;
+            this.grdSuaLichSuKhachHangTraNoVo.TabIndex = 6;
             this.grdSuaLichSuKhachHangTraNoVo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -156,7 +156,7 @@
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(69, 28);
-            this.btnHuy.TabIndex = 16;
+            this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             // 
             // btnLuu
@@ -166,7 +166,7 @@
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(69, 28);
-            this.btnLuu.TabIndex = 15;
+            this.btnLuu.TabIndex = 4;
             this.btnLuu.Text = "Lưu";
             // 
             // spinTongSoLuongNo
@@ -183,7 +183,7 @@
             this.spinTongSoLuongNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spinTongSoLuongNo.Size = new System.Drawing.Size(163, 22);
-            this.spinTongSoLuongNo.TabIndex = 14;
+            this.spinTongSoLuongNo.TabIndex = 3;
             // 
             // lueTenSanPham
             // 
@@ -193,7 +193,7 @@
             this.lueTenSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueTenSanPham.Size = new System.Drawing.Size(163, 22);
-            this.lueTenSanPham.TabIndex = 13;
+            this.lueTenSanPham.TabIndex = 2;
             // 
             // lueTenKhachHang
             // 
@@ -203,7 +203,7 @@
             this.lueTenKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueTenKhachHang.Size = new System.Drawing.Size(163, 22);
-            this.lueTenKhachHang.TabIndex = 12;
+            this.lueTenKhachHang.TabIndex = 1;
             // 
             // labelControl3
             // 

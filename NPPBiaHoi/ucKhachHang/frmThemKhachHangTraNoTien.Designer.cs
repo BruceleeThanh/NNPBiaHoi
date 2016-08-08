@@ -92,7 +92,7 @@
             this.lueTenKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueTenKhachHang.Size = new System.Drawing.Size(171, 22);
-            this.lueTenKhachHang.TabIndex = 3;
+            this.lueTenKhachHang.TabIndex = 1;
             // 
             // spinTongTienNo
             // 
@@ -108,7 +108,7 @@
             this.spinTongTienNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spinTongTienNo.Size = new System.Drawing.Size(171, 22);
-            this.spinTongTienNo.TabIndex = 4;
+            this.spinTongTienNo.TabIndex = 2;
             // 
             // mmoGhiChu
             // 
@@ -116,7 +116,7 @@
             this.mmoGhiChu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mmoGhiChu.Name = "mmoGhiChu";
             this.mmoGhiChu.Size = new System.Drawing.Size(254, 81);
-            this.mmoGhiChu.TabIndex = 5;
+            this.mmoGhiChu.TabIndex = 3;
             // 
             // grdThemLichSuKhachHangTraNoTien
             // 
@@ -200,7 +200,7 @@
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(59, 28);
-            this.btnLuu.TabIndex = 7;
+            this.btnLuu.TabIndex = 4;
             this.btnLuu.Text = "Lưu";
             // 
             // btnHuy
@@ -210,7 +210,7 @@
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(66, 28);
-            this.btnHuy.TabIndex = 8;
+            this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             // 
             // frmThemKhachHangTraNoTien

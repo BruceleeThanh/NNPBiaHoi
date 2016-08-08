@@ -54,7 +54,7 @@
             this.btnLuu.Location = new System.Drawing.Point(146, 148);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(71, 29);
-            this.btnLuu.TabIndex = 0;
+            this.btnLuu.TabIndex = 5;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -66,7 +66,7 @@
             this.btnHuy.Location = new System.Drawing.Point(227, 148);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(71, 29);
-            this.btnHuy.TabIndex = 1;
+            this.btnHuy.TabIndex = 6;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -111,7 +111,7 @@
             this.txtDonGia.Location = new System.Drawing.Point(146, 77);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(152, 22);
-            this.txtDonGia.TabIndex = 7;
+            this.txtDonGia.TabIndex = 3;
             // 
             // lueSanPham
             // 
@@ -125,7 +125,7 @@
             this.lueSanPham.Properties.DisplayMember = "Ten";
             this.lueSanPham.Properties.ValueMember = "Ma";
             this.lueSanPham.Size = new System.Drawing.Size(152, 22);
-            this.lueSanPham.TabIndex = 10;
+            this.lueSanPham.TabIndex = 2;
             // 
             // lueKhachHang
             // 
@@ -139,7 +139,7 @@
             this.lueKhachHang.Properties.DisplayMember = "Ten";
             this.lueKhachHang.Properties.ValueMember = "Ma";
             this.lueKhachHang.Size = new System.Drawing.Size(152, 22);
-            this.lueKhachHang.TabIndex = 11;
+            this.lueKhachHang.TabIndex = 1;
             // 
             // timeThoiGianCapNhat
             // 
@@ -158,7 +158,7 @@
             this.timeThoiGianCapNhat.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.timeThoiGianCapNhat.Properties.Mask.EditMask = "T";
             this.timeThoiGianCapNhat.Size = new System.Drawing.Size(152, 22);
-            this.timeThoiGianCapNhat.TabIndex = 9;
+            this.timeThoiGianCapNhat.TabIndex = 4;
             // 
             // frmThemDonGiaKhachHang
             // 

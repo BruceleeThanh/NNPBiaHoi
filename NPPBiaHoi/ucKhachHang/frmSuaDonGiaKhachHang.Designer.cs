@@ -60,7 +60,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.txtDonGia.Location = new System.Drawing.Point(147, 71);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(152, 22);
-            this.txtDonGia.TabIndex = 17;
+            this.txtDonGia.TabIndex = 3;
             // 
             // labelControl3
             // 
@@ -86,7 +86,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.txtKhachHang.Name = "txtKhachHang";
             this.txtKhachHang.Properties.ReadOnly = true;
             this.txtKhachHang.Size = new System.Drawing.Size(152, 22);
-            this.txtKhachHang.TabIndex = 14;
+            this.txtKhachHang.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -105,7 +105,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnHuy.Location = new System.Drawing.Point(228, 142);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(71, 29);
-            this.btnHuy.TabIndex = 12;
+            this.btnHuy.TabIndex = 6;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -117,7 +117,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.btnLuu.Location = new System.Drawing.Point(147, 142);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(71, 29);
-            this.btnLuu.TabIndex = 11;
+            this.btnLuu.TabIndex = 5;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -137,7 +137,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.timeThoiGianCapNhat.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.timeThoiGianCapNhat.Properties.Mask.EditMask = "T";
             this.timeThoiGianCapNhat.Size = new System.Drawing.Size(152, 22);
-            this.timeThoiGianCapNhat.TabIndex = 19;
+            this.timeThoiGianCapNhat.TabIndex = 4;
             // 
             // txtSanPham
             // 
@@ -146,7 +146,7 @@ namespace NPPBiaHoi.ucKhachHang
             this.txtSanPham.Name = "txtSanPham";
             this.txtSanPham.Properties.ReadOnly = true;
             this.txtSanPham.Size = new System.Drawing.Size(152, 22);
-            this.txtSanPham.TabIndex = 20;
+            this.txtSanPham.TabIndex = 2;
             // 
             // frmSuaDonGiaKhachHang
             // 

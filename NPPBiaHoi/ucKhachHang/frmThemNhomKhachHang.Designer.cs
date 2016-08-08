@@ -51,7 +51,7 @@
             this.btnLuu.Location = new System.Drawing.Point(376, 268);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(86, 32);
-            this.btnLuu.TabIndex = 0;
+            this.btnLuu.TabIndex = 4;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -64,7 +64,7 @@
             this.btnHuy.Location = new System.Drawing.Point(479, 268);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(86, 32);
-            this.btnHuy.TabIndex = 1;
+            this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -100,14 +100,14 @@
             this.txtTen.Location = new System.Drawing.Point(99, 52);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(201, 22);
-            this.txtTen.TabIndex = 5;
+            this.txtTen.TabIndex = 1;
             // 
             // mmoMoTa
             // 
             this.mmoMoTa.Location = new System.Drawing.Point(99, 101);
             this.mmoMoTa.Name = "mmoMoTa";
             this.mmoMoTa.Size = new System.Drawing.Size(467, 155);
-            this.mmoMoTa.TabIndex = 6;
+            this.mmoMoTa.TabIndex = 2;
             // 
             // chkDangQuanLy
             // 
@@ -117,7 +117,7 @@
             this.chkDangQuanLy.Properties.Caption = "";
             this.chkDangQuanLy.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.chkDangQuanLy.Size = new System.Drawing.Size(26, 19);
-            this.chkDangQuanLy.TabIndex = 7;
+            this.chkDangQuanLy.TabIndex = 3;
             // 
             // frmThemNhomKhachHang
             // 

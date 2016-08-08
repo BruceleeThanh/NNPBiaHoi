@@ -79,7 +79,7 @@
             this.btnThoat.Location = new System.Drawing.Point(832, 638);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(78, 38);
-            this.btnThoat.TabIndex = 79;
+            this.btnThoat.TabIndex = 11;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -91,7 +91,7 @@
             this.picAnh.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picAnh.Size = new System.Drawing.Size(198, 235);
-            this.picAnh.TabIndex = 77;
+            this.picAnh.TabIndex = 10;
             // 
             // labelControl7
             // 
@@ -108,7 +108,7 @@
             this.mmoGhiChu.Name = "mmoGhiChu";
             this.mmoGhiChu.Properties.ReadOnly = true;
             this.mmoGhiChu.Size = new System.Drawing.Size(491, 138);
-            this.mmoGhiChu.TabIndex = 75;
+            this.mmoGhiChu.TabIndex = 8;
             // 
             // mmoHoTroDauTu
             // 
@@ -116,7 +116,7 @@
             this.mmoHoTroDauTu.Name = "mmoHoTroDauTu";
             this.mmoHoTroDauTu.Properties.ReadOnly = true;
             this.mmoHoTroDauTu.Size = new System.Drawing.Size(491, 151);
-            this.mmoHoTroDauTu.TabIndex = 74;
+            this.mmoHoTroDauTu.TabIndex = 7;
             // 
             // chkDangQuanLy
             // 
@@ -126,7 +126,7 @@
             this.chkDangQuanLy.Properties.Caption = "";
             this.chkDangQuanLy.Properties.ReadOnly = true;
             this.chkDangQuanLy.Size = new System.Drawing.Size(18, 19);
-            this.chkDangQuanLy.TabIndex = 73;
+            this.chkDangQuanLy.TabIndex = 9;
             // 
             // labelControl11
             // 
@@ -161,7 +161,7 @@
             this.txtKhoangCach.Name = "txtKhoangCach";
             this.txtKhoangCach.Properties.ReadOnly = true;
             this.txtKhoangCach.Size = new System.Drawing.Size(88, 22);
-            this.txtKhoangCach.TabIndex = 69;
+            this.txtKhoangCach.TabIndex = 6;
             // 
             // labelControl8
             // 
@@ -178,7 +178,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(278, 22);
-            this.txtEmail.TabIndex = 67;
+            this.txtEmail.TabIndex = 5;
             // 
             // labelControl6
             // 
@@ -195,7 +195,7 @@
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Properties.ReadOnly = true;
             this.txtSoDienThoai.Size = new System.Drawing.Size(278, 22);
-            this.txtSoDienThoai.TabIndex = 65;
+            this.txtSoDienThoai.TabIndex = 4;
             // 
             // labelControl5
             // 
@@ -212,7 +212,7 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Properties.ReadOnly = true;
             this.txtDiaChi.Size = new System.Drawing.Size(278, 22);
-            this.txtDiaChi.TabIndex = 63;
+            this.txtDiaChi.TabIndex = 3;
             // 
             // labelControl4
             // 
@@ -229,7 +229,7 @@
             this.txtChuCuaHang.Name = "txtChuCuaHang";
             this.txtChuCuaHang.Properties.ReadOnly = true;
             this.txtChuCuaHang.Size = new System.Drawing.Size(278, 22);
-            this.txtChuCuaHang.TabIndex = 61;
+            this.txtChuCuaHang.TabIndex = 2;
             // 
             // labelControl3
             // 
@@ -247,7 +247,7 @@
             this.txtTen.Name = "txtTen";
             this.txtTen.Properties.ReadOnly = true;
             this.txtTen.Size = new System.Drawing.Size(278, 22);
-            this.txtTen.TabIndex = 59;
+            this.txtTen.TabIndex = 1;
             // 
             // labelControl2
             // 
