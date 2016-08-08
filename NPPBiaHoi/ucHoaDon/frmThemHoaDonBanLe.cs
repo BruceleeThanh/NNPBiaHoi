@@ -17,9 +17,7 @@ namespace NPPBiaHoi.ucHoaDon
     {
         ucHoaDonBanLe aucHoaDonBanLe = null;
         List<SanPham> aListSanPham = new List<SanPham>();
-        List<HoaDonBanLe> aListHoaDonBanLe = new List<HoaDonBanLe>();
-        List<ThemHoaDonBanLeEN> aListThemHoaDonBanLeEN = new List<ThemHoaDonBanLeEN>();
-        List<ThemHoaDonBanLeEN> bListThemHoaDonBanLeEN;
+        List<ThemHoaDonBanLeEN> bListThemHoaDonBanLeEN = new List<ThemHoaDonBanLeEN>();
 
         public frmThemHoaDonBanLe()
         {
@@ -59,10 +57,10 @@ namespace NPPBiaHoi.ucHoaDon
                 for (int i = 0; i < SoDong; i++)
                 {
                     HoaDonBanLe aHoaDonBanLe = new HoaDonBanLe();
-                    aHoaDonBanLe.MaSanPham = aListThemHoaDonBanLeEN[i].MaSanPham;
-                    aHoaDonBanLe.SoLuong = aListThemHoaDonBanLeEN[i].SoLuong;
-                    aHoaDonBanLe.ThoiGian = aListThemHoaDonBanLeEN[i].ThoiGian;
-                    aHoaDonBanLe.GhiChu = aListThemHoaDonBanLeEN[i].GhiChu;
+                    aHoaDonBanLe.MaSanPham = int.Parse(grvThemHoaDonBanLe.GetRowCellValue(i, "MaSanPham").ToString());
+                    aHoaDonBanLe.SoLuong = int.Parse(grvThemHoaDonBanLe.GetRowCellValue(i, "SoLuong").ToString());
+                    aHoaDonBanLe.ThoiGian = Convert.ToDateTime(grvThemHoaDonBanLe.GetRowCellValue(i, "ThoiGian").ToString());
+                    aHoaDonBanLe.GhiChu = grvThemHoaDonBanLe.GetRowCellValue(i, "GhiChu").ToString();
 
                     aHoaDonBanLeBO.Insert(aHoaDonBanLe);
                 }
@@ -110,14 +108,11 @@ namespace NPPBiaHoi.ucHoaDon
                 aHoaDonBanLe.SoLuong = int.Parse(spinSoLuong.Text);
                 aHoaDonBanLe.ThoiGian = timeThoiGian.DateTime;
                 aHoaDonBanLe.GhiChu = mmoGhiChu.Text;
-                aListHoaDonBanLe.Add(aHoaDonBanLe);
-                bListThemHoaDonBanLeEN = new List<ThemHoaDonBanLeEN>();
-                foreach (HoaDonBanLe temp in aListHoaDonBanLe)
-                {
-                    bListThemHoaDonBanLeEN.Add(new ThemHoaDonBanLeEN(temp));
-                }
+
+                ThemHoaDonBanLeEN tThem = new ThemHoaDonBanLeEN(aHoaDonBanLe);
+                bListThemHoaDonBanLeEN.Add(tThem);
                 grdThemHoaDonBanLe.DataSource = bListThemHoaDonBanLeEN;
-                aListThemHoaDonBanLeEN = bListThemHoaDonBanLeEN;
+                grvThemHoaDonBanLe.RefreshData();
             }
             catch (Exception ex)
             {
@@ -130,12 +125,20 @@ namespace NPPBiaHoi.ucHoaDon
         {
             try
             {
-                grvThemHoaDonBanLe.DeleteSelectedRows();
+                HoaDonBanLe tam2 = new HoaDonBanLe();
+                tam2.MaSanPham = int.Parse(grvThemHoaDonBanLe.GetFocusedRowCellValue("MaSanPham").ToString());
+                tam2.SoLuong = int.Parse(grvThemHoaDonBanLe.GetFocusedRowCellValue("SoLuong").ToString());
+                tam2.ThoiGian = Convert.ToDateTime(grvThemHoaDonBanLe.GetFocusedRowCellValue("ThoiGian").ToString());
+                tam2.GhiChu = grvThemHoaDonBanLe.GetFocusedRowCellValue("GhiChu").ToString();
+                
+                ThemHoaDonBanLeEN tam1 = new ThemHoaDonBanLeEN(tam2);
+                bListThemHoaDonBanLeEN.RemoveAt(grvThemHoaDonBanLe.GetSelectedRows()[0]);
+                grdThemHoaDonBanLe.DataSource = bListThemHoaDonBanLeEN;
                 grvThemHoaDonBanLe.RefreshData();
             }
             catch (Exception ex)
             {
-                throw new Exception("btnXoa_ButtonClick: " + ex.ToString());
+                throw new Exception("btnXoa_ButtonClick: " + ex.ToString()); 
             }
         }
         

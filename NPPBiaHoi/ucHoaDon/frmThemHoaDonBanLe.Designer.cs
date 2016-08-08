@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemHoaDonBanLe));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dateThoiGian = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
@@ -68,7 +68,7 @@
             // 
             this.btnXoa.AutoHeight = false;
             this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnXoa.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnXoa_ButtonClick);
@@ -106,7 +106,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ten", "Name6")});
             this.lueTenSanPham.Properties.NullText = "Chọn sản phẩm";
             this.lueTenSanPham.Size = new System.Drawing.Size(143, 20);
-            this.lueTenSanPham.TabIndex = 16;
+            this.lueTenSanPham.TabIndex = 0;
             // 
             // labelControl4
             // 
@@ -169,7 +169,7 @@
             this.timeThoiGian.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.timeThoiGian.Properties.ShowOk = DevExpress.Utils.DefaultBoolean.True;
             this.timeThoiGian.Size = new System.Drawing.Size(143, 20);
-            this.timeThoiGian.TabIndex = 11;
+            this.timeThoiGian.TabIndex = 1;
             // 
             // spinSoLuong
             // 
@@ -193,7 +193,7 @@
             0,
             0});
             this.spinSoLuong.Size = new System.Drawing.Size(77, 20);
-            this.spinSoLuong.TabIndex = 10;
+            this.spinSoLuong.TabIndex = 2;
             // 
             // colThoiGian
             // 
@@ -246,7 +246,7 @@
             this.mmoGhiChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mmoGhiChu.Name = "mmoGhiChu";
             this.mmoGhiChu.Size = new System.Drawing.Size(328, 80);
-            this.mmoGhiChu.TabIndex = 5;
+            this.mmoGhiChu.TabIndex = 3;
             // 
             // grdThemHoaDonBanLe
             // 
@@ -302,7 +302,7 @@
             this.btnThem.Location = new System.Drawing.Point(9, 333);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(61, 23);
-            this.btnThem.TabIndex = 13;
+            this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -332,7 +332,7 @@
             this.btnHuy.Location = new System.Drawing.Point(582, 333);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(61, 23);
-            this.btnHuy.TabIndex = 10;
+            this.btnHuy.TabIndex = 6;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -345,7 +345,7 @@
             this.btnLuu.Location = new System.Drawing.Point(515, 333);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(61, 23);
-            this.btnLuu.TabIndex = 11;
+            this.btnLuu.TabIndex = 5;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
